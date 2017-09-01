@@ -1,6 +1,6 @@
 <?
-$sSectionName = "Mirtash";
+$sSectionName = "Mirtash - студия натурального камня";
 $arDirProperties = Array(
-   "description" => "Описание Mirtash"
+   "description" => "Mirtash - студия натурального камня"
 );
 ?>

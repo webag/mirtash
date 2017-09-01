@@ -18,18 +18,30 @@ $APPLICATION->SetTitle("Контакты");
 								<h3>Контакты</h3>
 								<div class="contact__info-callback">
 									<span>Звоните</span>
-									<a href="tel:89872278724">+7 (987) 227 87 24</a><br>
-									<a href="tel:88432661036">+7 (843) 266 10 36</a>
+									<?$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
+										"AREA_FILE_SHOW" => "file",
+										"PATH" => "/includes/phone_1.php"
+									));?>
+									<br>
+									<?$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
+										"AREA_FILE_SHOW" => "file",
+										"PATH" => "/includes/phone_2.php"
+									));?>
 								</div>
 								<a href="#call-back" class="btn" data-fancybox>Обратная связь</a>
 								<div class="contact__info-callback">
 									<span>Пишите ваши вопросы и предложения</span>
-									<a href="mailto:mirtash_kzn@mail.ru">mirtash_kzn@mail.ru</a>
+									<?$APPLICATION->IncludeComponent("bitrix:main.include","simple_email",Array(
+										"AREA_FILE_SHOW" => "file",
+										"PATH" => "/includes/email.php"
+									));?>
 								</div>
 								<div class="contact__info-callback">
 									<span>Мы в социальных сетях</span>
-									<a href="#" target="_blank"><img src="<?=SITE_TEMPLATE_PATH?>/img/svg/icons/icon-soc-vk.svg" alt=""></a>
-									<a href="#" target="_blank"><img src="<?=SITE_TEMPLATE_PATH?>/img/svg/icons/icon-soc-insta.svg" alt=""></a>
+									<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+										"AREA_FILE_SHOW" => "file",
+										"PATH" => "/includes/socials.php"
+									));?>
 								</div>
 							</div>
 						</div>

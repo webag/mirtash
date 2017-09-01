@@ -7,14 +7,26 @@
 		</div>
 		<div class="grid-6 grid-tabvert-8 grid-phone-12">
 			<div class="footer__contact">
-				<a class="footer__contact-phone" href="tel:89872278724">+7 (987) 227 87 24</a>
-				<a class="footer__contact-phone" href="tel:78432661036">+7 (843) 266 10 36</a>
-				<a class="footer__contact-email" href="mailto:mirtash_kzn@mail.ru">mirtash_kzn@mail.ru</a>
+				<?$APPLICATION->IncludeComponent("bitrix:main.include","footer_phone",Array(
+					"AREA_FILE_SHOW" => "file",
+					"PATH" => "/includes/phone_1.php"
+				));?>
+				<?$APPLICATION->IncludeComponent("bitrix:main.include","footer_phone",Array(
+					"AREA_FILE_SHOW" => "file",
+					"PATH" => "/includes/phone_2.php"
+				));?>
+				<?$APPLICATION->IncludeComponent("bitrix:main.include","footer_email",Array(
+					"AREA_FILE_SHOW" => "file",
+					"PATH" => "/includes/email.php"
+				));?>
 			</div>
 		</div>
 		<div class="grid-3 grid-tabvert-4 grid-phone-12">
 			<div class="footer__copy">
-				<p>Все права защищены, 2017 г. ООО «Мирташ»</p>
+				<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+					"AREA_FILE_SHOW" => "file",
+					"PATH" => "/includes/copyright.php"
+				));?>
 			</div>
 		</div>
 	</div>

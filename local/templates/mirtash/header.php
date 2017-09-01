@@ -42,7 +42,9 @@
 
 <div id="panel"><?$APPLICATION->ShowPanel();?></div>
 
+
 <div class="menu-left">
+
 	<a href="#" class="menu-left__opener-wrap">
 		<span class="menu-left__opener">
 			<span></span>
@@ -51,28 +53,42 @@
 			<span></span>
 		</span>
 	</a>
+
 	<div class="menu-left__main">
 		<a href="/" class="menu-left__logo">
-			<img src="img/logo-menu.png" alt="">
+			<img src="<?=SITE_TEMPLATE_PATH?>/img/logo-menu.png" alt="">
 		</a>
 		<div class="menu-left__nav">
 			<a href="/about/" class="menu-left__menu-link">О компании</a>
 			<a href="/contacts/" class="menu-left__menu-link">Контакты</a>
 			<a href="#" class="btn">Каталог</a>
-			<a href="#" class="menu-left__menu-link">обработаные камни</a>
+			<a href="#" class="menu-left__menu-link">Обработаные камни</a>
 			<a href="#" class="menu-left__menu-link">Необработанные камни</a>
 			<a href="#" class="menu-left__menu-link">Изделия из камня</a>
 			<a href="#" class="menu-left__menu-link">Услуги</a>
 		</div>
 		<div class="menu-left__contact">
 			<p>д. Калинино, ул. Центральная, д. 101<br>Режим работы: 8:00 – 20:00</p>
-			<a href="tel:89872278724" class="menu-left__contact-tel">+7 (987) 227 87 24</a><br>
-			<a href="tel:88432661036" class="menu-left__contact-tel">+7 (843) 266 10 36</a>
+			<?$APPLICATION->IncludeComponent("bitrix:main.include","menu_phone",Array(
+				"AREA_FILE_SHOW" => "file",
+				"PATH" => "/includes/phone_1.php"
+			));?>
+			<br>
+			<?$APPLICATION->IncludeComponent("bitrix:main.include","menu_phone",Array(
+				"AREA_FILE_SHOW" => "file",
+				"PATH" => "/includes/phone_2.php"
+			));?>
 			<div class="menu-left__contact-soc">
-				<a href="#"><img src="img/svg/icons/icon-soc-vk.svg" alt=""></a>
-				<a href="#"><img src="img/svg/icons/icon-soc-insta.svg" alt=""></a>
+				<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+					"AREA_FILE_SHOW" => "file",
+					"PATH" => "/includes/socials.php"
+				));?>
 			</div>
-			<a href="mailto:mirtash_kzn@mail.ru" class="menu-left__contact-mail">mirtash_kzn@mail.ru</a>
+			<?$APPLICATION->IncludeComponent("bitrix:main.include","menu_email",Array(
+				"AREA_FILE_SHOW" => "file",
+				"PATH" => "/includes/email.php"
+			));?>
 		</div>
 	</div>
+
 </div>

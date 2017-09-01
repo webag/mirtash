@@ -14,14 +14,23 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 				</div>
 				<div class="main-head__contact-item">
 					<div class="main-head__contact-soc">
-						<a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/img/svg/icons/icon-soc-vk.svg" alt=""></a>
-						<a href="#"><img src="<?=SITE_TEMPLATE_PATH?>/img/svg/icons/icon-soc-insta.svg" alt=""></a>
+						<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+							"AREA_FILE_SHOW" => "file",
+							"PATH" => "/includes/socials.php"
+						));?>
 					</div>
 					<div class="main-head__contact-tel">
-						<a href="tel:89872278724">+7 (987) 227 87 24</a><br>
-						<a href="tel:88432661036">+7 (843) 266 10 36</a>
+						<?$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
+							"AREA_FILE_SHOW" => "file",
+							"PATH" => "/includes/phone_1.php"
+						));?>
+						<br>
+						<?$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
+							"AREA_FILE_SHOW" => "file",
+							"PATH" => "/includes/phone_2.php"
+						));?>
 					</div>
-					<a href="#" class="main-head__contact-link">Контакты</a>
+					<a href="/contacts/" class="main-head__contact-link">Контакты</a>
 				</div>
 			</div>
 			<div class="main-head__info">

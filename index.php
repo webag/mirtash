@@ -9,7 +9,12 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 		<div class="main-head">
 			<div class="main-head__contact">
 				<div class="main-head__contact-item">
-					<p class="main-head__contact-adress">д. Калинино, ул. Центральная, д. 101<br>Режим работы: 8:00 – 20:00</p>
+					<p class="main-head__contact-adress">
+						<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+							"AREA_FILE_SHOW" => "file",
+							"PATH" => "/includes/address-work.php"
+						));?>
+					</p>
 					<a href="#" class="main-head__contact-link">Схема проезда</a>
 				</div>
 				<div class="main-head__contact-item">

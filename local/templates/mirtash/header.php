@@ -62,14 +62,17 @@
 		<div class="menu-left__nav">
 			<a href="/about/" class="menu-left__menu-link">О компании</a>
 			<a href="/contacts/" class="menu-left__menu-link">Контакты</a>
-			<a href="#" class="btn">Каталог</a>
-			<a href="#" class="menu-left__menu-link">Обработаные камни</a>
-			<a href="#" class="menu-left__menu-link">Необработанные камни</a>
-			<a href="#" class="menu-left__menu-link">Изделия из камня</a>
-			<a href="#" class="menu-left__menu-link">Услуги</a>
+			<a href="/catalog/" class="btn">Каталог</a>
+			<a href="/catalog/ready/" class="menu-left__menu-link">Обработаные камни</a>
+			<a href="/catalog/unready/" class="menu-left__menu-link">Необработанные камни</a>
 		</div>
 		<div class="menu-left__contact">
-			<p>д. Калинино, ул. Центральная, д. 101<br>Режим работы: 8:00 – 20:00</p>
+			<p>
+			<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+				"AREA_FILE_SHOW" => "file",
+				"PATH" => "/includes/address-work.php"
+			));?>
+			</p>
 			<?$APPLICATION->IncludeComponent("bitrix:main.include","menu_phone",Array(
 				"AREA_FILE_SHOW" => "file",
 				"PATH" => "/includes/phone_1.php"

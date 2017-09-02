@@ -49,17 +49,20 @@ $APPLICATION->SetTitle("Контакты");
 							<div class="contact__info-block">
 								<h3>Главный офис</h3>
 								<div class="user-content">
-									<p>422700, Республика Татарстан, Казан, д. <br>Калинино, ул. Центральная, д. 101 <br>Время работы: 8:00 — 20:00</p>
+									<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+										"AREA_FILE_SHOW" => "file",
+										"PATH" => "/includes/contacts/first.php"
+									));?>
 								</div>
 								<a href="https://yandex.ru/map-widget/v1/-/CBUNfZAmoB" class="contact__info-link" data-fancybox>Схема проезда</a>
 
 								<div class="contact__info-requiz">
 									<h3>Реквизиты</h3>
 									<div class="user-content">
-										<p>ИП Гайнуллина Лейсан </p>
-										<b>Юридический адрес:</b>
-										<p>422700, Республика Татарстан, Казан, д. Калинино, ул. Центральная, д. 101</p>
-										<p>ОКПО 0123456789 <br>ОГРНИП 0123456789098765 <br>ИНН 123456789876</p>
+										<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+											"AREA_FILE_SHOW" => "file",
+											"PATH" => "/includes/contacts/second.php"
+										));?>
 									</div>
 								</div>
 								<a href="#" class="contact__info-link">Карта партнера</a>

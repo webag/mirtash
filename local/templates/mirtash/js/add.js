@@ -64,3 +64,25 @@ $(document).ready(function(){
 /***********************
  отправка формы в php END
  ***********************/
+
+/***********************
+Якоря в каталоге большом BEGIN
+***********************/
+$(document).ready(function() {
+	$('.catalog-category__item-next').each(function () {
+		var this_sec = $(this).parents('.catalog-category__item-wrap');
+		var next_sec = this_sec.next('.catalog-category__item-wrap');
+		var next_sec_name = next_sec.find('.catalog-category__item-title h3').text();
+		var next_sec_id = next_sec.attr('id');
+		console.log(next_sec_id);
+
+		if (next_sec.length){
+			$(this).text(next_sec_name).attr('href','#'+next_sec_id);
+		} else {
+			$(this).remove();
+		}
+	})
+});
+/***********************
+Якоря в каталоге большом END
+***********************/

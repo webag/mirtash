@@ -30,25 +30,48 @@ if($('.menu-left__opener').length) {
 
 
 /**************************************************
-	Catalog Big Menu
+  Table Wrap Fix
+***************************************************/
+	if($('.user-content table').length) {
+		$('.user-content table').each(function(index, el) {
+			$(el).wrap('<div class="table-wrapper"></div>')
+		});
+	}
+/**************************************************
+  End Table Wrap Fix
 ***************************************************/
 
-		if($('.catalog-category__link-list').length) {
-			var catNavLink = $('.catalog-category__link-list');
-			var catNavLinkTop = catNavLink.offset().top;
-			var catNavLinkHeight = catNavLink.outerHeight();
-			$(window).scroll(function() {
-				if($(this).scrollTop() >= catNavLinkTop) {
-					catNavLink.addClass('sticked');
-					catNavLink.css('height', catNavLinkHeight - 30);
-				}
-				else{
-					catNavLink.removeClass('sticked');
-					catNavLink.css('height', 'inherit');
-				}
-			});
-		}
-		
+
+/**************************************************
+  Nice Select
+***************************************************/
+	if($('.custom-select').length) {
+		$('.custom-select').niceSelect();
+	}
+/**************************************************
+  End Nice Select
+***************************************************/
+
+
+/**************************************************
+	Catalog Big Menu
+***************************************************
+
+	if($('.catalog-category__link-list').length) {
+		var catNavLink = $('.catalog-category__link-list');
+		var catNavLinkTop = catNavLink.offset().top;
+		var catNavLinkHeight = catNavLink.outerHeight();
+		$(window).scroll(function() {
+			if($(this).scrollTop() >= catNavLinkTop) {
+				catNavLink.addClass('sticked');
+				catNavLink.css('height', catNavLinkHeight - 30);
+			}
+			else{
+				catNavLink.removeClass('sticked');
+				catNavLink.css('height', 'inherit');
+			}
+		});
+	}
 
 /**************************************************
 	End Catalog Big Menu
@@ -126,12 +149,10 @@ if($('.menu-left__opener').length) {
 /**************************************************
 	Прокрутка к секциям
 ***************************************************/
-	$('body a[data-anchor]').click(function (event) {
-		event.preventDefault();
-		elementClick = "#" + $(this).data("anchor");
-		destination = $(elementClick).offset().top;
-		$('html').velocity( "scroll", { duration: 1000, easing: "easeInOutCubic", offset: destination, mobileHA: true });
-		$('body').velocity( "scroll", { duration: 1000, easing: "easeInOutCubic", offset: destination, mobileHA: true });
+	$('.scrollto').click(function () {
+		var elementClick = $(this).attr("href");
+		var destination = $(elementClick).offset().top;
+		$('html,body').stop().animate({scrollTop:destination}, 1000);
 		return false;
 	});
 /**************************************************
@@ -178,44 +199,5 @@ if($('.menu-left__opener').length) {
 	End Show Visible 
 ***************************************************/
 
-
-/**************************************************
-	Google Maps
-***************************************************/
-	// gmaps
-	if ($('#googlemap').length) { //если карта существует
-		$(document).ready(function(){
-
-			google.maps.event.addDomListener(window, 'load', initMap);
-
-			function initMap() {
-				var latLng= {};
-				latLng.lat = 55.782177;
-				latLng.lng = 49.155282;
-				var mapOptions = {
-					zoom: 16,
-					scrollwheel: false,
-					mapTypeControl: false,
-					zoomControlOptions: {
-						position: google.maps.ControlPosition.LEFT_CENTER
-					},
-					center: new google.maps.LatLng(latLng.lat, latLng.lng)
-				};
-
-				var mapElement = document.getElementById('googlemap');
-
-				var map = new google.maps.Map(mapElement, mapOptions);
-
-				var marker = new google.maps.Marker({
-					position: new google.maps.LatLng(latLng.lat, latLng.lng),
-					map: map,
-					title: 'Республика Татарстан, г. Казань, д. Калинино, ул. Центральная, д. 101'
-				});
-			}
-		});
-	}
-/**************************************************
-	End Google Maps
-***************************************************/
 
 });

@@ -246,6 +246,104 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 );?>
 
 
+<section class="main-about-sec def-sec-top">
+	<div class="wrapper">
+		<div class="main-about">
+			<div class="main-about__title">
+				<h2 class="h1">О КОМПАНИИ</h2>
+				<p>Компания MIRTASH занимается добычей, обработкой и продажей натурального камня.</p>
+			</div>
+			<div class="main-about__items row row--middle">
+				<div class="main-about__item grid-4 grid-phone-6 grid-phonemini-12">
+					<div class="main-about__item-img">
+						<img src="<?=SITE_TEMPLATE_PATH?>/img/svg/icons/icon-hand.svg" alt="">
+					</div>
+					<div class="main-about__item-text">
+						<span>Предлагаем качественный камень</span>
+						<p>Мы предлагаем камень разного цвета и плотности, добытый из проверенных нами месторождений. Он безопасен и экологичен: в нем нет токсичных примесей или радиационного фона. </p>
+					</div>
+				</div>
+				<div class="main-about__item grid-4 grid-phone-6 grid-phonemini-12">
+					<div class="main-about__item-img">
+						<img src="<?=SITE_TEMPLATE_PATH?>/img/svg/icons/icon-man-factory.svg" alt="">
+					</div>
+					<div class="main-about__item-text">
+						<span>Сами производим изделия</span>
+						<p>Полученный материал мы обрабатываем на шведском и итальянском оборудовании в брусчатку, плитку и другие изделия. Поэтому гарантируем качество каждого изделия.</p>
+					</div>
+				</div>
+				<div class="main-about__item grid-4 grid-phone-6 grid-phonemini-12">
+					<div class="main-about__item-img">
+						<img src="<?=SITE_TEMPLATE_PATH?>/img/svg/icons/icon-hands-coub.svg" alt="">
+					</div>
+					<div class="main-about__item-text">
+						<span>Предлагаем отличный сервис</span>
+						<p>Запас продукции всегда хранится на складе, чтобы вы могли сразу же забрать нужную партию. Если вы найдете в партии битый камень, мы заменим его.</p>
+					</div>
+				</div>
+			</div>
+			<div class="center-btn">
+				<a href="/about/" class="btn">Подбронее о компании</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="main-review-sec def-sec-bottom">
+	<div class="main-review__triangle-wrap">
+		<div class="main-review__triangle">
+			<img class="triangle-1 fade-top" src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-1.png" alt="" data-src="img/main-review-triangle-1.png">
+			<img class="triangle-2 fade-top" src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-2.png" alt="" data-src="img/main-review-triangle-2.png">
+			<img class="triangle-3 fade-top" src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-3.png" alt="" data-src="img/main-review-triangle-3.png">
+			<img class="triangle-4 fade-top" src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-4.png" alt="" data-src="img/main-review-triangle-4.png">
+			<img class="triangle-5 fade-top" src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-5.png" alt="" data-src="img/main-review-triangle-5.png">
+			<img class="triangle-6 fade-top" src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-6.png" alt="" data-src="img/main-review-triangle-6.png">
+		</div>
+	</div>
+	<div class="wrapper">
+		<div class="main-review">
+			<div class="main-review__stone fade-top">
+				<img src="<?=SITE_TEMPLATE_PATH?>/img/main-about-stone.png" alt="">
+			</div>
+
+			<div class="main-review__title">
+				<h2 class="h1">Отзывы</h2>
+				<p>За время работы компания обрела постоянных клиентов и зарекомендовала себя только как ответственный партнер</p>
+			</div>
+			<div class="main-review__items row">
+				<div class="main-review__item grid-3 grid-tab-4 grid-phone-6 grid-phonemini-12">
+					<div class="main-review__item-text">
+						<p>«Благодарю компанию MIRTASH за внимание к клиенту. Менеджеры помогли мне разобраться в видах камня и выбрать брусчатку для загородного дома»</p>
+					</div>
+					<div class="main-review__item-about">
+						<img src="<?=SITE_TEMPLATE_PATH?>/img/main-review-item-1.png" alt="">
+						<span>Михаил Самогин</span>
+					</div>
+				</div>
+				<div class="main-review__item grid-3 grid-tab-4 grid-phone-6 grid-phonemini-12">
+					<div class="main-review__item-text">
+						<p>«Камень отличный. Я использую его в проектах по ландшафтному дизайну у своих клиентов. Мои заказы всегда есть на складе, не приходится ждать партии»</p>
+					</div>
+					<div class="main-review__item-about">
+						<img src="<?=SITE_TEMPLATE_PATH?>/img/main-review-item-2.png" alt="">
+						<span>Евгения Дердышева</span>
+					</div>
+				</div>
+				<div class="main-review__item grid-3 grid-tab-4 grid-phone-6 grid-phonemini-12">
+					<div class="main-review__item-text">
+						<p>«Мне всегда отгружают партию день в день. Ни одного битого камня, пустот нет. По квадратуре всегда хватает, без обмана. Качество всегда хорошее»</p>
+					</div>
+					<div class="main-review__item-about">
+						<img src="<?=SITE_TEMPLATE_PATH?>/img/main-review-item-3.png" alt="">
+						<span>Марат Камалеев</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- wrapper -->
+</section><!-- main-review-sec -->
+
 <section class="form-callback-sec form-callback-sec--main">
 	<div class="wrapper">
 		<div class="row form-callback">

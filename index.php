@@ -78,49 +78,172 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 </section>
 
 
-<section class="offers-sec">
+<section class="offers-sec def-sec-top">
 	<div class="wrapper">
 		<div class="offers">
 			<div class="offers__title">
-				<h2></h2>
-				<p></p>
+				<h2 class="h1">Популярные предложения</h2>
+				<p>Даже самые востребованные позиции всегда есть в наличии</p>
 			</div>
-			<div class="offers__items">
-				<div class="offers__item row">
-					<div class="offers__item-img grid-4">
-						<img src="<?=SITE_TEMPLATE_PATH?>/img/offers-item-1.jpg" alt="">
-					</div>
-					<div class="offers__item-info grid-7">
-						<p class="offers__item-info-title">
-						<h4>Известняковый щебень</h4>
-						<span>Продукция</span>
-						</p>
-						<div class="user-content">
-							<p>Мы производим доломитовый (известняковый) щебень и реализуем его с доставкой по всей России.</p>
-							<ul>
-								<li>
-									<h5>Востребованные фракции.</h5>
-									<span>Мы предлагаем щебень трех фракций: 5-20, 20-40, 40-70. </span>
-								</li>
-								<li>
-									<h5>Высокая марка прочности.</h5>
-									<span>Вы получите щебень маркой прочности М600–М800.</span>
-								</li>
-								<li>
-									<h5>Подтвержденное качество.</h5>
-									<span>Мы получили лицензии и результаты лабораторной экспертизы по нашему щебню.</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="center-btn">
-					<a href="#" class="btn">Перейти в каталог</a>
-				</div>
-			</div>
+
+			<?$APPLICATION->IncludeComponent(
+				"bitrix:news.list",
+				"home_offers",
+				array(
+					"ACTIVE_DATE_FORMAT" => "d.m.Y",
+					"ADD_ELEMENT_CHAIN" => "N",
+					"ADD_SECTIONS_CHAIN" => "N",
+					"AJAX_MODE" => "N",
+					"AJAX_OPTION_ADDITIONAL" => "",
+					"AJAX_OPTION_HISTORY" => "N",
+					"AJAX_OPTION_JUMP" => "N",
+					"AJAX_OPTION_STYLE" => "N",
+					"BROWSER_TITLE" => "-",
+					"CACHE_GROUPS" => "Y",
+					"CACHE_TIME" => "36000000",
+					"CACHE_TYPE" => "A",
+					"CHECK_DATES" => "Y",
+					"COMPOSITE_FRAME_MODE" => "A",
+					"COMPOSITE_FRAME_TYPE" => "AUTO",
+					"DETAIL_URL" => "",
+					"DISPLAY_BOTTOM_PAGER" => "N",
+					"DISPLAY_DATE" => "N",
+					"DISPLAY_NAME" => "N",
+					"DISPLAY_PICTURE" => "N",
+					"DISPLAY_PREVIEW_TEXT" => "N",
+					"DISPLAY_TOP_PAGER" => "N",
+					"ELEMENT_CODE" => "",
+					"FIELD_CODE" => array(
+						0 => "",
+						1 => "",
+					),
+					"IBLOCK_ID" => "4",
+					"IBLOCK_TYPE" => "site_info",
+					"IBLOCK_URL" => "",
+					"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+					"MESSAGE_404" => "",
+					"META_DESCRIPTION" => "-",
+					"META_KEYWORDS" => "-",
+					"PAGER_BASE_LINK_ENABLE" => "N",
+					"PAGER_SHOW_ALL" => "N",
+					"PAGER_TEMPLATE" => ".default",
+					"PAGER_TITLE" => "Страница",
+					"PROPERTY_CODE" => array(
+						0 => "TRIGGERS",
+						1 => "LINK",
+						2 => "LABEL_TEXT",
+					),
+					"SET_BROWSER_TITLE" => "N",
+					"SET_CANONICAL_URL" => "N",
+					"SET_LAST_MODIFIED" => "N",
+					"SET_META_DESCRIPTION" => "N",
+					"SET_META_KEYWORDS" => "N",
+					"SET_STATUS_404" => "N",
+					"SET_TITLE" => "N",
+					"SHOW_404" => "N",
+					"STRICT_SECTION_CHECK" => "N",
+					"USE_PERMISSIONS" => "N",
+					"USE_SHARE" => "N",
+					"COMPONENT_TEMPLATE" => "related",
+					"NEWS_COUNT" => "20",
+					"SORT_BY1" => "SORT",
+					"SORT_ORDER1" => "ASC",
+					"SORT_BY2" => "ACTIVE_FROM",
+					"SORT_ORDER2" => "DESC",
+					"FILTER_NAME" => "",
+					"CACHE_FILTER" => "N",
+					"PREVIEW_TRUNCATE_LEN" => "",
+					"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+					"PARENT_SECTION" => "",
+					"PARENT_SECTION_CODE" => "",
+					"INCLUDE_SUBSECTIONS" => "Y",
+					"PAGER_SHOW_ALWAYS" => "N",
+					"PAGER_DESC_NUMBERING" => "N",
+					"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000"
+				),
+				false
+			);?>
+
 		</div>
 	</div>
 </section>
+
+
+<?$APPLICATION->IncludeComponent(
+	"bitrix:news.list",
+	"home_usage",
+	array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"ADD_ELEMENT_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "N",
+		"BROWSER_TITLE" => "-",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"COMPOSITE_FRAME_MODE" => "A",
+		"COMPOSITE_FRAME_TYPE" => "AUTO",
+		"DETAIL_URL" => "",
+		"DISPLAY_BOTTOM_PAGER" => "N",
+		"DISPLAY_DATE" => "N",
+		"DISPLAY_NAME" => "N",
+		"DISPLAY_PICTURE" => "N",
+		"DISPLAY_PREVIEW_TEXT" => "N",
+		"DISPLAY_TOP_PAGER" => "N",
+		"ELEMENT_CODE" => "",
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"IBLOCK_ID" => "5",
+		"IBLOCK_TYPE" => "site_info",
+		"IBLOCK_URL" => "",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"MESSAGE_404" => "",
+		"META_DESCRIPTION" => "-",
+		"META_KEYWORDS" => "-",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_TEMPLATE" => ".default",
+		"PAGER_TITLE" => "Страница",
+		"PROPERTY_CODE" => array(
+			0 => "",
+		),
+		"SET_BROWSER_TITLE" => "N",
+		"SET_CANONICAL_URL" => "N",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_META_KEYWORDS" => "N",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "N",
+		"SHOW_404" => "N",
+		"STRICT_SECTION_CHECK" => "N",
+		"USE_PERMISSIONS" => "N",
+		"USE_SHARE" => "N",
+		"COMPONENT_TEMPLATE" => "related",
+		"NEWS_COUNT" => "20",
+		"SORT_BY1" => "SORT",
+		"SORT_ORDER1" => "ASC",
+		"SORT_BY2" => "ACTIVE_FROM",
+		"SORT_ORDER2" => "DESC",
+		"FILTER_NAME" => "",
+		"CACHE_FILTER" => "N",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000"
+	),
+	false
+);?>
 
 
 <section class="form-callback-sec form-callback-sec--main">
@@ -131,7 +254,7 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 					<p class="h1">Получите бесплатную консультацию </p>
 					<p>по подбору камня от профессионального <br>дизайнера прямо сейчас</p>
 				</div>
-				<img class="form-callback__stone form-callback__stone--main" data-src="img/form-stone-main.png" data-src-phone="" src="<?=SITE_TEMPLATE_PATH?>/img/form-stone-main.png" alt="">
+				<img class="form-callback__stone form-callback__stone--main" data-src="<?=SITE_TEMPLATE_PATH?>/img/form-stone-main.png" data-src-phone="" src="<?=SITE_TEMPLATE_PATH?>/img/form-stone-main.png" alt="">
 			</div>
 			<div class="grid-5 grid-tabvert-6 grid-phone-12 form-callback__right">
 				<div class="form-wrap">

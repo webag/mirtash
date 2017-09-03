@@ -53,7 +53,6 @@ $(document).ready(function(){
 					console.log(result);
 					$.fancybox.close();
 					$.fancybox.open({src  : '#modal-thanks'});
-					// $.fancybox($('#modal-thanks'), {padding: 0});
 					setTimeout(function() {$.fancybox.close();},4500);
 					form[0].reset();
 				})

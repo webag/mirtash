@@ -17,13 +17,13 @@ $(document).ready(function() {
 /**************************************************
 	Open Menu
 ***************************************************/
-if($('.menu-left__opener').length) {
-	$('.menu-left__opener-wrap').on('click', function(event) {
-		event.preventDefault();
-		$(this).toggleClass('open');
-		$('.menu-left').toggleClass('open');
-	});
-}
+	if($('.menu-left__opener').length) {
+		$('.menu-left__opener-wrap').on('click', function(event) {
+			event.preventDefault();
+			$(this).toggleClass('open');
+			$('.menu-left').toggleClass('open');
+		});
+	}
 /**************************************************
 	End Open Menu
 ***************************************************/
@@ -79,6 +79,15 @@ if($('.menu-left__opener').length) {
 
 
 /**************************************************
+	Masked input tel
+***************************************************/
+	$("input[type='tel']").mask("+7 (999) 999-99-99", {autoclear: false});
+/**************************************************
+	End Masked input tel
+***************************************************/
+
+
+/**************************************************
 	Flickity
 ***************************************************/
 	if($('.about-gallery__slider').length) {
@@ -94,6 +103,43 @@ if($('.menu-left__opener').length) {
 			$('.is-selected').removeClass('next-selected prev-selected');
 			$('.is-selected').next().addClass('next-selected');
 			$('.is-selected').prev().addClass('prev-selected');
+		})
+	}
+
+	if($('.stone-slider__items').length) {
+		var $stoneSliderNav = $('.stone-slider__nav');
+		var $stoneSliderItems = $('.stone-slider__items');
+
+		function changeStoneNav(index) {
+			$stoneSliderNav.find('a').removeClass('active')
+			$stoneSliderNav.find('a').eq(index).addClass('active');
+		}
+		function changeStoneSlider(index) {
+			changeStoneNav(index);
+			$stoneSlider.flickity('selectCell', index );
+		}
+
+		$stoneSliderNav.find('a').on('click', function(event) {
+			event.preventDefault();
+			//console.log();
+			changeStoneSlider($(this).index());
+		});
+
+		var $stoneSlider = $('.stone-slider__items').flickity({
+			pageDots: false,
+			imagesLoaded: true,
+			lazyLoad: 1,
+			initialIndex: 1
+		});
+		var stoneSliderFlkty = $stoneSlider.data('flickity');
+
+		// jQuery
+		$('.stone-slider__items').on('select.flickity', function() {
+			$('.stone-slider__item').removeClass('prev-selected');
+			$('.stone-slider__item').removeClass('next-selected ');
+			$('.is-selected').next().addClass('next-selected');
+			$('.is-selected').prev().addClass('prev-selected');
+			changeStoneNav(stoneSliderFlkty.selectedIndex);
 		})
 	}
 

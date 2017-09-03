@@ -28,9 +28,9 @@ $this->setFrameMode(true);
 								<?
 								$img = CFile::ResizeImageGet($arItem["PREVIEW_PICTURE"], array("width" => 250, "height" => 190), BX_RESIZE_IMAGE_EXACT, true);
 								?>
-							<span class="catalog-inner__item-img">
-								<img src="<?=$img['src']?>" alt="<?=$arItem['NAME']?>">
-							</span>
+								<span class="catalog-inner__item-img">
+									<img src="<?=$img['src']?>" alt="<?=$arItem['NAME']?>">
+								</span>
 							<? endif; ?>
 							<span class="catalog-inner__item-title"><?=$arItem['NAME']?></span>
 						</a>

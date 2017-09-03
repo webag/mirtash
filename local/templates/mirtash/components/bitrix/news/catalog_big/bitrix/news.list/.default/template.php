@@ -14,19 +14,6 @@ $this->setFrameMode(true);
 ?>
 
 
-<section class="catalog-head-sec">
-	<div class="wrapper">
-		<div class="catalog-head">
-			<p class="h3">Каталог Mirtash</p>
-			<div class="catalog-head__links">
-				<a href="/catalog/ready/" class="catalog-head__link active"><span>пиленные камни</span></a>
-				<a href="/catalog/unready/" class="catalog-head__link"><span>Необработанные камни</span></a>
-			</div>
-		</div>
-	</div>
-</section>
-
-
 <section class="catalog-category-sec">
 
 	<div class="wrapper">
@@ -77,34 +64,3 @@ $this->setFrameMode(true);
 </section>
 
 
-<section class="form-callback-sec form-callback-sec--catalog-big">
-	<div class="wrapper">
-		<div class="row form-callback">
-			<div class="grid-7 grid-tabvert-6 grid-phone-12 form-callback__left">
-				<div class="form-callback__title">
-					<p class="h1">Получите бесплатную консультацию </p>
-					<p>по подбору камня от профессионального <br>дизайнера прямо сейчас</p>
-				</div>
-				<img class="form-callback__stone form-callback__stone--catalog-big" data-src="img/form-stone.png" data-src-phone="" src="<?=SITE_TEMPLATE_PATH?>/img/form-stone-catalog-big.png" alt="">
-			</div>
-			<div class="grid-5 grid-tabvert-6 grid-phone-12 form-callback__right">
-				<div class="form-wrap">
-					<div class="form">
-						<h3>Оставьте ваши контактные данные</h3>
-						<p>Специалист свяжется с вами в ближайшее время</p>
-						<form class="ajax-form">
-							<input type="text" class="input-text" name="user_name" placeholder="Ваше имя" data-label="Имя пользователя">
-							<input type="tel" class="input-text" name="user_phone" placeholder="Номер телефона*" data-label="Телефон" data-req="true">
-							<input type="email" class="input-text" name="user_email" placeholder="E-mail*" data-label="E-mail" data-req="true">
-							<input type="hidden" value="Новая заявка" name="form_subject">
-							<div class="btnwrap-center">
-								<button class="btn btn--submit"><span>Отправить</span></button>
-							</div>
-							<span class="form__personal">Мы не передаем Вашу персональную информацию третьим лицам. Нажимая кнопку «Отправить» вы даете согласие на обработку персональных данных.</span>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>

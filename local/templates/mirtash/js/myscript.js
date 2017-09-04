@@ -143,6 +143,20 @@ $(document).ready(function() {
 		})
 	}
 
+	if($('.palitra__slider').length) {
+		$('.palitra__slider').flickity({
+			pageDots: false,
+			imagesLoaded: true,
+			lazyLoad: 1,
+			initialIndex: 1
+		});
+		var $palitraSec = $('.palitra-sec-bg');
+		$('.palitra__slider').on('select.flickity', function() {
+			var thisSlideBg = $(this).find('.is-selected').css('background-image');
+			$palitraSec.css('background-image', thisSlideBg);
+		})
+	}
+
 	if($('.big-slider__nav').length) {
 		$('.big-slider__nav').flickity({
 			asNavFor: '#big-slider-ship',

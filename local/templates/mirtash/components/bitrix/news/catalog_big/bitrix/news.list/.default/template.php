@@ -53,7 +53,7 @@ $this->setFrameMode(true);
 					<?=$arItem["PREVIEW_TEXT"]?>
 				</div>
 				<div class="center-btn fade-top">
-					<a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="btn btn--mini">Подробнее</a>
+					<a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="btn btn--middle">Подробнее</a>
 				</div>
 			</div>
 			<a href="#" class="catalog-category__item-next fade-top scrollto"></a>

@@ -246,6 +246,57 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 );?>
 
 
+<section class="palitra-sec def-sec">
+	<div class="palitra-sec-bg"></div>
+	<div class="wrapper">
+		<div class="palitra">
+			<div class="palitra__title">
+				<h2 class="h1">Палитра нашей&nbsp;продукции</h2>
+			</div>
+			<div class="palitra__slider">
+				<div class="palitra__slide" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/palitra-slide-1.jpg')">
+					<img src="<?=SITE_TEMPLATE_PATH?>/img/palitra-slide-1.jpg" class="palitra__slide-img-main" alt="">
+					<img src="<?=SITE_TEMPLATE_PATH?>/img/palitra-slide-second-1.jpg" alt="" class="palitra__slide-img-second">
+					<div class="palitra__slide-info">
+						<div class="user-content">
+							<h3>Златолит зеленый</h3>
+							<p>Присмотритесь к этому камню, если ищете украшение для участка.</p>
+							<p>Частицы кварца придают камню легкое сияние. Он будто слегка переливаются на солнце или при искусственном свете.</p>
+						</div>
+						<a href="#" class="palitra__slide-info-more">Подробнее</a>
+					</div>
+				</div>
+				<div class="palitra__slide" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/palitra-slide-2.jpg')">
+					<img src="<?=SITE_TEMPLATE_PATH?>/img/palitra-slide-2.jpg" class="palitra__slide-img-main" alt="">
+					<img src="<?=SITE_TEMPLATE_PATH?>/img/palitra-slide-second-2.jpg" alt="" class="palitra__slide-img-second">
+					<div class="palitra__slide-info">
+						<div class="user-content">
+							<h3>Златолит зеленый</h3>
+							<p>Присмотритесь к этому камню, если ищете украшение для участка.</p>
+							<p>Частицы кварца придают камню легкое сияние. Он будто слегка переливаются на солнце или при искусственном свете.</p>
+						</div>
+						<a href="#" class="palitra__slide-info-more">Подробнее</a>
+					</div>
+				</div>
+				<div class="palitra__slide" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/palitra-slide-3.jpg')">
+					<img src="<?=SITE_TEMPLATE_PATH?>/img/palitra-slide-3.jpg" class="palitra__slide-img-main" alt="">
+					<img src="<?=SITE_TEMPLATE_PATH?>/img/palitra-slide-second-3.jpg" alt="" class="palitra__slide-img-second">
+					<div class="palitra__slide-info">
+						<div class="user-content">
+							<h3>Златолит зеленый</h3>
+							<p>Присмотритесь к этому камню, если ищете украшение для участка.</p>
+							<p>Частицы кварца придают камню легкое сияние. Он будто слегка переливаются на солнце или при искусственном свете.</p>
+						</div>
+						<a href="#" class="palitra__slide-info-more">Подробнее</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- wrapper -->
+
+</section><!-- palitra-sec -->
+
+
 <section class="main-about-sec def-sec-top">
 	<div class="wrapper">
 		<div class="main-about">
@@ -293,12 +344,12 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 <section class="main-review-sec def-sec-bottom">
 	<div class="main-review__triangle-wrap">
 		<div class="main-review__triangle">
-			<img class="triangle-1 fade-top" src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-1.png" alt="" data-src="img/main-review-triangle-1.png">
-			<img class="triangle-2 fade-top" src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-2.png" alt="" data-src="img/main-review-triangle-2.png">
-			<img class="triangle-3 fade-top" src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-3.png" alt="" data-src="img/main-review-triangle-3.png">
-			<img class="triangle-4 fade-top" src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-4.png" alt="" data-src="img/main-review-triangle-4.png">
-			<img class="triangle-5 fade-top" src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-5.png" alt="" data-src="img/main-review-triangle-5.png">
-			<img class="triangle-6 fade-top" src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-6.png" alt="" data-src="img/main-review-triangle-6.png">
+			<img class="triangle-1 fade-top" src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-1.png" alt="" data-src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-1.png">
+			<img class="triangle-2 fade-top" src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-2.png" alt="" data-src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-2.png">
+			<img class="triangle-3 fade-top" src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-3.png" alt="" data-src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-3.png">
+			<img class="triangle-4 fade-top" src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-4.png" alt="" data-src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-4.png">
+			<img class="triangle-5 fade-top" src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-5.png" alt="" data-src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-5.png">
+			<img class="triangle-6 fade-top" src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-6.png" alt="" data-src="<?=SITE_TEMPLATE_PATH?>/img/main-review-triangle-6.png">
 		</div>
 	</div>
 	<div class="wrapper">

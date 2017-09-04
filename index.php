@@ -300,12 +300,12 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 <section class="main-about-sec def-sec-top">
 	<div class="wrapper">
 		<div class="main-about">
-			<div class="main-about__title">
+			<div class="main-about__title fade-top">
 				<h2 class="h1">О КОМПАНИИ</h2>
 				<p>Компания MIRTASH занимается добычей, обработкой и продажей натурального камня.</p>
 			</div>
 			<div class="main-about__items row row--middle">
-				<div class="main-about__item grid-4 grid-phone-6 grid-phonemini-12">
+				<div class="main-about__item fade-top grid-4 grid-phone-6 grid-phonemini-12">
 					<div class="main-about__item-img">
 						<img src="<?=SITE_TEMPLATE_PATH?>/img/svg/icons/icon-hand.svg" alt="">
 					</div>
@@ -314,7 +314,7 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 						<p>Мы предлагаем камень разного цвета и плотности, добытый из проверенных нами месторождений. Он безопасен и экологичен: в нем нет токсичных примесей или радиационного фона. </p>
 					</div>
 				</div>
-				<div class="main-about__item grid-4 grid-phone-6 grid-phonemini-12">
+				<div class="main-about__item fade-top grid-4 grid-phone-6 grid-phonemini-12">
 					<div class="main-about__item-img">
 						<img src="<?=SITE_TEMPLATE_PATH?>/img/svg/icons/icon-man-factory.svg" alt="">
 					</div>
@@ -323,7 +323,7 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 						<p>Полученный материал мы обрабатываем на шведском и итальянском оборудовании в брусчатку, плитку и другие изделия. Поэтому гарантируем качество каждого изделия.</p>
 					</div>
 				</div>
-				<div class="main-about__item grid-4 grid-phone-6 grid-phonemini-12">
+				<div class="main-about__item fade-top grid-4 grid-phone-6 grid-phonemini-12">
 					<div class="main-about__item-img">
 						<img src="<?=SITE_TEMPLATE_PATH?>/img/svg/icons/icon-hands-coub.svg" alt="">
 					</div>
@@ -334,7 +334,7 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 				</div>
 			</div>
 			<div class="center-btn">
-				<a href="/about/" class="btn">Подбронее о компании</a>
+				<a href="/about/" class="btn fade-top">Подбронее о компании</a>
 			</div>
 		</div>
 	</div>

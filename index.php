@@ -15,7 +15,7 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 							"PATH" => "/includes/address-work.php"
 						));?>
 					</p>
-					<a href="#" class="main-head__contact-link">Схема проезда</a>
+					<a href="https://yandex.ru/map-widget/v1/-/CBUNfZAmoB" class="main-head__contact-link" data-fancybox>Схема проезда</a>
 				</div>
 				<div class="main-head__contact-item">
 					<div class="main-head__contact-soc">

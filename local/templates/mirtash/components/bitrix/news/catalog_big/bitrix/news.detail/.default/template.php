@@ -36,7 +36,6 @@ $this->setFrameMode(true);
 							</div>
 							<div class="cart__info-title">
 								<h1><?=$arResult["NAME"]?></h1>
-								<span>Популярно</span>
 							</div>
 							<div class="user-content">
 								<? if (!empty($arResult["DETAIL_TEXT"])) : ?>

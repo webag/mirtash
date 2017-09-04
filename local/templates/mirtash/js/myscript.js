@@ -47,6 +47,12 @@ $(document).ready(function() {
 ***************************************************/
 	if($('.custom-select').length) {
 		$('.custom-select').niceSelect();
+		$('.nice-select.custom-select').on('click', function(event) {
+			$(this).closest('.nice-select.custom-select').addClass('choosed');
+		});
+		$('.nice-select.custom-select .option').on('click', function(event) {
+			$(this).closest('.nice-select.custom-select').addClass('choosed');
+		});
 	}
 /**************************************************
   End Nice Select
@@ -55,7 +61,7 @@ $(document).ready(function() {
 
 /**************************************************
 	Catalog Big Menu
-***************************************************
+***************************************************/
 
 	if($('.catalog-category__link-list').length) {
 		var catNavLink = $('.catalog-category__link-list');
@@ -95,7 +101,13 @@ $(document).ready(function() {
 			pageDots: false,
 			imagesLoaded: true,
 			lazyLoad: 1,
-			initialIndex: 1
+			initialIndex: 1,
+			arrowShape: { 
+			  x0: 15,
+			  x1: 40, y1: 25,
+			  x2: 50, y2: 25,
+			  x3: 25
+			}
 		});
 
 		// jQuery
@@ -129,7 +141,13 @@ $(document).ready(function() {
 			pageDots: false,
 			imagesLoaded: true,
 			lazyLoad: 1,
-			initialIndex: 1
+			initialIndex: 1,
+			arrowShape: { 
+			  x0: 15,
+			  x1: 40, y1: 25,
+			  x2: 50, y2: 25,
+			  x3: 25
+			}
 		});
 		var stoneSliderFlkty = $stoneSlider.data('flickity');
 
@@ -144,16 +162,30 @@ $(document).ready(function() {
 	}
 
 	if($('.palitra__slider').length) {
-		$('.palitra__slider').flickity({
+		var $palitraSliderNav = $('.palitra__slide-counter');
+		function changePalitraNav(index) {
+			$palitraSliderNav.eq(index).find('span').removeClass('active')
+			$palitraSliderNav.eq(index).find('span').eq(index).addClass('active');
+		}
+
+		var $palitraSlider = $('.palitra__slider').flickity({
 			pageDots: false,
 			imagesLoaded: true,
 			lazyLoad: 1,
-			initialIndex: 1
+			initialIndex: 1,
+			arrowShape: { 
+			  x0: 15,
+			  x1: 40, y1: 25,
+			  x2: 50, y2: 25,
+			  x3: 25
+			}
 		});
+		var palitraSliderFlkty = $palitraSlider.data('flickity');
 		var $palitraSec = $('.palitra-sec-bg');
 		$('.palitra__slider').on('select.flickity', function() {
 			var thisSlideBg = $(this).find('.is-selected').css('background-image');
 			$palitraSec.css('background-image', thisSlideBg);
+			changePalitraNav(palitraSliderFlkty.selectedIndex);
 		})
 	}
 

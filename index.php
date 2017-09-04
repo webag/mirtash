@@ -362,38 +362,87 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 				<h2 class="h1">Отзывы</h2>
 				<p>За время работы компания обрела постоянных клиентов и зарекомендовала себя только как ответственный партнер</p>
 			</div>
-			<div class="main-review__items row">
-				<div class="main-review__item grid-3 grid-tab-4 grid-phone-6 grid-phonemini-12">
-					<div class="main-review__item-text">
-						<p>«Благодарю компанию MIRTASH за внимание к клиенту. Менеджеры помогли мне разобраться в видах камня и выбрать брусчатку для загородного дома»</p>
-					</div>
-					<div class="main-review__item-about">
-						<img src="<?=SITE_TEMPLATE_PATH?>/img/main-review-item-1.png" alt="">
-						<span>Михаил Самогин</span>
-					</div>
-				</div>
-				<div class="main-review__item grid-3 grid-tab-4 grid-phone-6 grid-phonemini-12">
-					<div class="main-review__item-text">
-						<p>«Камень отличный. Я использую его в проектах по ландшафтному дизайну у своих клиентов. Мои заказы всегда есть на складе, не приходится ждать партии»</p>
-					</div>
-					<div class="main-review__item-about">
-						<img src="<?=SITE_TEMPLATE_PATH?>/img/main-review-item-2.png" alt="">
-						<span>Евгения Дердышева</span>
-					</div>
-				</div>
-				<div class="main-review__item grid-3 grid-tab-4 grid-phone-6 grid-phonemini-12">
-					<div class="main-review__item-text">
-						<p>«Мне всегда отгружают партию день в день. Ни одного битого камня, пустот нет. По квадратуре всегда хватает, без обмана. Качество всегда хорошее»</p>
-					</div>
-					<div class="main-review__item-about">
-						<img src="<?=SITE_TEMPLATE_PATH?>/img/main-review-item-3.png" alt="">
-						<span>Марат Камалеев</span>
-					</div>
-				</div>
-			</div>
+
+			<?$APPLICATION->IncludeComponent(
+				"bitrix:news.list",
+				"home_reviews",
+				array(
+					"ACTIVE_DATE_FORMAT" => "d.m.Y",
+					"ADD_ELEMENT_CHAIN" => "N",
+					"ADD_SECTIONS_CHAIN" => "N",
+					"AJAX_MODE" => "N",
+					"AJAX_OPTION_ADDITIONAL" => "",
+					"AJAX_OPTION_HISTORY" => "N",
+					"AJAX_OPTION_JUMP" => "N",
+					"AJAX_OPTION_STYLE" => "N",
+					"BROWSER_TITLE" => "-",
+					"CACHE_GROUPS" => "Y",
+					"CACHE_TIME" => "36000000",
+					"CACHE_TYPE" => "A",
+					"CHECK_DATES" => "Y",
+					"COMPOSITE_FRAME_MODE" => "A",
+					"COMPOSITE_FRAME_TYPE" => "AUTO",
+					"DETAIL_URL" => "",
+					"DISPLAY_BOTTOM_PAGER" => "N",
+					"DISPLAY_DATE" => "N",
+					"DISPLAY_NAME" => "N",
+					"DISPLAY_PICTURE" => "N",
+					"DISPLAY_PREVIEW_TEXT" => "N",
+					"DISPLAY_TOP_PAGER" => "N",
+					"ELEMENT_CODE" => "",
+					"FIELD_CODE" => array(
+						0 => "",
+						1 => "",
+					),
+					"IBLOCK_ID" => "6",
+					"IBLOCK_TYPE" => "site_info",
+					"IBLOCK_URL" => "",
+					"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+					"MESSAGE_404" => "",
+					"META_DESCRIPTION" => "-",
+					"META_KEYWORDS" => "-",
+					"PAGER_BASE_LINK_ENABLE" => "N",
+					"PAGER_SHOW_ALL" => "N",
+					"PAGER_TEMPLATE" => ".default",
+					"PAGER_TITLE" => "Страница",
+					"PROPERTY_CODE" => array(
+						0 => "",
+					),
+					"SET_BROWSER_TITLE" => "N",
+					"SET_CANONICAL_URL" => "N",
+					"SET_LAST_MODIFIED" => "N",
+					"SET_META_DESCRIPTION" => "N",
+					"SET_META_KEYWORDS" => "N",
+					"SET_STATUS_404" => "N",
+					"SET_TITLE" => "N",
+					"SHOW_404" => "N",
+					"STRICT_SECTION_CHECK" => "N",
+					"USE_PERMISSIONS" => "N",
+					"USE_SHARE" => "N",
+					"COMPONENT_TEMPLATE" => "home_reviews",
+					"NEWS_COUNT" => "20",
+					"SORT_BY1" => "SORT",
+					"SORT_ORDER1" => "ASC",
+					"SORT_BY2" => "ACTIVE_FROM",
+					"SORT_ORDER2" => "DESC",
+					"FILTER_NAME" => "",
+					"CACHE_FILTER" => "N",
+					"PREVIEW_TRUNCATE_LEN" => "",
+					"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+					"PARENT_SECTION" => "",
+					"PARENT_SECTION_CODE" => "",
+					"INCLUDE_SUBSECTIONS" => "Y",
+					"PAGER_SHOW_ALWAYS" => "N",
+					"PAGER_DESC_NUMBERING" => "N",
+					"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000"
+				),
+				false
+			);?>
+
 		</div>
-	</div><!-- wrapper -->
-</section><!-- main-review-sec -->
+	</div>
+</section>
+
 
 <section class="form-callback-sec form-callback-sec--main">
 	<div class="wrapper">

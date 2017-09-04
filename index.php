@@ -253,47 +253,86 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 			<div class="palitra__title">
 				<h2 class="h1">Палитра нашей&nbsp;продукции</h2>
 			</div>
-			<div class="palitra__slider">
-				<div class="palitra__slide" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/palitra-slide-1.jpg')">
-					<img src="<?=SITE_TEMPLATE_PATH?>/img/palitra-slide-1.jpg" class="palitra__slide-img-main" alt="">
-					<img src="<?=SITE_TEMPLATE_PATH?>/img/palitra-slide-second-1.jpg" alt="" class="palitra__slide-img-second">
-					<div class="palitra__slide-info">
-						<div class="user-content">
-							<h3>Златолит зеленый</h3>
-							<p>Присмотритесь к этому камню, если ищете украшение для участка.</p>
-							<p>Частицы кварца придают камню легкое сияние. Он будто слегка переливаются на солнце или при искусственном свете.</p>
-						</div>
-						<a href="#" class="palitra__slide-info-more">Подробнее</a>
-					</div>
-				</div>
-				<div class="palitra__slide" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/palitra-slide-2.jpg')">
-					<img src="<?=SITE_TEMPLATE_PATH?>/img/palitra-slide-2.jpg" class="palitra__slide-img-main" alt="">
-					<img src="<?=SITE_TEMPLATE_PATH?>/img/palitra-slide-second-2.jpg" alt="" class="palitra__slide-img-second">
-					<div class="palitra__slide-info">
-						<div class="user-content">
-							<h3>Златолит зеленый</h3>
-							<p>Присмотритесь к этому камню, если ищете украшение для участка.</p>
-							<p>Частицы кварца придают камню легкое сияние. Он будто слегка переливаются на солнце или при искусственном свете.</p>
-						</div>
-						<a href="#" class="palitra__slide-info-more">Подробнее</a>
-					</div>
-				</div>
-				<div class="palitra__slide" style="background-image: url('<?=SITE_TEMPLATE_PATH?>/img/palitra-slide-3.jpg')">
-					<img src="<?=SITE_TEMPLATE_PATH?>/img/palitra-slide-3.jpg" class="palitra__slide-img-main" alt="">
-					<img src="<?=SITE_TEMPLATE_PATH?>/img/palitra-slide-second-3.jpg" alt="" class="palitra__slide-img-second">
-					<div class="palitra__slide-info">
-						<div class="user-content">
-							<h3>Златолит зеленый</h3>
-							<p>Присмотритесь к этому камню, если ищете украшение для участка.</p>
-							<p>Частицы кварца придают камню легкое сияние. Он будто слегка переливаются на солнце или при искусственном свете.</p>
-						</div>
-						<a href="#" class="palitra__slide-info-more">Подробнее</a>
-					</div>
-				</div>
-			</div>
+
+			<?$APPLICATION->IncludeComponent(
+				"bitrix:news.list",
+				"home_palitra",
+				array(
+					"ACTIVE_DATE_FORMAT" => "d.m.Y",
+					"ADD_ELEMENT_CHAIN" => "N",
+					"ADD_SECTIONS_CHAIN" => "N",
+					"AJAX_MODE" => "N",
+					"AJAX_OPTION_ADDITIONAL" => "",
+					"AJAX_OPTION_HISTORY" => "N",
+					"AJAX_OPTION_JUMP" => "N",
+					"AJAX_OPTION_STYLE" => "N",
+					"BROWSER_TITLE" => "-",
+					"CACHE_GROUPS" => "Y",
+					"CACHE_TIME" => "36000000",
+					"CACHE_TYPE" => "A",
+					"CHECK_DATES" => "Y",
+					"COMPOSITE_FRAME_MODE" => "A",
+					"COMPOSITE_FRAME_TYPE" => "AUTO",
+					"DETAIL_URL" => "",
+					"DISPLAY_BOTTOM_PAGER" => "N",
+					"DISPLAY_DATE" => "N",
+					"DISPLAY_NAME" => "N",
+					"DISPLAY_PICTURE" => "N",
+					"DISPLAY_PREVIEW_TEXT" => "N",
+					"DISPLAY_TOP_PAGER" => "N",
+					"ELEMENT_CODE" => "",
+					"FIELD_CODE" => array(
+						0 => "",
+						1 => "",
+					),
+					"IBLOCK_ID" => "1",
+					"IBLOCK_TYPE" => "site_info",
+					"IBLOCK_URL" => "",
+					"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+					"MESSAGE_404" => "",
+					"META_DESCRIPTION" => "-",
+					"META_KEYWORDS" => "-",
+					"PAGER_BASE_LINK_ENABLE" => "N",
+					"PAGER_SHOW_ALL" => "N",
+					"PAGER_TEMPLATE" => ".default",
+					"PAGER_TITLE" => "Страница",
+					"PROPERTY_CODE" => array(
+						0 => "PALITRA_IMG",
+					),
+					"SET_BROWSER_TITLE" => "N",
+					"SET_CANONICAL_URL" => "N",
+					"SET_LAST_MODIFIED" => "N",
+					"SET_META_DESCRIPTION" => "N",
+					"SET_META_KEYWORDS" => "N",
+					"SET_STATUS_404" => "N",
+					"SET_TITLE" => "N",
+					"SHOW_404" => "N",
+					"STRICT_SECTION_CHECK" => "N",
+					"USE_PERMISSIONS" => "N",
+					"USE_SHARE" => "N",
+					"COMPONENT_TEMPLATE" => "home_palitra",
+					"NEWS_COUNT" => "20",
+					"SORT_BY1" => "SORT",
+					"SORT_ORDER1" => "ASC",
+					"SORT_BY2" => "ACTIVE_FROM",
+					"SORT_ORDER2" => "DESC",
+					"FILTER_NAME" => "",
+					"CACHE_FILTER" => "N",
+					"PREVIEW_TRUNCATE_LEN" => "",
+					"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+					"PARENT_SECTION" => "",
+					"PARENT_SECTION_CODE" => "",
+					"INCLUDE_SUBSECTIONS" => "Y",
+					"PAGER_SHOW_ALWAYS" => "N",
+					"PAGER_DESC_NUMBERING" => "N",
+					"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000"
+				),
+				false
+			);?>
+
+
 		</div>
 	</div><!-- wrapper -->
-
 </section><!-- palitra-sec -->
 
 

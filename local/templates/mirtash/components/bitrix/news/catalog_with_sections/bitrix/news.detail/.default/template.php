@@ -51,7 +51,7 @@ $this->setFrameMode(true);
 								<a href="/catalog/unready/">Необработанные камни</a>
 							</div>
 							<div class="cart__info-title">
-								<h1><?=$arResult["NAME"]?></h1>
+								<h1 class="h2"><?=$arResult["NAME"]?></h1>
 								<? if (!empty($arResult['PROPERTIES']['LABLE']['VALUE'])) : ?>
 									<span><?=$arResult['PROPERTIES']['LABLE']['VALUE']?></span>
 								<? endif; ?>
@@ -161,7 +161,7 @@ $this->setFrameMode(true);
 									<p>Сколько <?=$arResult["PROPERTIES"]["EDIN"]["~VALUE"]?> продукции вам необходимо?</p>
 									<input type="text" class="input-text input-text--bordered" name="user_num" data-label="Количество" placeholder="Количество">
 									<div class="center-btn">
-										<button class="btn btn--submit">заказать</button>
+										<button class="btn btn--submit btn--full">заказать</button>
 									</div>
 									<input type="hidden" value="Новая заявка" name="form_subject">
 									<input type="hidden" value="<?=$arResult['NAME']?>" name="user_product" data-label="Продукт">

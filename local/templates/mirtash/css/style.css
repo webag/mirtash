@@ -3987,7 +3987,8 @@ textarea.error {
 	font-size: 16px;
 	color: #FFF;
 	letter-spacing: .01em;
-	transition: all .3s ease;
+	background: rgba(103,184,168,0);
+	transition: background .3s ease;
 }
 
 .stone-slider__nav a:before,
@@ -3995,7 +3996,6 @@ textarea.error {
 	content: "";
 	position: absolute;
 	top: 0;
-	opacity: 0;
 	transition: all .3s ease;
 }
 
@@ -4005,7 +4005,7 @@ textarea.error {
 	height: 0;
 	border-style: solid;
 	border-width: 15px 12px 15px 0;
-	border-color: transparent #67b8a8 transparent transparent;
+	border-color: transparent rgba(103,184,168,0) transparent transparent;
 }
 
 .stone-slider__nav a:after {
@@ -4014,7 +4014,7 @@ textarea.error {
 	height: 0;
 	border-style: solid;
 	border-width: 15px 0 15px 12px;
-	border-color: transparent transparent transparent #67b8a8;
+	border-color: transparent transparent transparent rgba(103,184,168,0);
 }
 
 .stone-slider__nav a:hover {
@@ -4022,9 +4022,12 @@ textarea.error {
 	background: rgba(103,184,168,0.12);
 }
 
-.stone-slider__nav a:hover:before,
+.stone-slider__nav a:hover:before {
+	border-color: transparent rgba(103,184,168,0.12) transparent transparent;
+}
+
 .stone-slider__nav a:hover:after {
-	opacity: .12;
+	border-color: transparent transparent transparent rgba(103,184,168,0.12);
 }
 
 .stone-slider__nav a.active {
@@ -4032,17 +4035,20 @@ textarea.error {
 	background: #67b8a8;
 }
 
-.stone-slider__nav a.active:before,
+.stone-slider__nav a.active:before {
+	border-color: transparent #67b8a8 transparent transparent;
+}
+
 .stone-slider__nav a.active:after {
-	opacity: 1;
+	border-color: transparent transparent transparent #67b8a8;
 }
 
 .stone-slider__items .flickity-prev-next-button.next {
-	right: 17.5%;
+	right: calc(50% - 545px);
 }
 
 .stone-slider__items .flickity-prev-next-button.previous {
-	left: 17.5%;
+	left: calc(50% - 545px);
 }
 
 .stone-slider__item {

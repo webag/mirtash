@@ -43,26 +43,52 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 					<img src="<?=SITE_TEMPLATE_PATH?>/img/logo-main.png" alt="">
 				</div>
 				<div class="main-head__title">
-					<h1>Натуральный природный камень от российского производителя<span>для отделки и благоустройства территории</span></h1>
+					<h1>
+						<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+							"AREA_FILE_SHOW" => "file",
+							"PATH" => "/includes/home/title.php"
+						));?>
+						<span>
+							<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+								"AREA_FILE_SHOW" => "file",
+								"PATH" => "/includes/home/title_sub.php"
+							));?>
+						</span>
+					</h1>
 				</div>
 				<div class="main-head__items">
 					<div class="main-head__item">
 						<div class="main-head__item-img">
 							<img src="<?=SITE_TEMPLATE_PATH?>/img/svg/icons/icon-factory.svg" alt="">
 						</div>
-						<p>Собственное производство в&nbsp;Казани</p>
+						<p>
+							<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+								"AREA_FILE_SHOW" => "file",
+								"PATH" => "/includes/home/head_1.php"
+							));?>
+						</p>
 					</div>
 					<div class="main-head__item">
 						<div class="main-head__item-img">
 							<img src="<?=SITE_TEMPLATE_PATH?>/img/svg/icons/icon-chain.svg" alt="">
 						</div>
-						<p>Обработанный материал и&nbsp;изделия на&nbsp;заказ</p>
+						<p>
+							<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+								"AREA_FILE_SHOW" => "file",
+								"PATH" => "/includes/home/head_2.php"
+							));?>
+						</p>
 					</div>
 					<div class="main-head__item">
 						<div class="main-head__item-img">
 							<img src="<?=SITE_TEMPLATE_PATH?>/img/svg/icons/icon-boxes.svg" alt="">
 						</div>
-						<p>Запас продукции всегда в&nbsp;наличии</p>
+						<p>
+							<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+								"AREA_FILE_SHOW" => "file",
+								"PATH" => "/includes/home/head_3.php"
+							));?>
+						</p>
 					</div>
 				</div>
 				<div class="main-head__video">
@@ -82,8 +108,18 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 	<div class="wrapper">
 		<div class="offers">
 			<div class="offers__title">
-				<h2 class="h1">Популярные предложения</h2>
-				<p>Даже самые востребованные позиции всегда есть в наличии</p>
+				<h2 class="h1">
+					<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+						"AREA_FILE_SHOW" => "file",
+						"PATH" => "/includes/home/pop_tile.php"
+					));?>
+				</h2>
+				<p>
+					<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+						"AREA_FILE_SHOW" => "file",
+						"PATH" => "/includes/home/pop_subtitle.php"
+					));?>
+				</p>
 			</div>
 
 			<?$APPLICATION->IncludeComponent(
@@ -340,8 +376,18 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 	<div class="wrapper">
 		<div class="main-about">
 			<div class="main-about__title fade-top">
-				<h2 class="h1">О КОМПАНИИ</h2>
-				<p>Компания MIRTASH занимается добычей, обработкой и продажей натурального камня.</p>
+				<h2 class="h1">
+					<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+						"AREA_FILE_SHOW" => "file",
+						"PATH" => "/includes/home/about_title.php"
+					));?>
+				</h2>
+				<p>
+					<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+						"AREA_FILE_SHOW" => "file",
+						"PATH" => "/includes/home/about_subtitle.php"
+					));?>
+				</p>
 			</div>
 			<div class="main-about__items row row--middle">
 				<div class="main-about__item fade-top grid-4 grid-phone-6 grid-phonemini-12">
@@ -349,8 +395,10 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 						<img src="<?=SITE_TEMPLATE_PATH?>/img/svg/icons/icon-hand.svg" alt="">
 					</div>
 					<div class="main-about__item-text">
-						<span>Предлагаем качественный камень</span>
-						<p>Мы предлагаем камень разного цвета и плотности, добытый из проверенных нами месторождений. Он безопасен и экологичен: в нем нет токсичных примесей или радиационного фона. </p>
+						<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+							"AREA_FILE_SHOW" => "file",
+							"PATH" => "/includes/home/about_1.php"
+						));?>
 					</div>
 				</div>
 				<div class="main-about__item fade-top grid-4 grid-phone-6 grid-phonemini-12">
@@ -358,8 +406,10 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 						<img src="<?=SITE_TEMPLATE_PATH?>/img/svg/icons/icon-man-factory.svg" alt="">
 					</div>
 					<div class="main-about__item-text">
-						<span>Сами производим изделия</span>
-						<p>Полученный материал мы обрабатываем на шведском и итальянском оборудовании в брусчатку, плитку и другие изделия. Поэтому гарантируем качество каждого изделия.</p>
+						<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+							"AREA_FILE_SHOW" => "file",
+							"PATH" => "/includes/home/about_2.php"
+						));?>
 					</div>
 				</div>
 				<div class="main-about__item fade-top grid-4 grid-phone-6 grid-phonemini-12">
@@ -367,8 +417,10 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 						<img src="<?=SITE_TEMPLATE_PATH?>/img/svg/icons/icon-hands-coub.svg" alt="">
 					</div>
 					<div class="main-about__item-text">
-						<span>Предлагаем отличный сервис</span>
-						<p>Запас продукции всегда хранится на складе, чтобы вы могли сразу же забрать нужную партию. Если вы найдете в партии битый камень, мы заменим его.</p>
+						<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+							"AREA_FILE_SHOW" => "file",
+							"PATH" => "/includes/home/about_3.php"
+						));?>
 					</div>
 				</div>
 			</div>
@@ -398,8 +450,18 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 			</div>
 
 			<div class="main-review__title">
-				<h2 class="h1">Отзывы</h2>
-				<p>За время работы компания обрела постоянных клиентов и зарекомендовала себя только как ответственный партнер</p>
+				<h2 class="h1">
+					<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+						"AREA_FILE_SHOW" => "file",
+						"PATH" => "/includes/home/reviews_title.php"
+					));?>
+				</h2>
+				<p>
+					<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(
+						"AREA_FILE_SHOW" => "file",
+						"PATH" => "/includes/home/reviews_subtitle.php"
+					));?>
+				</p>
 			</div>
 
 			<?$APPLICATION->IncludeComponent(

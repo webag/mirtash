@@ -63,7 +63,7 @@ $(document).ready(function() {
 	Catalog Big Menu
 ***************************************************/
 
-	if($('.catalog-category__link-list').length) {
+	if($('.catalog-category__link-list').length && $(window).width() > 740) {
 		var catNavLink = $('.catalog-category__link-list');
 		var catNavLinkTop = catNavLink.offset().top;
 		var catNavLinkHeight = catNavLink.outerHeight();
@@ -102,6 +102,7 @@ $(document).ready(function() {
 			imagesLoaded: true,
 			lazyLoad: 1,
 			initialIndex: 1,
+			adaptiveHeight: true,
 			arrowShape: { 
 			  x0: 15,
 			  x1: 40, y1: 25,
@@ -142,6 +143,7 @@ $(document).ready(function() {
 			imagesLoaded: true,
 			lazyLoad: 1,
 			initialIndex: 1,
+			adaptiveHeight: true,
 			arrowShape: { 
 			  x0: 15,
 			  x1: 40, y1: 25,
@@ -173,6 +175,7 @@ $(document).ready(function() {
 			imagesLoaded: true,
 			lazyLoad: 1,
 			initialIndex: 1,
+			adaptiveHeight: true,
 			arrowShape: { 
 			  x0: 15,
 			  x1: 40, y1: 25,
@@ -261,7 +264,7 @@ $(document).ready(function() {
 		 */
 	function isVisible(elem) {
 		var coords = elem.getBoundingClientRect();
-		var windowHeight = document.documentElement.clientHeight;
+		var windowHeight = document.documentElement.clientHeight - 60;
 
 		// верхняя граница elem в пределах видимости ИЛИ нижняя граница видима
 		var topVisible = coords.top > 0 && coords.top < windowHeight;

@@ -19,7 +19,7 @@ $this->setFrameMode(true);
 		<div class="catalog-head">
 			<p class="h3">Каталог Mirtash</p>
 			<div class="catalog-head__links">
-				<a href="/catalog/ready/" class="catalog-head__link"><span>пиленные камни</span></a>
+				<a href="/catalog/ready/" class="catalog-head__link"><span>Обработанные камни</span></a>
 				<a href="/catalog/unready/" class="catalog-head__link active"><span>Необработанные камни</span></a>
 			</div>
 		</div>

@@ -77,7 +77,6 @@
 				"AREA_FILE_SHOW" => "file",
 				"PATH" => "/includes/phone_1.php"
 			));?>
-			<br>
 			<?$APPLICATION->IncludeComponent("bitrix:main.include","menu_phone",Array(
 				"AREA_FILE_SHOW" => "file",
 				"PATH" => "/includes/phone_2.php"

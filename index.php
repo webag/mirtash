@@ -28,9 +28,7 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 						<?$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
 							"AREA_FILE_SHOW" => "file",
 							"PATH" => "/includes/phone_1.php"
-						));?>
-						<br>
-						<?$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
+						));?><br><?$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
 							"AREA_FILE_SHOW" => "file",
 							"PATH" => "/includes/phone_2.php"
 						));?>

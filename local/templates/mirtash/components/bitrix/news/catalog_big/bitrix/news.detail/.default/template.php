@@ -91,7 +91,7 @@ $this->setFrameMode(true);
 								<? if (!empty($arResult["PROPERTIES"]["PRICE"]["VALUE"])) : ?>
 									<div class="cart__short-price">
 										<span>Стоимость:</span>
-										<span><?=$arResult["PROPERTIES"]["PRICE"]["VALUE"]?> &#8381;</span>
+										<span><?=$arResult["PROPERTIES"]["PRICE"]["VALUE"]?> <small style="font-size: 80%">&#8381;</small></span>
 									</div>
 								<? endif; ?>
 

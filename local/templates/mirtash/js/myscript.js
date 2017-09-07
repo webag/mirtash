@@ -100,7 +100,7 @@ $(document).ready(function() {
 		$('.about-gallery__slider').flickity({
 			pageDots: false,
 			imagesLoaded: true,
-			lazyLoad: 1,
+			// lazyLoad: 1,
 			initialIndex: 1,
 			adaptiveHeight: true,
 			arrowShape: { 

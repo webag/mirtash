@@ -20,11 +20,11 @@ $this->setFrameMode(true);
 	<?foreach($arResult["ITEMS"] as $arItem):?>
 		<div class="offers__item row">
 
-			<div class="offers__item-img grid-4 grid-tab-5 grid-tabvert-6 grid-phonemini-12">
+			<div class="offers__item-img grid-4 grid-tab-5 grid-tabvert-5 grid-phonemini-12">
 				<img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="<?=$arItem['NAME']?>">
 			</div>
 
-			<div class="offers__item-info grid-7 grid-tab-6 grid-tabvert-6 grid-phonemini-12">
+			<div class="offers__item-info grid-7 grid-tab-6 grid-tabvert-7 grid-phonemini-12">
 				<div class="offers__item-info-title">
 					<h4><?=$arItem['NAME']?></h4>
 					<? if (!empty($arItem['PROPERTIES']['LABEL_TEXT']['VALUE'])) : ?>

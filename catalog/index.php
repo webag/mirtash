@@ -14,7 +14,7 @@ $APPLICATION->SetTitle("Каталог");
 				<a class="catalog__item" href="/catalog/ready/">
 					<img src="<?=SITE_TEMPLATE_PATH?>/img/catalog-road-1.jpg" alt="">
 					<div class="catalog__item-info">
-						<span>Пиленные камни</span>
+						<span>Обработанные камни</span>
 					</div>
 				</a>
 				<a class="catalog__item" href="/catalog/unready/">

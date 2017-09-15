@@ -58,6 +58,16 @@ $(document).ready(function() {
   End Nice Select
 ***************************************************/
 
+/**************************************************
+  About head Title
+***************************************************/
+	setTimeout(function() {
+		$('.fade-load').addClass('loaded');
+	}, 1500);
+/**************************************************
+  End About head Title
+***************************************************/
+
 
 /**************************************************
 	Catalog Big Menu
@@ -84,6 +94,84 @@ $(document).ready(function() {
 ***************************************************/
 
 
+/***********************
+Stones BEGIN
+***********************/
+if($(window).width() > 1024) {
+	var stone_1 = new TimelineLite({ onComplete: function () { this.restart() }});
+	stone_1
+		.to($('.s1_1'), 4, {morphSVG: $('.s1_2'), ease: Power0.easeNone})
+		.to($('.s1_1'), 4, {morphSVG: $('.s1_3'), ease: Power0.easeNone})
+		.to($('.s1_1'), 4, {morphSVG: $('.s1_1'), ease: Power0.easeNone});
+
+	var stone_2 = new TimelineLite({ onComplete: function () { this.restart() }});
+	stone_2
+		.to($('.s2_1'), 5, {morphSVG: $('.s2_2'), ease: Power0.easeNone})
+		.to($('.s2_1'), 5, {morphSVG: $('.s2_3'), ease: Power0.easeNone})
+		.to($('.s2_1'), 5, {morphSVG: $('.s2_1'), ease: Power0.easeNone});
+
+	var stone_3 = new TimelineLite({ onComplete: function () { this.restart() }});
+	stone_3
+		.to($('.s3_1'), 6, {morphSVG: $('.s3_2'), ease: Power0.easeNone})
+		.to($('.s3_1'), 6, {morphSVG: $('.s3_3'), ease: Power0.easeNone})
+		.to($('.s3_1'), 6, {morphSVG: $('.s3_1'), ease: Power0.easeNone});
+
+	var stone_4 = new TimelineLite({ onComplete: function () { this.restart() }});
+	stone_4
+		.to($('.s4_1'), 7, {morphSVG: $('.s4_2'), ease: Power0.easeNone})
+		.to($('.s4_1'), 7, {morphSVG: $('.s4_3'), ease: Power0.easeNone})
+		.to($('.s4_1'), 7, {morphSVG: $('.s4_1'), ease: Power0.easeNone});
+
+	var stone_5 = new TimelineLite({ onComplete: function () { this.restart() }});
+	stone_5
+		.to($('.s5_1'), 8, {morphSVG: $('.s5_2'), ease: Power0.easeNone})
+		.to($('.s5_1'), 8, {morphSVG: $('.s5_3'), ease: Power0.easeNone})
+		.to($('.s5_1'), 8, {morphSVG: $('.s5_1'), ease: Power0.easeNone});
+
+	var stone_6 = new TimelineLite({ onComplete: function () { this.restart() }});
+	stone_6
+		.to($('.s6_1'), 5, {morphSVG: $('.s6_2'), ease: Power0.easeNone})
+		.to($('.s6_1'), 5, {morphSVG: $('.s6_3'), ease: Power0.easeNone})
+		.to($('.s6_1'), 5, {morphSVG: $('.s6_1'), ease: Power0.easeNone});
+}
+/***********************
+Stones END
+***********************/
+
+
+/**************************************************
+  Work Icons SVG
+***************************************************/
+	if($(window).width() > 1024) {
+		$thisWorkGeoIcon = $('.work-proccess__item-img').eq(0).find('img');
+		$thisWorkExcIcon = $('.work-proccess__item-img').eq(1).find('img');
+		$thisWorkOtbIcon = $('.work-proccess__item-img').eq(2).find('img');
+		$thisWorkSawIcon = $('.work-proccess__item-img').eq(3).find('img');
+		$thisWorkHomeIcon = $('.work-proccess__item-img').eq(4).find('img');
+		var key = 0;
+
+		function setWorkActive($thisIcon, key) {
+			$thisIcon.removeClass('active');
+			$thisIcon.eq(key).addClass('active');
+		};
+
+		setInterval(function(){
+			key++;
+			if (key == $thisWorkGeoIcon.length) {
+				key = 0;
+			}
+			setWorkActive($thisWorkGeoIcon, key);
+			setWorkActive($thisWorkExcIcon, key);
+			setWorkActive($thisWorkOtbIcon, key);
+			setWorkActive($thisWorkSawIcon, key);
+			setWorkActive($thisWorkHomeIcon, key);
+		}, 1000);
+	}
+/**************************************************
+  End Work Icons SVG
+***************************************************/
+
+
 /**************************************************
 	Masked input tel
 ***************************************************/
@@ -100,7 +188,7 @@ $(document).ready(function() {
 		$('.about-gallery__slider').flickity({
 			pageDots: false,
 			imagesLoaded: true,
-			// lazyLoad: 1,
+			lazyLoad: 1,
 			initialIndex: 1,
 			adaptiveHeight: true,
 			arrowShape: { 

@@ -19,8 +19,18 @@ $this->setFrameMode(true);
 		<div class="catalog-head">
 			<p class="h3">Каталог Mirtash</p>
 			<div class="catalog-head__links">
-				<a href="/catalog/ready/" class="catalog-head__link"><span>Обработанные камни</span></a>
-				<a href="/catalog/unready/" class="catalog-head__link active"><span>Необработанные камни</span></a>
+
+				<? if(CSite::InDir('/catalog/ready/index.php')): ?>
+					<a href="/catalog/ready/" class="catalog-head__link active"><span>Обработанные камни</span></a>
+				<? else:?>
+					<a href="/catalog/ready/" class="catalog-head__link"><span>Обработанные камни</span></a>
+				<? endif;?>
+
+				<? if(CSite::InDir('/catalog/unready/index.php')): ?>
+					<a href="/catalog/unready/" class="catalog-head__link active"><span>Необработанные камни</span></a>
+				<? else:?>
+					<a href="/catalog/unready/" class="catalog-head__link"><span>Необработанные камни</span></a>
+				<? endif;?>
 			</div>
 		</div>
 	</div>
@@ -45,7 +55,7 @@ $this->setFrameMode(true);
 		"ELEMENT_SORT_ORDER" => "asc",
 		"ELEMENT_SORT_ORDER2" => "DESC",
 		"FILTER_NAME" => "arrFilter",
-		"IBLOCK_ID" => "2",
+		"IBLOCK_ID" => $arParams["IBLOCK_ID"],
 		"IBLOCK_TYPE" => "catalogs",
 		"LINE_ELEMENT_COUNT" => "3",
 		"PRICE_CODE" => array(

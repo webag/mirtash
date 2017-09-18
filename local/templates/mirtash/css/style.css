@@ -6673,3 +6673,30 @@ to {
 
 }
 
+
+.about-down-link{
+	position: absolute;
+	bottom: 50px;
+	left: 0;
+	right: 0;
+	display: block;
+	margin: 0 auto;
+	width: 40px;
+	height: 40px;
+	transform: rotate(-90deg);
+	animation: downlink 0.5s ease infinite alternate;
+}
+
+.about-down-link svg{
+	fill: #FFF;
+}
+
+@keyframes downlink {
+	from{
+		transform: translate(0,-5px) rotate(-90deg);
+	}
+	to{
+		transform: translate(0,5px) rotate(-90deg);
+	}
+}
+

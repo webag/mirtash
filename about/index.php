@@ -21,10 +21,16 @@ $APPLICATION->SetTitle("О компании");
 			</div>
 		</div>
 	</div>
+
+	<a href="#about_second" class="about-down-link scrollto">
+		<svg viewBox="0 0 100 100">
+			<path d="M 15,50 L 40,75 L 50,75 L 25,50  L 50,25 L 40,25 Z"></path>
+		</svg>
+	</a>
 </section>
 
 
-<section class="about-info-sec def-sec">
+<section class="about-info-sec def-sec" id="about_second">
 	<div class="wrapper">
 		<div class="about-info">
 			<div class="row">

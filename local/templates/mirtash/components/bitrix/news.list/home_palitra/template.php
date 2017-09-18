@@ -15,6 +15,14 @@ $this->setFrameMode(true);
 
 
 <? if (!empty($arResult["ITEMS"])) : ?>
+<section class="palitra-sec def-sec">
+	<div class="palitra-sec-bg"></div>
+	<div class="wrapper">
+		<div class="palitra">
+			<div class="palitra__title">
+				<h2 class="h1">Палитра нашей&nbsp;продукции</h2>
+			</div>
+
 <div class="palitra__slider">
 
 	<?foreach($arResult["ITEMS"] as $arItem):?>
@@ -45,5 +53,8 @@ $this->setFrameMode(true);
 
 	<?endforeach;?>
 
-</div>
+			</div>
+		</div>
+	</div><!-- wrapper -->
+</section><!-- palitra-sec -->
 <? endif; ?>

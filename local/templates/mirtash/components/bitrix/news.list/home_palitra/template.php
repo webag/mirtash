@@ -16,7 +16,14 @@ $this->setFrameMode(true);
 
 <? if (!empty($arResult["ITEMS"])) : ?>
 <section class="palitra-sec def-sec">
-	<div class="palitra-sec-bg"></div>
+
+	<?foreach($arResult["ITEMS"] as $arItem):?>
+		<?
+		$img_bg = CFile::ResizeImageGet($arItem["PREVIEW_PICTURE"], array("width" => 1000, "height" => 500), BX_RESIZE_IMAGE_EXACT, true);
+		?>
+		<div class="palitra-sec-bg" style="background-image: url('<?=$img_bg['src']?>')"></div>
+	<?endforeach;?>
+
 	<div class="wrapper">
 		<div class="palitra">
 			<div class="palitra__title">

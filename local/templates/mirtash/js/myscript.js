@@ -254,7 +254,7 @@ Stones END
 	if($('.palitra__slider').length) {
 		var $palitraSliderNav = $('.palitra__slide-counter');
 		function changePalitraNav(index) {
-			$palitraSliderNav.eq(index).find('span').removeClass('active')
+			$palitraSliderNav.eq(index).find('span').removeClass('active');
 			$palitraSliderNav.eq(index).find('span').eq(index).addClass('active');
 		}
 
@@ -274,9 +274,10 @@ Stones END
 		var palitraSliderFlkty = $palitraSlider.data('flickity');
 		var $palitraSec = $('.palitra-sec-bg');
 		$('.palitra__slider').on('select.flickity', function() {
-			var thisSlideBg = $(this).find('.is-selected').css('background-image');
+			/*var thisSlideBg = $(this).find('.is-selected').css('background-image');
 			$palitraSec.css('background-image', thisSlideBg);
-			changePalitraNav(palitraSliderFlkty.selectedIndex);
+			changePalitraNav(palitraSliderFlkty.selectedIndex);*/
+			$palitraSec.removeClass('active').eq(palitraSliderFlkty.selectedIndex).addClass('active');
 		})
 	}
 

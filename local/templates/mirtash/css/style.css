@@ -4459,6 +4459,13 @@ textarea.error {
 	height: calc(100% + 40px);
 	overflow: hidden;
 	filter: blur(20px);
+	background-size: cover;
+	transition: opacity 0.5s ease;
+	opacity: 0;
+}
+
+.palitra-sec-bg.active{
+	opacity: 1;
 }
 
 .palitra {

@@ -3239,7 +3239,8 @@ textarea.error {
 }
 
 .catalog-inner__item:hover {
-	box-shadow: 0 4px 15px 0 rgba(0,0,0,0.1);
+	box-shadow: 0 5px 20px 0 rgba(0,0,0,0.1);
+	transform: translate3d(0,-3px,0);
 }
 
 .catalog-inner__item:hover:after {
@@ -3371,7 +3372,7 @@ textarea.error {
 }
 
 .contact-sec {
-	min-height: 100vh;
+	min-height: calc(100vh - 130px);
 	background: url('../img/bg-contact.jpg') no-repeat center center;
 	background-size: cover;
 }
@@ -3410,7 +3411,8 @@ textarea.error {
 	display: flex;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
-	padding-top: 130px;
+	/*padding-top: 130px;*/
+	padding-top: 25px;
 }
 
 .contact__info-col {

@@ -21,10 +21,9 @@ $this->setFrameMode(true);
 			<div class="cart__head">
 				<p>
 					<span class="h3">Каталог Mirtash</span>
-					<span class="h1">Необработанные камни</span>
+					<span class="h1"><?=$arResult["IBLOCK"]["NAME"]?></span>
 				</p>
 			</div>
-
 
 			<?
 			$item_class = "";
@@ -48,7 +47,7 @@ $this->setFrameMode(true);
 						<div class="cart__info">
 							<div class="cart__breadcrumbs">
 								<a href="/catalog/">Каталог</a>
-								<a href="/catalog/unready/">Необработанные камни</a>
+								<a href="/catalog/unready/"><?=$arResult["IBLOCK"]["NAME"]?></a>
 							</div>
 							<div class="cart__info-title">
 								<h1 class="h2"><?=$arResult["NAME"]?></h1>

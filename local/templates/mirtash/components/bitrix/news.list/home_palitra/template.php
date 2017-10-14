@@ -19,7 +19,7 @@ $this->setFrameMode(true);
 
 	<?foreach($arResult["ITEMS"] as $arItem):?>
 		<?
-		$img_bg = CFile::ResizeImageGet($arItem["PREVIEW_PICTURE"], array("width" => 1000, "height" => 500), BX_RESIZE_IMAGE_EXACT, true);
+		$img_bg = CFile::ResizeImageGet($arItem["PROPERTIES"]["PALITRA_IMG_BG"]["VALUE"], array("width" => 1000, "height" => 500), BX_RESIZE_IMAGE_EXACT, true);
 		?>
 		<div class="palitra-sec-bg" style="background-image: url('<?=$img_bg['src']?>')"></div>
 	<?endforeach;?>
@@ -34,7 +34,7 @@ $this->setFrameMode(true);
 
 	<?foreach($arResult["ITEMS"] as $arItem):?>
 		<?
-		$img = CFile::ResizeImageGet($arItem["PREVIEW_PICTURE"], array("width" => 1000, "height" => 500), BX_RESIZE_IMAGE_EXACT, true);
+		$img = CFile::ResizeImageGet($arItem["PROPERTIES"]["PALITRA_IMG_BG"]["VALUE"], array("width" => 1000, "height" => 500), BX_RESIZE_IMAGE_EXACT, true);
 		$img_min = CFile::ResizeImageGet($arItem["PROPERTIES"]["PALITRA_IMG"]["VALUE"], array("width" => 255, "height" => 255), BX_RESIZE_IMAGE_EXACT, true);
 		?>
 
@@ -47,14 +47,14 @@ $this->setFrameMode(true);
 				<?=$arItem['PREVIEW_TEXT']?>
 			</div>
 			<a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="palitra__slide-info-more">Подробнее</a>
-			<div class="palitra__slide-counter">
+			<!--<div class="palitra__slide-counter">
 				<span></span>
 				<span></span>
 				<span></span>
 				<span></span>
 				<span></span>
 				<span></span>
-			</div>
+			</div>-->
 		</div>
 	</div>
 

@@ -356,7 +356,7 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 		"CACHE_FILTER" => "N",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"PARENT_SECTION" => "",
+		"PARENT_SECTION" => "5",
 		"PARENT_SECTION_CODE" => "",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"PAGER_SHOW_ALWAYS" => "N",

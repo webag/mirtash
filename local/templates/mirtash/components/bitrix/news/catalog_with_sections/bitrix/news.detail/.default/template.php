@@ -47,7 +47,11 @@ $this->setFrameMode(true);
 						<div class="cart__info">
 							<div class="cart__breadcrumbs">
 								<a href="/catalog/">Каталог</a>
-								<a href="/catalog/unready/"><?=$arResult["IBLOCK"]["NAME"]?></a>
+								<? if(CSite::InDir('/catalog/ready/')): ?>
+									<a href="/catalog/ready/"><?=$arResult["IBLOCK"]["NAME"]?></a>
+								<? else:?>
+									<a href="/catalog/unready/"><?=$arResult["IBLOCK"]["NAME"]?></a>
+								<? endif;?>
 							</div>
 							<div class="cart__info-title">
 								<h1 class="h2"><?=$arResult["NAME"]?></h1>

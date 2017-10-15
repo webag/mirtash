@@ -4676,6 +4676,7 @@ textarea.error {
 .stone {
 	position: absolute;
 	stroke: #02cfa6;
+	transform: translate3d(1px,1px,1px);
 }
 
 .stone .hid {
@@ -4703,7 +4704,7 @@ textarea.error {
 }
 
 .main-about-sec .stone__3 {
-	top: -110px;
+	top: 20px;
 	left: 150px;
 	z-index: 1;
 }
@@ -4816,8 +4817,8 @@ h2,
 }
 
 .stone {
-	-ms-transform: scale(.8);
-	transform: scale(.8);
+	-ms-transform: scale3d(.8,0.8,0.8);
+	transform: scale3d(.8,0.8,0.8);
 }
 
 .offers-sec .stone__4 {

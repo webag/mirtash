@@ -136,6 +136,7 @@ $this->setFrameMode(true);
 									<p>Как с вами связаться?</p>
 									<input type="text" class="input-text input-text--bordered" name="user_name" placeholder="Ваше имя" data-label="Имя пользователя">
 									<input type="tel" class="input-text input-text--bordered" name="user_phone" placeholder="Номер телефона*" data-label="Телефон" data-req="true">
+									<input type="email" class="input-text input-text--bordered" name="user_email" placeholder="E-mail" data-label="E-mail">
 									<p>Выберите необходимые параметры</p>
 									<? if (!empty($arResult["PROPERTIES"]["TYPE"]["~VALUE"])) : ?>
 										<select class="custom-select" name="user_type" data-label="Тип">

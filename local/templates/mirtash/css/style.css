@@ -6739,7 +6739,7 @@ to {
 	display: block;
 	height: auto;
 	transition: opacity 0.3s ease;
-	/*transform: translate3d(0,0,0);*/
+	transform: translate3d(0,0,0);
 }
 
 .s-insta .grid-2 img:hover{

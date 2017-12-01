@@ -97,7 +97,7 @@ $(document).ready(function() {
 /***********************
 Stones BEGIN
 ***********************/
-if($(window).width() > 1024) {
+/*if($(window).width() > 1024) {
 	var stone_1 = new TimelineLite({ onComplete: function () { this.restart() }});
 	stone_1
 		.to($('.s1_1'), 4, {morphSVG: $('.s1_2'), ease: Power0.easeNone})
@@ -133,7 +133,7 @@ if($(window).width() > 1024) {
 		.to($('.s6_1'), 5, {morphSVG: $('.s6_2'), ease: Power0.easeNone})
 		.to($('.s6_1'), 5, {morphSVG: $('.s6_3'), ease: Power0.easeNone})
 		.to($('.s6_1'), 5, {morphSVG: $('.s6_1'), ease: Power0.easeNone});
-}
+}*/
 /***********************
 Stones END
 ***********************/

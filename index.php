@@ -291,8 +291,8 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 
 
 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"home_palitra",
+	"bitrix:news.list", 
+	"home_palitra", 
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_ELEMENT_CHAIN" => "N",
@@ -321,8 +321,8 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 			0 => "",
 			1 => "",
 		),
-		"IBLOCK_ID" => "1",
-		"IBLOCK_TYPE" => "site_info",
+		"IBLOCK_ID" => "2",
+		"IBLOCK_TYPE" => "catalogs",
 		"IBLOCK_URL" => "",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"MESSAGE_404" => "",
@@ -333,7 +333,9 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Страница",
 		"PROPERTY_CODE" => array(
-			0 => "PALITRA_IMG",
+			0 => "",
+			1 => "PALITRA_IMG",
+			2 => "",
 		),
 		"SET_BROWSER_TITLE" => "N",
 		"SET_CANONICAL_URL" => "N",
@@ -356,7 +358,7 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 		"CACHE_FILTER" => "N",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"PARENT_SECTION" => "5",
+		"PARENT_SECTION" => "1",
 		"PARENT_SECTION_CODE" => "",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"PAGER_SHOW_ALWAYS" => "N",
@@ -546,6 +548,20 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 			);?>
 
 		</div>
+	</div>
+</section>
+
+
+<section class="s-insta">
+	<div class="wrapper">
+		<h2 class="h1"><img src="<?=SITE_TEMPLATE_PATH?>/img/instagram.png" alt="1"></h2>
+		<a class="insta-header" href="https://www.instagram.com/mirtash_kzn/" target="_blank">
+			<img src="<?=SITE_TEMPLATE_PATH?>/img/instalogo.jpg" alt="instalogo">
+			<div class="insta-header__content">
+				<span>mirtash_kzn</span>
+			</div>
+		</a>
+		<div class="row" id="instafeed"></div>
 	</div>
 </section>
 

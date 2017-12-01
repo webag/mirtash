@@ -295,6 +295,20 @@ $APPLICATION->SetTitle("О компании");
 </section>
 
 
+<section class="s-insta">
+	<div class="wrapper">
+		<h2 class="h1"><img src="<?=SITE_TEMPLATE_PATH?>/img/instagram.png" alt="1"></h2>
+		<a class="insta-header" href="https://www.instagram.com/mirtash_kzn/" target="_blank">
+			<img src="<?=SITE_TEMPLATE_PATH?>/img/instalogo.jpg" alt="instalogo">
+			<div class="insta-header__content">
+				<span>mirtash_kzn</span>
+			</div>
+		</a>
+		<div class="row" id="instafeed"></div>
+	</div>
+</section>
+
+
 <section class="form-callback-sec form-callback-sec--about">
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 227.2 312.1" class="stone stone__2" stroke="#017b62" stroke-width="2px" fill="none" width="227" height="312">
 		<polyline class="s2_1" points="51,68.2 50.9,126.5 55.9,160.6 54.3,288.3 90.6,307.4 106.2,311.1 207.8,271 202.6,227.7 201.5,182.3 191.9,131.3 189.3,69.6 191.8,49.8 130.8,25.1 75.1,62.5 191.8,49.8 97.8,97.1 75.1,62.5 51,68.2 97.8,97.1 50.9,126.5 55.9,160.6 90.8,190.7 90.6,307.4 106.2,311.1 112.2,265.6 159.5,236.1 149.6,159.6 90.8,190.7 97.8,97.1 189.3,69.6 191.9,131.3 149.6,159.6 201.5,182.3 202.6,227.7 159.5,236.1 207.8,271 112.2,265.6 "/>

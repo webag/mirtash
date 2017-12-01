@@ -32,6 +32,7 @@
 	Asset::getInstance()->addString('<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>');
 	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/assets.js");
 	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/myscript.js");
+	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/insta.js");
 	Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . "/js/add.js");
 	Asset::getInstance()->addString('<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">');
 	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/style.css");

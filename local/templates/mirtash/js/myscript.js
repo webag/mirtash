@@ -97,18 +97,18 @@ $(document).ready(function() {
 /***********************
 Stones BEGIN
 ***********************/
-/*if($(window).width() > 1024) {
+if($(window).width() > 1024) {
 	var stone_1 = new TimelineLite({ onComplete: function () { this.restart() }});
 	stone_1
 		.to($('.s1_1'), 4, {morphSVG: $('.s1_2'), ease: Power0.easeNone})
 		.to($('.s1_1'), 4, {morphSVG: $('.s1_3'), ease: Power0.easeNone})
 		.to($('.s1_1'), 4, {morphSVG: $('.s1_1'), ease: Power0.easeNone});
 
-	var stone_2 = new TimelineLite({ onComplete: function () { this.restart() }});
+	/*var stone_2 = new TimelineLite({ onComplete: function () { this.restart() }});
 	stone_2
 		.to($('.s2_1'), 5, {morphSVG: $('.s2_2'), ease: Power0.easeNone})
 		.to($('.s2_1'), 5, {morphSVG: $('.s2_3'), ease: Power0.easeNone})
-		.to($('.s2_1'), 5, {morphSVG: $('.s2_1'), ease: Power0.easeNone});
+		.to($('.s2_1'), 5, {morphSVG: $('.s2_1'), ease: Power0.easeNone});*/
 
 	var stone_3 = new TimelineLite({ onComplete: function () { this.restart() }});
 	stone_3
@@ -128,12 +128,12 @@ Stones BEGIN
 		.to($('.s5_1'), 8, {morphSVG: $('.s5_3'), ease: Power0.easeNone})
 		.to($('.s5_1'), 8, {morphSVG: $('.s5_1'), ease: Power0.easeNone});
 
-	var stone_6 = new TimelineLite({ onComplete: function () { this.restart() }});
+	/*var stone_6 = new TimelineLite({ onComplete: function () { this.restart() }});
 	stone_6
 		.to($('.s6_1'), 5, {morphSVG: $('.s6_2'), ease: Power0.easeNone})
 		.to($('.s6_1'), 5, {morphSVG: $('.s6_3'), ease: Power0.easeNone})
-		.to($('.s6_1'), 5, {morphSVG: $('.s6_1'), ease: Power0.easeNone});
-}*/
+		.to($('.s6_1'), 5, {morphSVG: $('.s6_1'), ease: Power0.easeNone});*/
+}
 /***********************
 Stones END
 ***********************/

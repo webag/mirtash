@@ -4676,7 +4676,8 @@ textarea.error {
 .stone {
 	position: absolute;
 	stroke: #02cfa6;
-	transform: translate3d(1px,1px,1px);
+	transform: translate3d(0,0,0);
+	/*stroke-linejoin: bevel;*/
 }
 
 .stone .hid {
@@ -6757,6 +6758,7 @@ to {
 	background-size: 100% 100%;
 	z-index: 2;
 	opacity: 0.8;
+	transform: translate3d(0,0,0);
 }
 
 .s-insta .grid-2.video:after{
@@ -6770,6 +6772,7 @@ to {
 	background-size: 100% 100%;
 	z-index: 2;
 	opacity: 0.8;
+	transform: translate3d(0,0,0);
 }
 
 .insta-header{

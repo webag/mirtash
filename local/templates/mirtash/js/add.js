@@ -85,22 +85,3 @@ $(document).ready(function() {
 /***********************
 Якоря в каталоге большом END
 ***********************/
-
-/***********************
-insta BEGIN
-***********************/
-$(function($){
-	var feed = new Instafeed({
-		get: 'user',
-		userId: '3420099609',
-		clientId: '80b83cc7404d423ea0c1ece7aa520bfd',
-		accessToken: '3420099609.1677ed0.fcb5e57937fa47a68f64c85c90d8a31f',
-		limit: 12,
-		resolution: 'low_resolution',
-		template: '<div class="grid-2 grid-tab-3 grid-phone-6 {{type}}"><a href="{{link}}" target="_blank"><img src="{{image}}" /></a></div>'
-	});
-	feed.run();
-});
-/***********************
-insta END
-***********************/

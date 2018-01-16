@@ -561,7 +561,28 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 				<span>mirtash_kzn</span>
 			</div>
 		</a>
-		<div class="row" id="instafeed"></div>
+		<div class="row" id="instafeed">
+			<?
+			$username = 'mirtash_kzn';
+			$instaResult = file_get_contents('https://www.instagram.com/mirtash_kzn/?__a=1');
+			$insta = json_decode($instaResult);
+			?>
+
+			<? foreach ($insta->user->media->nodes as $post) : ?>
+				<?
+				if ($post->__typename == 'GraphSidecar'):
+					$posttype = 'carousel';
+				else:
+					$posttype = 'image';
+				endif;
+				?>
+				<div class="grid-2 grid-tab-3 grid-phone-6 <?=$posttype?>">
+					<a href="https://www.instagram.com/p/<?=$post->code?>/" target="_blank">
+						<img src="<?=$post->thumbnail_resources[2]->src?>" />
+					</a>
+				</div>
+			<? endforeach; ?>
+		</div>
 	</div>
 </section>
 

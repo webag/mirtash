@@ -61,30 +61,6 @@
 </div>
 
 
-<?
-$rsUser = CUser::GetByID(1);
-$arUser = $rsUser->Fetch();
-?>
-<script>
-/***********************
-insta BEGIN
-***********************/
-$(function($){
-var feed = new Instafeed({
-get: 'user',
-userId: '3420099609',
-clientId: '80b83cc7404d423ea0c1ece7aa520bfd',
-accessToken: '<?=$arUser["UF_INSTA"]?>',
-limit: 12,
-resolution: 'low_resolution',
-template: '<div class="grid-2 grid-tab-3 grid-phone-6 {{type}}"><a href="{{link}}" target="_blank"><img src="{{image}}" /></a></div>'
-});
-feed.run();
-});
-/***********************
-insta END
-***********************/
-</script>
 
 </body>
 </html>

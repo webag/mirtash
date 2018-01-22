@@ -568,19 +568,21 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 			$insta = json_decode($instaResult);
 			?>
 
-			<? foreach ($insta->user->media->nodes as $post) : ?>
-				<?
-				if ($post->__typename == 'GraphSidecar'):
-					$posttype = 'carousel';
-				else:
-					$posttype = 'image';
-				endif;
-				?>
-				<div class="grid-2 grid-tab-3 grid-phone-6 <?=$posttype?>">
-					<a href="https://www.instagram.com/p/<?=$post->code?>/" target="_blank">
-						<img src="<?=$post->thumbnail_resources[2]->src?>" />
-					</a>
-				</div>
+			<? foreach ($insta->user->media->nodes as $key => $post) : ?>
+				<? if ($key < 14) : ?>
+					<?
+					if ($post->__typename == 'GraphSidecar'):
+						$posttype = 'carousel';
+					else:
+						$posttype = 'image';
+					endif;
+					?>
+					<div class="grid-2 grid-tab-3 grid-phone-6 <?=$posttype?>">
+						<a href="https://www.instagram.com/p/<?=$post->code?>/" target="_blank">
+							<img src="<?=$post->thumbnail_resources[2]->src?>" />
+						</a>
+					</div>
+				<? endif; ?>
 			<? endforeach; ?>
 		</div>
 	</div>

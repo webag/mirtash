@@ -564,8 +564,19 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 		<div class="row" id="instafeed">
 			<?
 			$username = 'mirtash_kzn';
-			$instaResult = file_get_contents('https://www.instagram.com/mirtash_kzn/?__a=1');
+//			$instaResult = file_get_contents('https://www.instagram.com/mirtash_kzn/?__a=1');
+			$instaResult = file_get_contents('https://instagram.com/graphql/query/?query_id=17888483320059182&id=3420099609&first=12&after=<end_cursor>');
+
 			$insta = json_decode($instaResult);
+			?>
+
+			<?
+			global $USER;
+			if ($USER->IsAdmin()){
+				echo "<pre>";
+				print_r($instaResult);
+				echo "</pre>";
+			}
 			?>
 
 			<? foreach ($insta->user->media->nodes as $key => $post) : ?>

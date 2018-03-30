@@ -68,7 +68,7 @@ $this->setFrameMode(true);
 		"PRODUCT_QUANTITY_VARIABLE" => "quantity",
 		"PROPERTY_CODE" => array(
 			0 => "LABLE",
-			1 => "",
+			1 => "PRICE",
 		),
 		"SECTION_COUNT" => "20",
 		"SECTION_FIELDS" => array(

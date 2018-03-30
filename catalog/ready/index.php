@@ -120,8 +120,8 @@ $APPLICATION->IncludeComponent(
 -->
 
 <?$APPLICATION->IncludeComponent(
-	"bitrix:news",
-	"catalog_with_sections",
+	"bitrix:news", 
+	"catalog_with_sections", 
 	array(
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "Y",
@@ -151,13 +151,14 @@ $APPLICATION->IncludeComponent(
 		"DETAIL_PROPERTY_CODE" => array(
 			0 => "VIEW",
 			1 => "EDIN",
-			2 => "MINPART",
-			3 => "SIZE",
-			4 => "PRICE",
-			5 => "TYPE",
-			6 => "PARAMS_TABLE",
-			7 => "PHOTOS",
-			8 => "LABLE",
+			2 => "LABLE",
+			3 => "MINPART",
+			4 => "SIZE",
+			5 => "PRICE",
+			6 => "TYPE",
+			7 => "PARAMS_TABLE",
+			8 => "PHOTOS",
+			9 => "",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "N",
@@ -176,8 +177,9 @@ $APPLICATION->IncludeComponent(
 			1 => "",
 		),
 		"LIST_PROPERTY_CODE" => array(
-			0 => "TYPE",
-			1 => "",
+			0 => "PRICE",
+			1 => "TYPE",
+			2 => "",
 		),
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",

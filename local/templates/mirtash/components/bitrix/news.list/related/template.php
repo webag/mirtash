@@ -33,6 +33,9 @@ $this->setFrameMode(true);
 								</span>
 							<? endif; ?>
 							<span class="catalog-inner__item-title"><?=$arItem['NAME']?></span>
+							<? if (!empty($arItem['PROPERTIES']['PRICE']['VALUE'])) : ?>
+								<span class="catalog-inner__item-price"><img src="<?=SITE_TEMPLATE_PATH?>/img/svg/icons/price.svg" alt=""><?=$arItem['PROPERTIES']['PRICE']['VALUE'];?> &#8381;</span>
+							<? endif; ?>
 						</a>
 					<?endforeach;?>
 

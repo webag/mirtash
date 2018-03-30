@@ -3361,7 +3361,6 @@ textarea.error {
 .catalog-inner__item-title {
 	display: block;
 	min-height: 40px;
-	margin-bottom: 12px;
 	padding-top: 5px;
 	padding-left: 10%;
 	padding-right: 10%;
@@ -6799,4 +6798,26 @@ to {
 
 .insta-header:hover .insta-header__content{
 	color: #FFF;
+}
+
+
+.catalog-inner__item-price{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 12px;
+}
+
+.catalog-inner__item-price img{
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+}
+
+@media screen and (max-width: 740px) {
+	.catalog-inner__item-price{
+		margin-top: 12px;
+	}
 }

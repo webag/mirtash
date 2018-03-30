@@ -52,6 +52,9 @@ $this->setFrameMode(true);
 							<? endif; ?>
 						</span>
 						<span class="catalog-inner__item-title"><?=$arElement["NAME"];?></span>
+						<? if (!empty($arElement['PROPERTIES']['PRICE']['VALUE'])) : ?>
+							<span class="catalog-inner__item-price"><img src="<?=SITE_TEMPLATE_PATH?>/img/svg/icons/price.svg" alt=""><?=$arElement['PROPERTIES']['PRICE']['VALUE'];?> &#8381;</span>
+						<? endif; ?>
 					</a>
 				<?endforeach?>
 

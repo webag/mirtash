@@ -562,30 +562,34 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 			</div>
 		</a>
 		<div class="row" id="instafeed">
-			<?
-			$username = 'mirtash_kzn';
-			$instaResult = file_get_contents('https://www.instagram.com/mirtash_kzn/?__a=1');
 
-			$insta = json_decode($instaResult);
-			?>
-
-			<? foreach ($insta->user->media->nodes as $key => $post) : ?>
-				<? if ($key < 14) : ?>
-					<?
-					if ($post->__typename == 'GraphSidecar'):
-						$posttype = 'carousel';
-					else:
-						$posttype = 'image';
-					endif;
-					?>
-					<div class="grid-2 grid-tab-3 grid-phone-6 <?=$posttype?>">
-						<a href="https://www.instagram.com/p/<?=$post->code?>/" target="_blank">
-							<img src="<?=$post->thumbnail_resources[2]->src?>" />
-						</a>
-					</div>
-				<? endif; ?>
-			<? endforeach; ?>
 		</div>
+
+		<?
+		$rsUser = CUser::GetByID(1);
+		$arUser = $rsUser->Fetch();
+		?>
+		<script>
+			/***********************
+			 insta BEGIN
+			 ***********************/
+				$(function($){
+					var feed = new Instafeed({
+						get: 'user',
+						userId: '3420099609',
+						clientId: '80b83cc7404d423ea0c1ece7aa520bfd',
+						accessToken: '<?=$arUser["UF_INSTA"]?>',
+						limit: 12,
+						resolution: 'low_resolution',
+						template: '<div class="grid-2 grid-tab-3 grid-phone-6 {{type}}"><a href="{{link}}" target="_blank"><img src="{{image}}" /></a></div>'
+					});
+					feed.run();
+					});
+			/***********************
+			 insta END
+			 ***********************/
+				</script>
+
 	</div>
 </section>
 

@@ -2879,6 +2879,7 @@ textarea.error {
 	display: inline-block;
 	margin-left: 52px;
 	margin-right: 52px;
+	margin-bottom: 5px;
 	font-size: 14px;
 	font-weight: 700;
 	letter-spacing: .05em;

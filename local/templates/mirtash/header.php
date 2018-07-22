@@ -64,8 +64,8 @@
 			<a href="/about/" class="menu-left__menu-link">О компании</a>
 			<a href="/contacts/" class="menu-left__menu-link">Контакты</a>
 			<a href="/catalog/" class="btn">Каталог</a>
-			<a href="/catalog/ready/" class="menu-left__menu-link">Обработаные камни</a>
-			<a href="/catalog/unready/" class="menu-left__menu-link">Необработанные камни</a>
+			<!--<a href="/catalog/ready/" class="menu-left__menu-link">Обработаные камни</a>
+			<a href="/catalog/unready/" class="menu-left__menu-link">Необработанные камни</a>-->
 		</div>
 		<div class="menu-left__contact">
 			<p>

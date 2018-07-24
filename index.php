@@ -92,10 +92,10 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 				</div>
 				<div class="main-head__video">
 					<img src="<?=SITE_TEMPLATE_PATH?>/img/main-head-stone.png" alt="">
-					<a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk&autoplay=1&rel=0&controls=0&showinfo=0" data-fancybox>
+					<!--<a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk&autoplay=1&rel=0&controls=0&showinfo=0" data-fancybox>
 						<em></em>
 						<span>Смотреть видео</span>
-					</a>
+					</a>-->
 				</div>
 			</div>
 		</div>

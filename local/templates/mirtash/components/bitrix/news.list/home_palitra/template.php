@@ -46,7 +46,7 @@ $this->setFrameMode(true);
 				<h3><?=$arItem['NAME']?></h3>
 				<?=$arItem['PREVIEW_TEXT']?>
 			</div>
-			<a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="palitra__slide-info-more">Подробнее</a>
+			<!--<a href="<?/*=$arItem['DETAIL_PAGE_URL']*/?>" class="palitra__slide-info-more">Подробнее</a>-->
 			<!--<div class="palitra__slide-counter">
 				<span></span>
 				<span></span>

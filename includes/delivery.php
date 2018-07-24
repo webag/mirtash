@@ -1,0 +1,5 @@
+<h3>Доставка по Казани</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, voluptates voluptatibus. Amet animi architecto consectetur consequuntur eligendi eum impedit ipsam nihil praesentium, quidem quis, repellendus sapiente, suscipit vitae voluptates voluptatibus.</p>
+<h3>Доставка за пределы Казани</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, voluptates voluptatibus. Amet animi architecto consectetur consequuntur eligendi eum impedit ipsam nihil praesentium, quidem quis, repellendus sapiente, suscipit vitae voluptates voluptatibus.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, voluptates voluptatibus. Amet animi architecto consectetur consequuntur eligendi eum impedit ipsam nihil praesentium, quidem quis, repellendus sapiente, suscipit vitae voluptates voluptatibus.</p>

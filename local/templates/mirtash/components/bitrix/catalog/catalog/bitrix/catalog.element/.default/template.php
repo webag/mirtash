@@ -18,8 +18,6 @@ $this->setFrameMode(true);
 	<div class="wrapper">
 		<div class="cart">
 
-			<pre><? //print_r($arResult['SECTION'])?></pre>
-
 			<div class="cart__head">
 				<p>
 					<span class="h3">Каталог Mirtash</span>

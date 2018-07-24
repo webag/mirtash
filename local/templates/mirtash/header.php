@@ -62,6 +62,7 @@
 		</a>
 		<div class="menu-left__nav">
 			<a href="/about/" class="menu-left__menu-link">О компании</a>
+			<a href="/delivery/" class="menu-left__menu-link">Доставка</a>
 			<a href="/contacts/" class="menu-left__menu-link">Контакты</a>
 			<a href="/catalog/" class="btn">Каталог</a>
 			<!--<a href="/catalog/ready/" class="menu-left__menu-link">Обработаные камни</a>

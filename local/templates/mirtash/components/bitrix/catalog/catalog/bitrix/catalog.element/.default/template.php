@@ -21,7 +21,7 @@ $this->setFrameMode(true);
 			<div class="cart__head">
 				<p>
 					<span class="h3">Каталог Mirtash</span>
-					<span class="h1"><?=$arResult["SECTION"]["NAME"]?></span>
+					<span class="h1"><?=$arResult['SECTION']['PATH'][0]["NAME"]?></span>
 				</p>
 			</div>
 
@@ -47,7 +47,7 @@ $this->setFrameMode(true);
 						<div class="cart__info">
 							<div class="cart__breadcrumbs">
 								<a href="/catalog/">Каталог</a>
-								<a href="<?=$arResult['SECTION']['SECTION_PAGE_URL']?>"><?=$arResult["SECTION"]["NAME"]?></a>
+								<a href="<?=$arResult['SECTION']['PATH'][0]['SECTION_PAGE_URL']?>"><?=$arResult['SECTION']['PATH'][0]["NAME"]?></a>
 							</div>
 							<div class="cart__info-title">
 								<h1 class="h2"><?=$arResult["NAME"]?></h1>
@@ -181,14 +181,21 @@ $this->setFrameMode(true);
 
 
 
+<?
+$db_groups = CIBlockElement::GetElementGroups($arResult["ID"], true);
+while($ar_group = $db_groups->Fetch()):
+	$sections[] = $ar_group["ID"];
+endwhile;
+?>
 
 <?
 global $arrFilter;
 $arrFilter = Array(
 	"!ID" => $arResult["ID"],
-	"SECTION_ID" => $arResult["SECTION"]["PATH"][0]["ID"]
+	"SECTION_ID" => $sections[0]
 );
 ?>
+
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"related",
@@ -207,7 +214,7 @@ $arrFilter = Array(
 		"CHECK_DATES" => "Y",
 		"COMPOSITE_FRAME_MODE" => "A",
 		"COMPOSITE_FRAME_TYPE" => "AUTO",
-		"DETAIL_URL" => "",
+		"DETAIL_URL" => "/catalog/all/#ELEMENT_CODE#/",
 		"DISPLAY_BOTTOM_PAGER" => "N",
 		"DISPLAY_DATE" => "Y",
 		"DISPLAY_NAME" => "Y",
@@ -218,7 +225,7 @@ $arrFilter = Array(
 		"FILTER_NAME" => "arrFilter",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => $arResult["IBLOCK_ID"],
-		"IBLOCK_TYPE" => "site_info",
+		"IBLOCK_TYPE" => "catalogs",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"MESSAGE_404" => "",
@@ -230,7 +237,7 @@ $arrFilter = Array(
 		"PAGER_SHOW_ALWAYS" => "N",
 		"PAGER_TEMPLATE" => ".default",
 		"PAGER_TITLE" => "Новости",
-		"PARENT_SECTION" => "",
+		"PARENT_SECTION" => $arResult["SECTION"]["PATH"][0]["ID"],
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"PROPERTY_CODE" => array("PRICE"),

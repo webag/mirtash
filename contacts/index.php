@@ -75,7 +75,7 @@ $APPLICATION->SetTitle("Контакты");
 										));?>
 									</div>
 								</div>
-								<a href="#" class="contact__info-link">Карта партнера</a>
+								<a href="/kp_mirtash.docx" class="contact__info-link" target="_blank" download rel="nofollow">Карта партнера</a>
 							</div>
 						</div>
 					</div>

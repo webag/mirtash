@@ -108,7 +108,7 @@ $APPLICATION->SetTitle("Каталог");
 		"SEF_MODE" => "Y",
 		"SEF_URL_TEMPLATES" => Array(
 			"compare" => "compare.php?action=#ACTION_CODE#",
-			"element" => "#SECTION_CODE#/#ELEMENT_CODE#/",
+			"element" => "all/#ELEMENT_CODE#/",
 			"section" => "#SECTION_CODE#/",
 			"sections" => "",
 			"smart_filter" => "#SECTION_ID#/filter/#SMART_FILTER_PATH#/apply/"
@@ -116,7 +116,7 @@ $APPLICATION->SetTitle("Каталог");
 		"SET_LAST_MODIFIED" => "N",
 		"SET_STATUS_404" => "N",
 		"SET_TITLE" => "Y",
-		"SHOW_404" => "N",
+		"SHOW_404" => "Y",
 		"SHOW_DEACTIVATED" => "N",
 		"SHOW_PRICE_COUNT" => "1",
 		"SHOW_TOP_ELEMENTS" => "N",

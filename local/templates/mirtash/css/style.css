@@ -2899,8 +2899,20 @@ textarea.error {
 	transform: translateY(-50%) rotate(45deg);
 }
 
+.catalog-head__link:before {
+	content: "";
+	position: absolute;
+	left: -59px;
+	top: 50%;
+	width: 8px;
+	height: 8px;
+	background: #02CFA6;
+	-ms-transform: translateY(-50%) rotate(45deg);
+	transform: translateY(-50%) rotate(45deg);
+}
+
 .catalog-head__link:last-child:after {
-	content: none;
+	/*content: none;*/
 }
 
 .catalog-head__link span {
@@ -5134,6 +5146,9 @@ p {
 .catalog-head__link:after {
 	right: -35px;
 }
+.catalog-head__link:before{
+	left: -36px;
+}
 
 .catalog-category-sec {
 	padding-top: 45px;
@@ -6031,6 +6046,9 @@ p {
 }
 
 .catalog-head__link:after {
+	content: none;
+}
+.catalog-head__link:before{
 	content: none;
 }
 

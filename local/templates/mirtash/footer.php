@@ -61,6 +61,18 @@
 </div>
 
 
+<!-- Begin LeadBack code {literal} -->
+<script>
+	var _emv = _emv || [];
+	_emv['campaign'] = '7ac52e3f2729d1c4d45d45e1';
+
+	(function() {
+		var em = document.createElement('script'); em.type = 'text/javascript'; em.async = true;
+		em.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'leadback.ru/js/leadback.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(em, s);
+	})();
+</script>
+<!-- End LeadBack code {/literal} -->
 
 </body>
 </html>

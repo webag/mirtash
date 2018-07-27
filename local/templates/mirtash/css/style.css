@@ -6859,3 +6859,7 @@ to {
 		padding: 15px;
 	}
 }
+
+.lb-widget-panel{
+	font-size: inherit !important;
+}

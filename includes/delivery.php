@@ -1,5 +1,5 @@
-<h3>Доставка по Казани</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, voluptates voluptatibus. Amet animi architecto consectetur consequuntur eligendi eum impedit ipsam nihil praesentium, quidem quis, repellendus sapiente, suscipit vitae voluptates voluptatibus.</p>
-<h3>Доставка за пределы Казани</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, voluptates voluptatibus. Amet animi architecto consectetur consequuntur eligendi eum impedit ipsam nihil praesentium, quidem quis, repellendus sapiente, suscipit vitae voluptates voluptatibus.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, voluptates voluptatibus. Amet animi architecto consectetur consequuntur eligendi eum impedit ipsam nihil praesentium, quidem quis, repellendus sapiente, suscipit vitae voluptates voluptatibus.</p>
+<h3>Время доставки</h3>
+<p>Доставка осуществляется каждый день с 08:00-20:00, без обеда и выходных. Если указанное время не подходит, постаремся доставить в удобное для Вас время. </p>
+<h3>Транспорт и стоимость</h3>
+<p>Можем организовать доставку любым траспортом. Стоимость каждой доставки рассчитывается индивидуально, в зависимости от удаленности и вида транспорта.</p>
+<p>Самовывоз - с нашей торговой площадки. Каждый день с 08:00-20:00, без обеда и выходных. Адрес:Республика Татарстан, Высокогорский район, д. Калинино, Центральная, 101.</p>

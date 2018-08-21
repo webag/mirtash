@@ -9,7 +9,7 @@ $APPLICATION->SetTitle("Монтаж");
 
 		<div class="cart__head">
 			<span class="h3">Mirtash</span>
-			<h1 class="h1">Монтаж</h1>
+			<h1 class="h1">МОНТАЖ</h1>
 		</div>
 
 		<div class="page-text">

@@ -6753,6 +6753,13 @@ to {
 	position: relative;
 }
 
+.s-insta .grid-2 a{
+	display: block;
+	height: 0;
+	padding-bottom: 100%;
+	overflow: hidden;
+}
+
 .s-insta .grid-2 img{
 	position: relative;
 	z-index: 1;

@@ -1,11 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Mirtash - студия натурального камня");
-?>
-
-
-
-<section class="main-head-sec">
+?><section class="main-head-sec">
 	<div class="wrapper">
 		<div class="main-head">
 			<div class="main-head__contact">
@@ -589,7 +585,7 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 			/***********************
 			 insta END
 			 ***********************/
-				</script>
+			</script>
 
 	</div>
 </section>

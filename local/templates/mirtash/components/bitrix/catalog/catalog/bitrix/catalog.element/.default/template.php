@@ -103,7 +103,7 @@ $this->setFrameMode(true);
 								<?
 								$detail_img = CFile::ResizeImageGet($arResult["DETAIL_PICTURE"], array("width" => 290, "height" => 220), BX_RESIZE_IMAGE_EXACT, true);
 								?>
-								<img src="<?=$detail_img['src']?>" alt="<?=$arResult["NAME"]?>">
+								<a href="<?=$arResult["DETAIL_PICTURE"]["SRC"]?>" data-fancybox><img src="<?=$detail_img['src']?>" alt="<?=$arResult["NAME"]?>"></a>
 							<? endif; ?>
 
 							<div class="cart__short-info">

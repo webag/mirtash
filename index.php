@@ -1,7 +1,10 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Mirtash - студия натурального камня");
-?><section class="main-head-sec">
+?>
+
+
+<section class="main-head-sec">
 	<div class="wrapper">
 		<div class="main-head">
 			<div class="main-head__contact">
@@ -50,6 +53,7 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 							));?>
 						</span>
 					</h1>
+					<a href="/catalog/" class="btn">Каталог</a>
 				</div>
 				<div class="main-head__items">
 					<div class="main-head__item">
@@ -288,8 +292,8 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 
 
 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"home_palitra", 
+	"bitrix:news.list",
+	"home_palitra",
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_ELEMENT_CHAIN" => "N",

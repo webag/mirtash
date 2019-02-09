@@ -1465,7 +1465,7 @@ footer {
 	border-color: transparent #02cfa6 transparent transparent;
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-	opacity: 0;
+	opacity: 1;
 	transition: all .3s ease;
 	z-index: 0;
 }
@@ -1490,7 +1490,7 @@ footer {
 	border-color: transparent transparent transparent #02cfa6;
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-	opacity: 0;
+	opacity: 1;
 	transition: all .3s ease;
 	z-index: 0;
 }
@@ -2092,6 +2092,16 @@ textarea.error {
 	-ms-transform: rotate(45deg) translate(-80%, 0);
 	transform: rotate(45deg) translate(-80%, 0);
 	z-index: 0;
+	animation: menuGlow 1s ease infinite alternate;
+}
+
+@keyframes menuGlow {
+	from{
+		box-shadow: 0 0 0 0 rgba(2,207,166,0.8);
+	}
+	to{
+		box-shadow: 2px 0 35px 4px rgba(2,207,166,1);
+	}
 }
 
 .menu-left__opener-wrap:hover:after {
@@ -2151,6 +2161,16 @@ textarea.error {
 	-ms-transform: rotate(0deg);
 	transform: rotate(0deg);
 	transition: .25s ease-in-out;
+	animation: menuSpanGlow 1s ease infinite alternate;
+}
+
+@keyframes menuSpanGlow {
+	from{
+		background: #00382d;
+	}
+	to{
+		background: #02cfa6;
+	}
 }
 
 .menu-left__opener span:nth-child(1) {

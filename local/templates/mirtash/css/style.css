@@ -1778,7 +1778,7 @@ sup {
 	left: 5px;
 	width: 8px;
 	height: 8px;
-	background: #62290e;
+	background: #02cfa6;
 	-ms-transform: rotate(45deg);
 	transform: rotate(45deg);
 }
@@ -6916,4 +6916,8 @@ to {
 	position: absolute;
 	top: 0;
 	left: 0;
+}
+
+.user-content em{
+	font-style: italic;
 }

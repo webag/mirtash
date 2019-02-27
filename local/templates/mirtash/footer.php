@@ -7,10 +7,10 @@
 		</div>
 		<div class="grid-6 grid-tabvert-8 grid-phone-12">
 			<div class="footer__contact">
-				<?$APPLICATION->IncludeComponent("bitrix:main.include","footer_phone",Array(
+				<?/*$APPLICATION->IncludeComponent("bitrix:main.include","footer_phone",Array(
 					"AREA_FILE_SHOW" => "file",
 					"PATH" => "/includes/phone_1.php"
-				));?>
+				));*/?>
 				<?$APPLICATION->IncludeComponent("bitrix:main.include","footer_phone",Array(
 					"AREA_FILE_SHOW" => "file",
 					"PATH" => "/includes/phone_2.php"

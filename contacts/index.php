@@ -1,8 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Контакты");
+$APPLICATION->SetTitle("Контакты компании Mirtash");
 ?>
-
 
 <section class="contact-sec def-sec">
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 279.7 246" class="stone stone__4" stroke="#017b62" stroke-width="2px" fill="none" width="280" height="246">
@@ -28,11 +27,11 @@ $APPLICATION->SetTitle("Контакты");
 								<h3>Контакты</h3>
 								<div class="contact__info-callback">
 									<span>Звоните</span>
-									<?$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
+									<?/*$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
 										"AREA_FILE_SHOW" => "file",
 										"PATH" => "/includes/phone_1.php"
-									));?>
-									<br>
+									));*/?><!--
+									<br>-->
 									<?$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
 										"AREA_FILE_SHOW" => "file",
 										"PATH" => "/includes/phone_2.php"

@@ -57,6 +57,16 @@ $(document).ready(function(){
 					form[0].reset();
 				})
 			});
+
+			var userName = form.find('[name=user_name]').val();
+			var userPhone = form.find('[name=user_phone]').val();
+			var userEmail = form.find('[name=user_email]').val();
+
+			mgo.postForm({
+				name: userName,
+				email: userPhone,
+				number: userEmail
+			})
 		}
 	});
 });

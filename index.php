@@ -1,8 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("Mirtash - студия натурального камня");
+$APPLICATION->SetPageProperty("description", "Мы предлагаем природный натуральный камень разного цвета и плотности, добытый из проверенных нами месторождений. Большой выбор натурального камня в наличии на складе.");
+$APPLICATION->SetTitle("Mirtash - студия натурального камня в Казани. ");
 ?>
-
 
 <section class="main-head-sec">
 	<div class="wrapper">
@@ -25,10 +25,11 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 						));?>
 					</div>
 					<div class="main-head__contact-tel">
-						<?$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
+						<?/*$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
 							"AREA_FILE_SHOW" => "file",
 							"PATH" => "/includes/phone_1.php"
-						));?><br><?$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
+						));*/?><!--<br>-->
+						<?$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
 							"AREA_FILE_SHOW" => "file",
 							"PATH" => "/includes/phone_2.php"
 						));?>

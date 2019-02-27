@@ -69,6 +69,17 @@
 	</script>
 	<noscript><div><img src="https://mc.yandex.ru/watch/48542102" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 	<!-- /Yandex.Metrika counter -->
+
+	<script>
+		(function(w, d, u, i, o, s, p) {
+			if (d.getElementById(i)) { return; } w['MangoObject'] = o;
+			w[o] = w[o] || function() { (w[o].q = w[o].q || []).push(arguments) }; w[o].u = u; w[o].t = 1 * new Date();
+			s = d.createElement('script'); s.async = 1; s.id = i; s.src = u;
+			p = d.getElementsByTagName('script')[0]; p.parentNode.insertBefore(s, p);
+		}(window, document, '//widgets.mango-office.ru/widgets/mango.js', 'mango-js', 'mgo'));
+		mgo({calltracking: {id: 15935, elements: [{"numberText":"78432661036"}]}});
+	</script>​
+
 </head>
 <body>
 
@@ -106,10 +117,10 @@
 				"PATH" => "/includes/address-work.php"
 			));?>
 			</p>
-			<?$APPLICATION->IncludeComponent("bitrix:main.include","menu_phone",Array(
+			<?/*$APPLICATION->IncludeComponent("bitrix:main.include","menu_phone",Array(
 				"AREA_FILE_SHOW" => "file",
 				"PATH" => "/includes/phone_1.php"
-			));?>
+			));*/?>
 			<?$APPLICATION->IncludeComponent("bitrix:main.include","menu_phone",Array(
 				"AREA_FILE_SHOW" => "file",
 				"PATH" => "/includes/phone_2.php"

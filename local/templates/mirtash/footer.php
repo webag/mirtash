@@ -61,6 +61,17 @@
 </div>
 
 
+<div style="display: none">
+	<script>
+		(function(w, d, u, i, o, s, p) {
+			if (d.getElementById(i)) { return; } w['MangoObject'] = o;
+			w[o] = w[o] || function() { (w[o].q = w[o].q || []).push(arguments) }; w[o].u = u; w[o].t = 1 * new Date();
+			s = d.createElement('script'); s.async = 1; s.id = i; s.src = u;
+			p = d.getElementsByTagName('script')[0]; p.parentNode.insertBefore(s, p);
+		}(window, document, '//widgets.mango-office.ru/widgets/mango.js', 'mango-js', 'mgo'));
+		mgo({calltracking: {id: 15935, elements: [{"numberText":"78432661036"}]}});
+	</script>​
+</div>
 <!-- Begin LeadBack code {literal} -->
 <script>
 	var _emv = _emv || [];
@@ -73,6 +84,16 @@
 	})();
 </script>
 <!-- End LeadBack code {/literal} -->
+<!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+(function(){ var widget_id = 'QBmZKZpH8i';var d=document;var w=window;function l(){
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+s.src = '//code.jivosite.com/script/widget/'+widget_id
+; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);}
+if(d.readyState=='complete'){l();}else{if(w.attachEvent){w.attachEvent('onload',l);}
+else{w.addEventListener('load',l,false);}}})();
+</script>
+<!-- {/literal} END JIVOSITE CODE -->
 
 </body>
 </html>

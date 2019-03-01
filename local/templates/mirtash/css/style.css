@@ -6320,6 +6320,8 @@ p {
 	width: 49%;
 }
 
+
+
 .cart__form-wrap .form__personal {
 	margin-top: 15px;
 }
@@ -6920,4 +6922,25 @@ to {
 
 .user-content em{
 	font-style: italic;
+}
+
+.cart-phone{
+	background: #FFF;
+	box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1);
+	padding: 12px 6%;
+	margin-bottom: 10px;
+	width: 100%;
+	font-size: 20px;
+}
+
+@media screen and (max-width: 740px){
+	.cart-phone{
+		width: 49%;
+	}
+}
+
+@media screen and (max-width: 460px){
+	.cart-phone{
+		width: 100%;
+	}
 }

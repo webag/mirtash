@@ -126,6 +126,13 @@ $this->setFrameMode(true);
 							</div>
 						</div>
 
+						<div class="cart-phone">
+							<?$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
+								"AREA_FILE_SHOW" => "file",
+								"PATH" => "/includes/phone_2.php"
+							));?>
+						</div>
+
 						<div class="cart__form-wrap">
 							<div class="cart__form">
 								<form class="ajax-form">

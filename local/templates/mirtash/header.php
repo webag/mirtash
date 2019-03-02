@@ -10,11 +10,12 @@
 
 	<!--fav-->
 	<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
 	<link rel="manifest" href="/favicons/manifest.json">
-	<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#005c4a">
 	<link rel="shortcut icon" href="/favicons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-config" content="/favicons/browserconfig.xml">
 	<meta name="theme-color" content="#00372d">
 	<!--fav-->
@@ -69,6 +70,7 @@
 	</script>
 	<noscript><div><img src="https://mc.yandex.ru/watch/48542102" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 	<!-- /Yandex.Metrika counter -->
+<meta name="yandex-verification" content="4ef91cc0a5f61dcf" />
 
 </head>
 <body>

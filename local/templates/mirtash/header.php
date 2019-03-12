@@ -15,9 +15,9 @@
 	<link rel="manifest" href="/favicons/manifest.json">
 	<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#005c4a">
 	<link rel="shortcut icon" href="/favicons/favicon.ico">
-	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileColor" content="#005c4a">
 	<meta name="msapplication-config" content="/favicons/browserconfig.xml">
-	<meta name="theme-color" content="#00372d">
+	<meta name="theme-color" content="#005c4a">
 	<!--fav-->
 
 	<!-- og -->

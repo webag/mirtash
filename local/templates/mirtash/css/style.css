@@ -3601,6 +3601,18 @@ textarea.error {
 	transform: translateX(8px);
 }
 
+.main-head__mobphones{
+	display: none;
+	text-align: center;
+	margin: -15px 0 15px 0;
+}
+
+@media screen and (max-width: 740px){
+	.main-head__mobphones{
+		display: block;
+	}
+}
+
 .main-head__title h1 {
 	text-transform: uppercase;
 }
@@ -6208,18 +6220,6 @@ p {
 	overflow: visible;
 	background-size: cover;
 	background-color: #00382d;
-}
-
-.main-head__mobphones{
-	display: none;
-	text-align: center;
-	margin: -15px 0 15px 0;
-}
-
-@media screen and (max-width: 740px){
-	.main-head__mobphones{
-		display: block;
-	}
 }
 
 .main-head__contact {

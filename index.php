@@ -41,6 +41,16 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 				<div class="main-head__logo">
 					<img src="<?=SITE_TEMPLATE_PATH?>/img/svg/logo.svg" alt="">
 				</div>
+				<div class="main-head__mobphones">
+					<?$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
+						"AREA_FILE_SHOW" => "file",
+						"PATH" => "/includes/phone_2.php"
+					));?><br>
+					<?$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
+						"AREA_FILE_SHOW" => "file",
+						"PATH" => "/includes/phone_1.php"
+					));?>
+				</div>
 				<div class="main-head__title">
 					<h1>
 						<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(

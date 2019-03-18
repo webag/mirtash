@@ -3506,8 +3506,7 @@ textarea.error {
 }
 
 .main-head-sec {
-	background-color: #00382d;
-	background: url('../img/bg-main-head.jpg') no-repeat center top,#f7f2f0;
+	background: url('../img/bg-main-head.jpg') no-repeat center top,linear-gradient(to bottom,#00382d 70%,#f7f2f0 70%,#f7f2f0);
 	overflow: hidden;
 }
 

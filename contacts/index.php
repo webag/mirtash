@@ -27,14 +27,14 @@ $APPLICATION->SetTitle("Контакты компании Mirtash");
 								<h3>Контакты</h3>
 								<div class="contact__info-callback">
 									<span>Звоните</span>
-									<?/*$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
-										"AREA_FILE_SHOW" => "file",
-										"PATH" => "/includes/phone_1.php"
-									));*/?><!--
-									<br>-->
 									<?$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
 										"AREA_FILE_SHOW" => "file",
 										"PATH" => "/includes/phone_2.php"
+									));?>
+									<br>
+									<?$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
+										"AREA_FILE_SHOW" => "file",
+										"PATH" => "/includes/phone_1.php"
 									));?>
 								</div>
 								<a href="#call-back" class="btn" data-fancybox>Обратная связь</a>

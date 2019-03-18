@@ -25,13 +25,13 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 						));?>
 					</div>
 					<div class="main-head__contact-tel">
-						<?/*$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
-							"AREA_FILE_SHOW" => "file",
-							"PATH" => "/includes/phone_1.php"
-						));*/?><!--<br>-->
 						<?$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
 							"AREA_FILE_SHOW" => "file",
 							"PATH" => "/includes/phone_2.php"
+						));?><br>
+						<?$APPLICATION->IncludeComponent("bitrix:main.include","simple_phone",Array(
+							"AREA_FILE_SHOW" => "file",
+							"PATH" => "/includes/phone_1.php"
 						));?>
 					</div>
 					<a href="/contacts/" class="main-head__contact-link">Контакты</a>

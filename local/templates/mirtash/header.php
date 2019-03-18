@@ -109,13 +109,13 @@
 				"PATH" => "/includes/address-work.php"
 			));?>
 			</p>
-			<?/*$APPLICATION->IncludeComponent("bitrix:main.include","menu_phone",Array(
-				"AREA_FILE_SHOW" => "file",
-				"PATH" => "/includes/phone_1.php"
-			));*/?>
 			<?$APPLICATION->IncludeComponent("bitrix:main.include","menu_phone",Array(
 				"AREA_FILE_SHOW" => "file",
 				"PATH" => "/includes/phone_2.php"
+			));?>
+			<?$APPLICATION->IncludeComponent("bitrix:main.include","menu_phone",Array(
+				"AREA_FILE_SHOW" => "file",
+				"PATH" => "/includes/phone_1.php"
 			));?>
 			<div class="menu-left__contact-soc">
 				<?$APPLICATION->IncludeComponent("bitrix:main.include","",Array(

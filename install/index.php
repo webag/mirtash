@@ -1,9 +1,9 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetTitle("Монтаж");
+$APPLICATION->SetPageProperty("keywords", "Отделка цоколя, Мощение дорожек, Альпийская горка, Облицовка каминов, Облицовка прудов, монтаж камня, отделка камнем");
+$APPLICATION->SetPageProperty("description", "Мы занимаемся монтажом природного камня. Облицовка каминов и прудов, альпийские горки, мощение дорожек, отделка цоколей домов.");
+$APPLICATION->SetTitle("Монтаж природного камня в Казани");
 ?>
-
-
 <section class="cart-sec def-sec">
 	<div class="wrapper">
 

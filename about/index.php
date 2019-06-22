@@ -1,10 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("О компании");
-?>
-
-
-<section class="about-header-sec">
+$APPLICATION->SetPageProperty("description", "Мы занимаемся добычей, обработкой и продажей природного натурального камня. Собственное производство. Работаем по всей России.");
+$APPLICATION->SetTitle("О компании Mirtash");
+?><section class="about-header-sec">
 	<div class="wrapper">
 		<div class="row row--middle about-header">
 			<div class="grid-9 grid-phone-12">

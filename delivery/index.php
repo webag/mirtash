@@ -1,9 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetTitle("Доставка");
+$APPLICATION->SetPageProperty("description", "Мы доставляем природный камень по территории Республики Татарстан и ближайшим регионам. Вся продукция в наличии на складе. Вы всегда можете заказать у нас доставку природного камня.");
+$APPLICATION->SetTitle("Доставка природного камня по Казани, Республике Татарстан и ближайшим регионам");
 ?>
-
-
 <section class="cart-sec def-sec">
 	<div class="wrapper">
 

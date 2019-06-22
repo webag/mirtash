@@ -6974,11 +6974,54 @@ textarea.error {
 	}
 }
 
-.cart-share {
-	padding-top: 15px;
+.s-cart-related{
+	padding: 30px 0;
+	background: $gray-bg;
+}
 
-	h5 {
-		margin-bottom: 5px;
+
+.s-cart-bottom{
+	background: $gray-bg;
+	padding-bottom: 60px;
+	@media screen and (max-width: 740px) {
+		padding: 30px 0;
+	}
+}
+
+.partner-block{
+	display: block;
+	border: 2px solid $green;
+	text-align: center;
+	min-height: 111px;
+	padding: 23px;
+	transition: all 0.3s ease;
+	color: #000;
+	
+	&:hover{
+		background: $green;
+		color: #FFF;
+		box-shadow: $shadow-small;
+	}
+
+	@media screen and (max-width: 740px) {
+		margin-bottom: 20px;
+	}
+}
+
+.partner-block__title{
+	margin-bottom: 5px;
+	padding-bottom: 0;
+}
+
+.cart-share {
+	background: #FFF;
+	box-shadow: $shadow-small;
+	padding: 25px;
+	text-align: center;
+	min-height: 111px;
+
+	h4 {
+		margin-bottom: 15px;
 		padding-bottom: 0;
 	}
 }

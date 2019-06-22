@@ -6797,11 +6797,58 @@ textarea.error {
   }
 }
 
-.cart-share {
-  padding-top: 15px;
+.s-cart-related {
+  padding: 30px 0;
+  background: #F9F9F9;
 }
 
-.cart-share h5 {
+.s-cart-bottom {
+  background: #F9F9F9;
+  padding-bottom: 60px;
+}
+
+@media screen and (max-width: 740px) {
+  .s-cart-bottom {
+    padding: 30px 0;
+  }
+}
+
+.partner-block {
+  display: block;
+  border: 2px solid #02cfa6;
+  text-align: center;
+  min-height: 111px;
+  padding: 23px;
+  transition: all 0.3s ease;
+  color: #000;
+}
+
+.partner-block:hover {
+  background: #02cfa6;
+  color: #FFF;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 740px) {
+  .partner-block {
+    margin-bottom: 20px;
+  }
+}
+
+.partner-block__title {
   margin-bottom: 5px;
+  padding-bottom: 0;
+}
+
+.cart-share {
+  background: #FFF;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  text-align: center;
+  min-height: 111px;
+}
+
+.cart-share h4 {
+  margin-bottom: 15px;
   padding-bottom: 0;
 }

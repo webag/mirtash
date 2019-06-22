@@ -52,6 +52,25 @@
 	</div>
 </div>
 
+<div class="modal-wrap" id="modal-partner">
+	<div class="form-wrap">
+		<div class="form">
+			<h3>Стать партнером</h3>
+			<p>Специалист свяжется с вами в ближайшее время</p>
+			<form class="ajax-form">
+				<input type="text" class="input-text" name="user_name" placeholder="Ваше имя" data-label="Имя пользователя">
+				<input type="tel" class="input-text" name="user_phone" placeholder="Номер телефона*" data-label="Телефон" data-req="true">
+				<input type="email" class="input-text" name="user_email" placeholder="E-mail*" data-label="E-mail" data-req="true">
+				<input type="hidden" value="Хочу стать партнером" name="form_subject">
+				<div class="btnwrap-center">
+					<button class="btn btn--submit"><span>Отправить</span></button>
+				</div>
+				<span class="form__personal">Мы не передаем Вашу персональную информацию третьим лицам. Нажимая кнопку «Отправить» вы даете согласие на обработку персональных данных.</span>
+			</form>
+		</div>
+	</div>
+</div>
+
 
 <div id="modal-thanks" class="modal-wrap">
 	<div class="form">

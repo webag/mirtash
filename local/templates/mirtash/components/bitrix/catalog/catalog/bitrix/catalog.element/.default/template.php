@@ -136,12 +136,6 @@ $this->setFrameMode(true);
 								"AREA_FILE_SHOW" => "file",
 								"PATH" => "/includes/phone_1.php"
 							));?>
-							<div class="cart-share">
-								<h5>Рассказать друзьям:</h5>
-								<script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
-								<script src="https://yastatic.net/share2/share.js"></script>
-								<div class="ya-share2" data-services="vkontakte,facebook" data-counter="ig"></div>
-							</div>
 						</div>
 
 						<div class="cart__form-wrap">
@@ -198,7 +192,6 @@ $this->setFrameMode(true);
 </section>
 
 
-
 <?
 $db_groups = CIBlockElement::GetElementGroups($arResult["ID"], true);
 while($ar_group = $db_groups->Fetch()):
@@ -213,7 +206,6 @@ $arrFilter = Array(
 	"SECTION_ID" => $sections[0]
 );
 ?>
-
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"related",
@@ -274,13 +266,6 @@ $arrFilter = Array(
 	)
 );?>
 
-<?
-global $USER;
-if ($USER->IsAdmin()):
-?>
-	<pre style="font-size: 12px"><?print_r($arResult['PROPERTIES']['INTEREST']['VALUE'])?></pre>
-<?endif;?>
-
 
 <?
 global $arrFilterBuy;
@@ -288,7 +273,6 @@ $arrFilterBuy = Array(
 	"ID" => $arResult['PROPERTIES']['BUY_WITH']['VALUE'],
 );
 ?>
-
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"buy_with",
@@ -356,7 +340,6 @@ $arrFilterInterest = Array(
 	"ID" => $arResult['PROPERTIES']['INTEREST']['VALUE'],
 );
 ?>
-
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"interest",
@@ -417,6 +400,27 @@ $arrFilterInterest = Array(
 	)
 );?>
 
+
+<section class="s-cart-bottom">
+	<div class="wrapper">
+		<div class="row">
+			<div class="grid-6 grid-phone-12">
+				<a href="#modal-partner" class="partner-block" data-fancybox>
+					<div class="partner-block__title h3">Стать партнером</div>
+					<div class="partner-block__subtitle">для дизайнеров и строителей</div>
+				</a>
+			</div>
+			<div class="grid-6 grid-phone-12">
+				<div class="cart-share">
+					<h4>Рассказать друзьям:</h4>
+					<script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+					<script src="https://yastatic.net/share2/share.js"></script>
+					<div class="ya-share2" data-services="vkontakte,facebook" data-counter="ig"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 
 <section class="form-callback-sec form-callback-sec--cart">

@@ -15,7 +15,7 @@ $this->setFrameMode(true);
 
 
 <? if (!empty($arResult["ITEMS"])) : ?>
-	<section class="catalog-inner-sec">
+	<section class="s-cart-related">
 		<div class="wrapper">
 			<div class="catalog-inner">
 				<div class="catalog-inner__part">

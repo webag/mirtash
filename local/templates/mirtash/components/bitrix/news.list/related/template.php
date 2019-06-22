@@ -1,4 +1,4 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -15,33 +15,30 @@ $this->setFrameMode(true);
 
 
 <? if (!empty($arResult["ITEMS"])) : ?>
-<section class="catalog-inner-sec">
-	<div class="wrapper">
-		<div class="catalog-inner">
-			<div class="catalog-inner__part">
-				<h2 class="catalog-inner__part-title">Похожая продукция</h2>
-				<div class="catalog-inner__items">
+	<section class="catalog-inner-sec">
+		<div class="wrapper">
+			<div class="catalog-inner">
+				<div class="catalog-inner__part">
+					<h2 class="catalog-inner__part-title">Похожая продукция</h2>
+					<div class="catalog-inner__items">
 
-					<?foreach($arResult["ITEMS"] as $arItem):?>
-						<a href="<?=$arItem['DETAIL_PAGE_URL']?>" class="catalog-inner__item">
-							<? if (!empty($arItem["PREVIEW_PICTURE"]["SRC"])) : ?>
-								<?
-								$img = CFile::ResizeImageGet($arItem["PREVIEW_PICTURE"], array("width" => 250, "height" => 190), BX_RESIZE_IMAGE_EXACT, true);
-								?>
-								<span class="catalog-inner__item-img">
-									<img src="<?=$img['src']?>" alt="<?=$arItem['NAME']?>">
-								</span>
-							<? endif; ?>
-							<span class="catalog-inner__item-title"><?=$arItem['NAME']?></span>
-							<? if (!empty($arItem['PROPERTIES']['PRICE']['VALUE'])) : ?>
-								<span class="catalog-inner__item-price"><img src="<?=SITE_TEMPLATE_PATH?>/img/svg/icons/price.svg" alt=""><?=$arItem['PROPERTIES']['PRICE']['VALUE'];?> &#8381;</span>
-							<? endif; ?>
-						</a>
-					<?endforeach;?>
+						<? foreach ($arResult["ITEMS"] as $arItem): ?>
+							<?
+							$APPLICATION->IncludeComponent(
+								'bitrix:catalog.item',
+								'product_preview',
+								array(
+									'RESULT' => $arItem
+								),
+								$component,
+								array('HIDE_ICONS' => 'Y')
+							);
+							?>
+						<? endforeach; ?>
 
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 <? endif; ?>

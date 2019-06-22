@@ -20,12 +20,15 @@
 	<meta name="theme-color" content="#00382d">
 	<!--fav-->
 
-	<!-- og -->
-	<meta property="og:title" content="<?$APPLICATION->ShowTitle()?>">
-	<meta property="og:description" content='<?=$APPLICATION->ShowProperty("description");?>'/>
-	<meta property="og:type" content="website" />
-	<meta property="og:image" content='<?=$APPLICATION->ShowProperty("ogimage",SITE_TEMPLATE_PATH."/img/og.jpg");?>' />
-	<!-- og -->
+    <!-- og -->
+    <?
+    $server_url = 'https://'.$_SERVER['HTTP_HOST'];
+    ?>
+    <meta property="og:title" content="<?$APPLICATION->ShowTitle()?>">
+    <meta property="og:description" content='<?=$APPLICATION->ShowProperty("description");?>'/>
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content='<?=$server_url?><?$APPLICATION->ShowProperty("ogimage",SITE_TEMPLATE_PATH."/img/og.jpg")?>' />
+    <!-- og -->
 
 	<?
 	use Bitrix\Main\Page\Asset;

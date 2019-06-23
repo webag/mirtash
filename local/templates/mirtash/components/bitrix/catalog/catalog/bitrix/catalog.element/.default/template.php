@@ -55,6 +55,25 @@ $this->setFrameMode(true);
 									<span><?=$arResult['PROPERTIES']['LABLE']['VALUE']?></span>
 								<? endif; ?>
 							</div>
+							<?
+							global $USER;
+							if ($USER->IsAdmin()):;
+							?>
+							<div class="cart-slider">
+								<? foreach ($arResult["PROPERTIES"]["PHOTOS"]["VALUE"] as $key => $photo_id) : ?>
+									<?
+									$photo_big = CFile::ResizeImageGet($photo_id, array("width" => 1900, "height" => 1000), BX_RESIZE_IMAGE_PROPORTIONAL, true);
+									$resize_img = CFile::ResizeImageGet($photo_id, array("width" => 624, "height" => 468), BX_RESIZE_IMAGE_EXACT, true, array());
+									?>
+									<div class="cart-slider__item">
+										<img src="<?=$resize_img['src']?>" alt="<?=$arResult["NAME"]?>" class="cart-slider__item-img">
+										<a href="<?=$photo_big['src']?>" class="cart-slider__zoom fancy" data-fancybox="cart-slider">
+											<img src="<?=SITE_TEMPLATE_PATH?>/img/svg/resize.svg" alt="zoom" width="20" height="20">
+										</a>
+									</div>
+								<? endforeach; ?>
+							</div>
+							<? endif; ?>
 							<div class="user-content">
 								<? if (!empty($arResult["DETAIL_TEXT"])) : ?>
 									<h5>Описание</h5>

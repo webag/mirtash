@@ -1,7 +1,7 @@
 /***********************
  отправка формы в php BEGIN
  ***********************/
-$(document).ready(function(){
+$(function($){
 
 	$(".ajax-form").on("submit", function(event) {
 		var form = $(this);
@@ -469,6 +469,16 @@ $(function($){
 			x2: 50, y2: 25,
 			x3: 25
 		}
+	});
+
+	var cartSliderThumbs = $('.cart-slider-thumbs');
+
+	cartSliderThumbs.flickity({
+		contain: true,
+		pageDots: false,
+		prevNextButtons: false,
+		imagesLoaded: true,
+		asNavFor: '.cart-slider'
 	});
 });
 /***********************

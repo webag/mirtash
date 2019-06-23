@@ -55,10 +55,7 @@ $this->setFrameMode(true);
 									<span><?=$arResult['PROPERTIES']['LABLE']['VALUE']?></span>
 								<? endif; ?>
 							</div>
-							<?
-							global $USER;
-							if ($USER->IsAdmin()):;
-							?>
+
 							<div class="cart-slider">
 								<? foreach ($arResult["PROPERTIES"]["PHOTOS"]["VALUE"] as $key => $photo_id) : ?>
 									<?
@@ -73,7 +70,17 @@ $this->setFrameMode(true);
 									</div>
 								<? endforeach; ?>
 							</div>
-							<? endif; ?>
+							<div class="cart-slider-thumbs">
+								<? foreach ($arResult["PROPERTIES"]["PHOTOS"]["VALUE"] as $key => $photo_id) : ?>
+									<?
+									$resize_img = CFile::ResizeImageGet($photo_id, array("width" => 113, "height" => 85), BX_RESIZE_IMAGE_EXACT, true, array());
+									?>
+									<div class="cart-slider-thumbs__slide">
+										<img src="<?=$resize_img['src']?>" alt="<?=$arResult["NAME"]?>">
+									</div>
+								<? endforeach; ?>
+							</div>
+
 							<div class="user-content">
 								<? if (!empty($arResult["DETAIL_TEXT"])) : ?>
 									<h5>Описание</h5>
@@ -93,22 +100,6 @@ $this->setFrameMode(true);
 								<? endif; ?>
 							</div>
 						</div>
-
-						<? if (!empty($arResult["PROPERTIES"]["PHOTOS"]["VALUE"])) : ?>
-						<div class="cart__gallery">
-							<? foreach ($arResult["PROPERTIES"]["PHOTOS"]["VALUE"] as $key => $photo_id) : ?>
-								<?
-								$photo_big = CFile::ResizeImageGet($photo_id, array("width" => 1900, "height" => 1000), BX_RESIZE_IMAGE_PROPORTIONAL, true);
-								if ($key == 0){
-									$photo_small = CFile::ResizeImageGet($photo_id, array("width" => 694, "height" => 450), BX_RESIZE_IMAGE_EXACT, true);
-								} else {
-									$photo_small = CFile::ResizeImageGet($photo_id, array("width" => 347, "height" => 225), BX_RESIZE_IMAGE_EXACT, true);
-								}
-								?>
-								<a href="<?=$photo_big['src']?>" data-fancybox="gal-1"><img src="<?=$photo_small['src']?>" alt="<?=$arResult["NAME"]?>"></a>
-							<? endforeach; ?>
-						</div>
-						<? endif; ?>
 
 					</div>
 

@@ -424,7 +424,7 @@ $arrFilterInterest = Array(
 	<div class="wrapper">
 		<div class="row">
 			<div class="grid-6 grid-phone-12">
-				<a href="#modal-partner" class="partner-block" data-fancybox>
+				<a href="#" class="partner-block fancy-modal" data-src="#modal-partner">
 					<div class="partner-block__title h3">Стать партнером</div>
 					<div class="partner-block__subtitle">для дизайнеров и строителей</div>
 				</a>

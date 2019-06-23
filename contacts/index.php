@@ -37,7 +37,7 @@ $APPLICATION->SetTitle("Контакты компании Mirtash");
 										"PATH" => "/includes/phone_1.php"
 									));?>
 								</div>
-								<a href="#call-back" class="btn" data-fancybox>Обратная связь</a>
+								<a href="#" class="btn fancy-modal" data-src="#call-back">Обратная связь</a>
 								<div class="contact__info-callback">
 									<span>Пишите ваши вопросы и предложения</span>
 									<?$APPLICATION->IncludeComponent("bitrix:main.include","simple_email",Array(
@@ -63,7 +63,7 @@ $APPLICATION->SetTitle("Контакты компании Mirtash");
 										"PATH" => "/includes/contacts/first.php"
 									));?>
 								</div>
-								<a href="https://yandex.ru/map-widget/v1/-/CBUNfZAmoB" class="contact__info-link" data-fancybox>Схема проезда</a>
+								<a href="https://yandex.ru/map-widget/v1/-/CBUNfZAmoB" class="contact__info-link fancy-map">Схема проезда</a>
 
 								<div class="contact__info-requiz">
 									<h3>Реквизиты</h3>

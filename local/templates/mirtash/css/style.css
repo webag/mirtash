@@ -905,6 +905,45 @@ body.compensate-for-scrollbar {
   }
 }
 
+.modal-wrap {
+  display: none;
+  background: transparent;
+  padding: 0;
+}
+
+.fancybox-close-small, .fancybox-slide--html .fancybox-close-small {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 34px;
+  height: 34px;
+  padding: 6px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: #FFF;
+  opacity: 1;
+  z-index: 10;
+  outline: none;
+  cursor: pointer;
+}
+
+.fancybox-close-small:hover, .fancybox-slide--html .fancybox-close-small:hover {
+  background: #02cfa6;
+}
+
+.fancybox-close-small:hover path, .fancybox-slide--html .fancybox-close-small:hover path {
+  fill: #FFF;
+}
+
+.fancybox-slide--iframe .fancybox-close-small {
+  background: #02cfa6;
+}
+
+.fancybox-slide--iframe .fancybox-close-small path {
+  fill: #FFF;
+}
+
 html,
 body,
 div,
@@ -1607,20 +1646,6 @@ footer {
   transform: translateY(0) translateZ(0);
 }
 
-.modal-wrap {
-  display: none;
-  background: transparent;
-}
-
-.fancybox-close-small {
-  top: 20px;
-  right: 20px;
-}
-
-.fancybox-close-small:after {
-  border-radius: 0;
-}
-
 .nice-select {
   float: none;
   margin-bottom: 15px;
@@ -1700,19 +1725,6 @@ footer {
 
 .fl-right {
   float: right;
-}
-
-.modal-text {
-  padding: 15px;
-  border-radius: 5px;
-  background: #fff;
-}
-
-#modal-spasibo {
-  padding-top: 30px;
-  padding-bottom: 15px;
-  border-radius: 20px;
-  background: #FFC438;
 }
 
 .flickity-prev-next-button {

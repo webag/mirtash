@@ -1,5 +1,10 @@
 @import 'variables';
 @import 'mixins';
+@import 'reset';
+
 @import "vendors/jquery.fancybox";
+@import "vendors/flickity";
+@import "vendors/nice-select";
+
 @import "modals";
 @import 'all';

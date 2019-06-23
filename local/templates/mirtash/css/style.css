@@ -3272,7 +3272,11 @@ textarea.error {
 }
 
 .catalog-head__link:last-child:after {
-  /*content: none;*/
+  content: none;
+}
+
+.catalog-head__link:first-child:before {
+  content: none;
 }
 
 .catalog-head__link span {

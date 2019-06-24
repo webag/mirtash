@@ -22,10 +22,10 @@ switch ($arResult['PROPERTIES']['LABLE']['VALUE_XML_ID']){
 
 	<div class="catalog-inner__item-img">
 		<? if (!empty($arResult["PREVIEW_PICTURE"]["SRC"])) : ?>
-		<?
-		$img = CFile::ResizeImageGet($arResult["PREVIEW_PICTURE"], array("width" => 250, "height" => 190), BX_RESIZE_IMAGE_EXACT, true);
-		?>
-		<img src="<?= $img['src'] ?>" alt="<?= $arResult['NAME'] ?>">
+			<?
+			$img = CFile::ResizeImageGet($arResult["PREVIEW_PICTURE"], array("width" => 250, "height" => 190), BX_RESIZE_IMAGE_EXACT, true);
+			?>
+			<img src="<?= $img['src'] ?>" alt="<?= $arResult['NAME'] ?>">
 		<? endif; ?>
 		<? if (!empty($arResult['PROPERTIES']['LABLE']['VALUE'])) : ?>
 			<div class="catalog-inner__item-tag"><?=$arResult['PROPERTIES']['LABLE']['VALUE']?></div>
@@ -35,10 +35,10 @@ switch ($arResult['PROPERTIES']['LABLE']['VALUE_XML_ID']){
 	<div class="catalog-inner__item-title"><?= $arResult['NAME'] ?></div>
 
 	<? if (!empty($arResult['PROPERTIES']['PRICE']['VALUE'])) : ?>
-		<span class="catalog-inner__item-price">
+		<div class="catalog-inner__item-price">
 			<img src="<?=SITE_TEMPLATE_PATH ?>/img/svg/icons/price.svg" alt="">
 			<?= $arResult['PROPERTIES']['PRICE']['VALUE']; ?> &#8381;
-		 </span>
+		</div>
 	<? endif; ?>
 </a>
 

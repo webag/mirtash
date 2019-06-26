@@ -39,6 +39,9 @@ $this->setFrameMode(true);
 					break;
 			}
 			?>
+			<? global $USER; if ($USER->IsAdmin()): ?>
+				<pre style="font-size: 12px;"><?//print_r($arResult['PROPERTIES']['PRICE_NOTE'])?></pre>
+			<? endif; ?>
 
 			<div class="cart__item row row--middle <?=$item_class?>">
 
@@ -113,6 +116,67 @@ $this->setFrameMode(true);
 						<div class="cart__short">
 
 							<div class="cart__short-info">
+								<? if ($USER->IsAdmin()): ?>
+								<div class="variants">
+									<div class="variants__param-name"><?=$arResult['PROPERTIES']['PARAM_NAME']['VALUE']?>:</div>
+									<div class="variants__selector">
+										<? foreach ($arResult['PROPERTIES']['PRICE_VARIANT']['VALUE'] as $key=>$arOffer) : ?>
+											<? $offer = $arOffer['SUB_VALUES']?>
+											<div class="variants__selector-btn <? echo $key==0 ? 'active':''?>">
+												<?=$offer['PARAM_VALUE']['VALUE']?>
+											</div>
+										<? endforeach; ?>
+									</div>
+									<div class="h4 ">Цена:</div>
+									<div class="variants__items">
+										<? foreach ($arResult['PROPERTIES']['PRICE_VARIANT']['VALUE'] as $key=>$arOffer) : ?>
+											<? $offer = $arOffer['SUB_VALUES']?>
+											<div class="variant <? echo $key==0 ? 'active':''?>">
+												<? if ($offer['PRICE_ROZN']['VALUE']) : ?>
+													<div class="variant__row">
+														<small class="variant__row-name">Розница:</small>
+														<figure></figure>
+														<div class="variant__row-prices">
+															<div class="variant__row-price">
+																<?=$offer['PRICE_ROZN']['VALUE']?>
+																<small>&#8381;/<?=$arResult["PROPERTIES"]["EDIN"]["~VALUE"]?></small>
+															</div>
+														</div>
+													</div>
+												<? endif; ?>
+												<? if ($offer['PRICE_OPT_SMALL']['VALUE']) : ?>
+													<div class="variant__row">
+														<small class="variant__row-name">Мелкий опт:</small>
+														<figure></figure>
+														<div class="variant__row-prices">
+															<div class="variant__row-price">
+																<?=$offer['PRICE_OPT_SMALL']['VALUE']?>
+																<small>&#8381;/<?=$arResult["PROPERTIES"]["EDIN"]["~VALUE"]?></small>
+															</div>
+														</div>
+													</div>
+												<? endif; ?>
+												<? if ($offer['PRICE_OPT']['VALUE']) : ?>
+													<div class="variant__row">
+														<small class="variant__row-name">Опт:</small>
+														<figure></figure>
+														<div class="variant__row-prices">
+															<div class="variant__row-price">
+																<?=$offer['PRICE_OPT']['VALUE']?>
+																<small>&#8381;/<?=$arResult["PROPERTIES"]["EDIN"]["~VALUE"]?></small>
+															</div>
+														</div>
+													</div>
+												<? endif; ?>
+											</div>
+										<? endforeach; ?>
+									</div>
+									<? if ($arResult['PROPERTIES']['PRICE_NOTE']['VALUE']) : ?>
+										<div class="variants__note"><?=$arResult['PROPERTIES']['PRICE_NOTE']['~VALUE']['TEXT']?></div>
+									<? endif; ?>
+								</div>
+								<? endif; ?>
+
 								<? if (!empty($arResult["PROPERTIES"]["PRICE"]["VALUE"])) : ?>
 									<div class="cart__short-price">
 										<span>Стоимость:</span>

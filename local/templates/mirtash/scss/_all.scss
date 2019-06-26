@@ -289,97 +289,6 @@ footer {
 	float: right;
 }
 
-.flickity-prev-next-button {
-	background: transparent;
-}
-
-.flickity-prev-next-button:hover {
-	background: transparent;
-}
-
-.flickity-prev-next-button:hover.previous:after {
-	opacity: 1;
-	border-color: transparent $green-hover transparent transparent;
-}
-
-.flickity-prev-next-button:hover.next:after {
-	opacity: 1;
-	border-color: transparent transparent transparent $green-hover;
-}
-
-.flickity-prev-next-button svg {
-	z-index: 1;
-}
-
-.flickity-prev-next-button.previous {
-	left: 21.5%;
-}
-
-.flickity-prev-next-button.previous:after {
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: 30%;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 35px 40px 35px 0;
-	border-color: transparent #02cfa6 transparent transparent;
-	transform: translate(-50%, -50%);
-	opacity: 1;
-	transition: all .3s ease;
-	z-index: 0;
-}
-
-.flickity-prev-next-button.previous[disabled] {
-	pointer-events: none;
-}
-
-.flickity-prev-next-button.next {
-	right: 21.5%;
-}
-
-.flickity-prev-next-button.next:after {
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: 70%;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 35px 0 35px 40px;
-	border-color: transparent transparent transparent #02cfa6;
-	transform: translate(-50%, -50%);
-	opacity: 1;
-	transition: all .3s ease;
-	z-index: 0;
-}
-
-.flickity-prev-next-button.next[disabled] {
-	pointer-events: none;
-}
-
-.flickity-prev-next-button .arrow {
-	fill: #fff;
-}
-
-.flickity-page-dots .dot {
-	width: 15px;
-	height: 15px;
-	border: 2px solid #fff;
-	background: transparent;
-	opacity: 1;
-	transition: all .3s ease;
-}
-
-.flickity-page-dots .dot:hover {
-	border-color: #ccc;
-}
-
-.flickity-page-dots .dot.is-selected {
-	background: #ccc;
-	border: 2px solid #ccc;
-}
 
 .btn {
 	position: relative;
@@ -4580,16 +4489,6 @@ textarea.error {
 		margin-bottom: 10px;
 	}
 
-	.flickity-prev-next-button.previous:after {
-		opacity: 1;
-		transform: translate(-50%, -50%) scale(.7);
-	}
-
-	.flickity-prev-next-button.next:after {
-		opacity: 1;
-		transform: translate(-50%, -50%) scale(.7);
-	}
-
 	.btn {
 		padding-left: 25px;
 		padding-right: 25px;
@@ -5768,13 +5667,17 @@ textarea.error {
 }
 
 .s-cart-related{
-	padding: 30px 0;
+	padding-top: 70px;
 	background: $gray-bg;
+	@media screen and (max-width: 740px) {
+		padding-top: 40px;
+	}
 }
 
 
 .s-cart-bottom{
 	background: $gray-bg;
+	padding-top: 60px;
 	padding-bottom: 60px;
 	@media screen and (max-width: 740px) {
 		padding: 30px 0;

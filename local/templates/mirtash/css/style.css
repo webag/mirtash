@@ -7078,6 +7078,53 @@ textarea.error {
   width: 100%;
 }
 
+.cart-slider__item-imgwrap {
+  display: block;
+  position: relative;
+}
+
+.cart-slider__item-imgwrap:hover:after {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+}
+
+.cart-slider__item-imgwrap:hover:before {
+  opacity: 0.2;
+}
+
+.cart-slider__item-imgwrap:after {
+  content: '';
+  background: url("../img/svg/zoom.svg") center top no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 20px, 0);
+  transition: all 0.3s ease;
+}
+
+.cart-slider__item-imgwrap:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #FFF;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
 .cart-slider__item-img {
   display: block;
   max-width: 100%;

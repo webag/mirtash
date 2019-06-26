@@ -454,39 +454,6 @@ Stones END
 
 
 /***********************
-Cart slider BEGIN
-***********************/
-$(function($){
-	var cartSlider = $('.cart-slider');
-
-	cartSlider.flickity({
-		contain: true,
-		pageDots: false,
-		imagesLoaded: true,
-		arrowShape: {
-			x0: 15,
-			x1: 40, y1: 25,
-			x2: 50, y2: 25,
-			x3: 25
-		}
-	});
-
-	var cartSliderThumbs = $('.cart-slider-thumbs');
-
-	cartSliderThumbs.flickity({
-		contain: true,
-		pageDots: false,
-		prevNextButtons: false,
-		imagesLoaded: true,
-		asNavFor: '.cart-slider'
-	});
-});
-/***********************
-Cart slider END
-***********************/
-
-
-/***********************
  Якоря в каталоге большом BEGIN
  ***********************/
 $(document).ready(function() {
@@ -566,4 +533,41 @@ $(function () {
 });
 /***********************
  fancybox END
+ ***********************/
+
+
+/***********************
+ Cart slider BEGIN
+ ***********************/
+$(function($){
+	var cartSlider = $('.cart-slider');
+
+	cartSlider.flickity({
+		contain: true,
+		pageDots: false,
+		imagesLoaded: true,
+		arrowShape: {
+			x0: 15,
+			x1: 40, y1: 25,
+			x2: 50, y2: 25,
+			x3: 25
+		}
+	});
+
+	var cartSliderThumbs = $('.cart-slider-thumbs');
+
+	cartSliderThumbs.flickity({
+		contain: true,
+		pageDots: false,
+		prevNextButtons: false,
+		imagesLoaded: true,
+		asNavFor: '.cart-slider'
+	});
+
+	$().fancybox({
+		selector: '.fancy-cart-slider'
+	});
+});
+/***********************
+ Cart slider END
  ***********************/

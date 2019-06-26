@@ -63,10 +63,12 @@ $this->setFrameMode(true);
 									$resize_img = CFile::ResizeImageGet($photo_id, array("width" => 624, "height" => 468), BX_RESIZE_IMAGE_EXACT, true, array());
 									?>
 									<div class="cart-slider__item">
-										<img src="<?=$resize_img['src']?>" alt="<?=$arResult["NAME"]?>" class="cart-slider__item-img">
-										<a href="<?=$photo_big['src']?>" class="cart-slider__zoom fancy" data-fancybox="cart-slider">
-											<img src="<?=SITE_TEMPLATE_PATH?>/img/svg/resize.svg" alt="zoom" width="20" height="20">
+										<a href="<?=$photo_big['src']?>" class="cart-slider__item-imgwrap fancy-cart-slider" data-fancybox="cart-slider">
+											<img src="<?=$resize_img['src']?>" alt="<?=$arResult["NAME"]?>" class="cart-slider__item-img">
 										</a>
+										<div class="cart-slider__zoom fancy">
+											<img src="<?=SITE_TEMPLATE_PATH?>/img/svg/resize.svg" alt="zoom" width="20" height="20">
+										</div>
 									</div>
 								<? endforeach; ?>
 							</div>
@@ -271,138 +273,161 @@ $arrFilter = Array(
 );?>
 
 
-<?
-global $arrFilterBuy;
-$arrFilterBuy = Array(
-	"ID" => $arResult['PROPERTIES']['BUY_WITH']['VALUE'],
-);
-?>
-<?$APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"buy_with",
-	Array(
-		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"ADD_SECTIONS_CHAIN" => "N",
-		"AJAX_MODE" => "N",
-		"AJAX_OPTION_ADDITIONAL" => "",
-		"AJAX_OPTION_HISTORY" => "N",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"CACHE_FILTER" => "N",
-		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
-		"CHECK_DATES" => "Y",
-		"COMPOSITE_FRAME_MODE" => "A",
-		"COMPOSITE_FRAME_TYPE" => "AUTO",
-		"DETAIL_URL" => "/catalog/all/#ELEMENT_CODE#/",
-		"DISPLAY_BOTTOM_PAGER" => "N",
-		"DISPLAY_DATE" => "Y",
-		"DISPLAY_NAME" => "Y",
-		"DISPLAY_PICTURE" => "Y",
-		"DISPLAY_PREVIEW_TEXT" => "Y",
-		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array("", ""),
-		"FILTER_NAME" => "arrFilterBuy",
-		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => $arResult["IBLOCK_ID"],
-		"IBLOCK_TYPE" => "catalogs",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-		"INCLUDE_SUBSECTIONS" => "Y",
-		"MESSAGE_404" => "",
-		"NEWS_COUNT" => "4",
-		"PAGER_BASE_LINK_ENABLE" => "N",
-		"PAGER_DESC_NUMBERING" => "N",
-		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-		"PAGER_SHOW_ALL" => "N",
-		"PAGER_SHOW_ALWAYS" => "N",
-		"PAGER_TEMPLATE" => ".default",
-		"PAGER_TITLE" => "Новости",
-		"PARENT_SECTION" => "",
-		"PARENT_SECTION_CODE" => "",
-		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array("PRICE"),
-		"SET_BROWSER_TITLE" => "N",
-		"SET_LAST_MODIFIED" => "N",
-		"SET_META_DESCRIPTION" => "N",
-		"SET_META_KEYWORDS" => "N",
-		"SET_STATUS_404" => "N",
-		"SET_TITLE" => "N",
-		"SHOW_404" => "N",
-		"SORT_BY1" => "SORT",
-		"SORT_BY2" => "ID",
-		"SORT_ORDER1" => "ASC",
-		"SORT_ORDER2" => "DESC",
-		"STRICT_SECTION_CHECK" => "N"
-	)
-);?>
+<? if ($arResult['PROPERTIES']['BUY_WITH']['VALUE']) : ?>
+<section class="s-cart-related">
+	<div class="wrapper">
+		<div class="catalog-inner">
+			<div class="catalog-inner__part">
+				<h2 class="catalog-inner__part-title">С этим товаром покупают</h2>
+				<?
+				global $arrFilterBuy;
+				$arrFilterBuy = Array(
+					"ID" => $arResult['PROPERTIES']['BUY_WITH']['VALUE'],
+				);
+				?>
+				<?$APPLICATION->IncludeComponent(
+					"bitrix:news.list",
+					"products_items",
+					Array(
+						"ACTIVE_DATE_FORMAT" => "d.m.Y",
+						"ADD_SECTIONS_CHAIN" => "N",
+						"AJAX_MODE" => "N",
+						"AJAX_OPTION_ADDITIONAL" => "",
+						"AJAX_OPTION_HISTORY" => "N",
+						"AJAX_OPTION_JUMP" => "N",
+						"AJAX_OPTION_STYLE" => "Y",
+						"CACHE_FILTER" => "N",
+						"CACHE_GROUPS" => "Y",
+						"CACHE_TIME" => "36000000",
+						"CACHE_TYPE" => "A",
+						"CHECK_DATES" => "Y",
+						"COMPOSITE_FRAME_MODE" => "A",
+						"COMPOSITE_FRAME_TYPE" => "AUTO",
+						"DETAIL_URL" => "/catalog/all/#ELEMENT_CODE#/",
+						"DISPLAY_BOTTOM_PAGER" => "N",
+						"DISPLAY_DATE" => "Y",
+						"DISPLAY_NAME" => "Y",
+						"DISPLAY_PICTURE" => "Y",
+						"DISPLAY_PREVIEW_TEXT" => "Y",
+						"DISPLAY_TOP_PAGER" => "N",
+						"FIELD_CODE" => array("", ""),
+						"FILTER_NAME" => "arrFilterBuy",
+						"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+						"IBLOCK_ID" => $arResult["IBLOCK_ID"],
+						"IBLOCK_TYPE" => "catalogs",
+						"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+						"INCLUDE_SUBSECTIONS" => "Y",
+						"MESSAGE_404" => "",
+						"NEWS_COUNT" => "4",
+						"PAGER_BASE_LINK_ENABLE" => "N",
+						"PAGER_DESC_NUMBERING" => "N",
+						"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+						"PAGER_SHOW_ALL" => "N",
+						"PAGER_SHOW_ALWAYS" => "N",
+						"PAGER_TEMPLATE" => ".default",
+						"PAGER_TITLE" => "Новости",
+						"PARENT_SECTION" => "",
+						"PARENT_SECTION_CODE" => "",
+						"PREVIEW_TRUNCATE_LEN" => "",
+						"PROPERTY_CODE" => array("PRICE"),
+						"SET_BROWSER_TITLE" => "N",
+						"SET_LAST_MODIFIED" => "N",
+						"SET_META_DESCRIPTION" => "N",
+						"SET_META_KEYWORDS" => "N",
+						"SET_STATUS_404" => "N",
+						"SET_TITLE" => "N",
+						"SHOW_404" => "N",
+						"SORT_BY1" => "SORT",
+						"SORT_BY2" => "ID",
+						"SORT_ORDER1" => "ASC",
+						"SORT_ORDER2" => "DESC",
+						"STRICT_SECTION_CHECK" => "N"
+					)
+				);?>
+			</div>
+		</div>
+	</div>
+</section>
+<? endif; ?>
 
 
-<?
-global $arrFilterInterest;
-$arrFilterInterest = Array(
-	"ID" => $arResult['PROPERTIES']['INTEREST']['VALUE'],
-);
-?>
-<?$APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"interest",
-	Array(
-		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"ADD_SECTIONS_CHAIN" => "N",
-		"AJAX_MODE" => "N",
-		"AJAX_OPTION_ADDITIONAL" => "",
-		"AJAX_OPTION_HISTORY" => "N",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"CACHE_FILTER" => "N",
-		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
-		"CHECK_DATES" => "Y",
-		"COMPOSITE_FRAME_MODE" => "A",
-		"COMPOSITE_FRAME_TYPE" => "AUTO",
-		"DETAIL_URL" => "/catalog/all/#ELEMENT_CODE#/",
-		"DISPLAY_BOTTOM_PAGER" => "N",
-		"DISPLAY_DATE" => "Y",
-		"DISPLAY_NAME" => "Y",
-		"DISPLAY_PICTURE" => "Y",
-		"DISPLAY_PREVIEW_TEXT" => "Y",
-		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array("", ""),
-		"FILTER_NAME" => "arrFilterInterest",
-		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => $arResult["IBLOCK_ID"],
-		"IBLOCK_TYPE" => "catalogs",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-		"INCLUDE_SUBSECTIONS" => "Y",
-		"MESSAGE_404" => "",
-		"NEWS_COUNT" => "4",
-		"PAGER_BASE_LINK_ENABLE" => "N",
-		"PAGER_DESC_NUMBERING" => "N",
-		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-		"PAGER_SHOW_ALL" => "N",
-		"PAGER_SHOW_ALWAYS" => "N",
-		"PAGER_TEMPLATE" => ".default",
-		"PAGER_TITLE" => "Новости",
-		"PARENT_SECTION" => "",
-		"PARENT_SECTION_CODE" => "",
-		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array("PRICE"),
-		"SET_BROWSER_TITLE" => "N",
-		"SET_LAST_MODIFIED" => "N",
-		"SET_META_DESCRIPTION" => "N",
-		"SET_META_KEYWORDS" => "N",
-		"SET_STATUS_404" => "N",
-		"SET_TITLE" => "N",
-		"SHOW_404" => "N",
-		"SORT_BY1" => "SORT",
-		"SORT_BY2" => "ID",
-		"SORT_ORDER1" => "ASC",
-		"SORT_ORDER2" => "DESC",
-		"STRICT_SECTION_CHECK" => "N"
-	)
-);?>
+<? if ($arResult['PROPERTIES']['INTEREST']['VALUE']) : ?>
+
+<section class="s-cart-related">
+	<div class="wrapper">
+		<div class="catalog-inner">
+			<div class="catalog-inner__part">
+				<h2 class="catalog-inner__part-title">Вас может заинтересовать</h2>
+				<?
+				global $arrFilterInterest;
+				$arrFilterInterest = Array(
+					"ID" => $arResult['PROPERTIES']['INTEREST']['VALUE'],
+				);
+				?>
+				<?$APPLICATION->IncludeComponent(
+					"bitrix:news.list",
+					"products_items",
+					Array(
+						"ACTIVE_DATE_FORMAT" => "d.m.Y",
+						"ADD_SECTIONS_CHAIN" => "N",
+						"AJAX_MODE" => "N",
+						"AJAX_OPTION_ADDITIONAL" => "",
+						"AJAX_OPTION_HISTORY" => "N",
+						"AJAX_OPTION_JUMP" => "N",
+						"AJAX_OPTION_STYLE" => "Y",
+						"CACHE_FILTER" => "N",
+						"CACHE_GROUPS" => "Y",
+						"CACHE_TIME" => "36000000",
+						"CACHE_TYPE" => "A",
+						"CHECK_DATES" => "Y",
+						"COMPOSITE_FRAME_MODE" => "A",
+						"COMPOSITE_FRAME_TYPE" => "AUTO",
+						"DETAIL_URL" => "/catalog/all/#ELEMENT_CODE#/",
+						"DISPLAY_BOTTOM_PAGER" => "N",
+						"DISPLAY_DATE" => "Y",
+						"DISPLAY_NAME" => "Y",
+						"DISPLAY_PICTURE" => "Y",
+						"DISPLAY_PREVIEW_TEXT" => "Y",
+						"DISPLAY_TOP_PAGER" => "N",
+						"FIELD_CODE" => array("", ""),
+						"FILTER_NAME" => "arrFilterInterest",
+						"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+						"IBLOCK_ID" => $arResult["IBLOCK_ID"],
+						"IBLOCK_TYPE" => "catalogs",
+						"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+						"INCLUDE_SUBSECTIONS" => "Y",
+						"MESSAGE_404" => "",
+						"NEWS_COUNT" => "4",
+						"PAGER_BASE_LINK_ENABLE" => "N",
+						"PAGER_DESC_NUMBERING" => "N",
+						"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+						"PAGER_SHOW_ALL" => "N",
+						"PAGER_SHOW_ALWAYS" => "N",
+						"PAGER_TEMPLATE" => ".default",
+						"PAGER_TITLE" => "Новости",
+						"PARENT_SECTION" => "",
+						"PARENT_SECTION_CODE" => "",
+						"PREVIEW_TRUNCATE_LEN" => "",
+						"PROPERTY_CODE" => array("PRICE"),
+						"SET_BROWSER_TITLE" => "N",
+						"SET_LAST_MODIFIED" => "N",
+						"SET_META_DESCRIPTION" => "N",
+						"SET_META_KEYWORDS" => "N",
+						"SET_STATUS_404" => "N",
+						"SET_TITLE" => "N",
+						"SHOW_404" => "N",
+						"SORT_BY1" => "SORT",
+						"SORT_BY2" => "ID",
+						"SORT_ORDER1" => "ASC",
+						"SORT_ORDER2" => "DESC",
+						"STRICT_SECTION_CHECK" => "N"
+					)
+				);?>
+			</div>
+		</div>
+	</div>
+</section>
+<? endif; ?>
 
 
 <section class="s-cart-bottom">
@@ -419,7 +444,7 @@ $arrFilterInterest = Array(
 					<h4>Рассказать друзьям:</h4>
 					<script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
 					<script src="https://yastatic.net/share2/share.js"></script>
-					<div class="ya-share2" data-services="vkontakte,facebook" data-counter="ig"></div>
+					<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,viber,whatsapp,skype,telegram"></div>
 				</div>
 			</div>
 		</div>

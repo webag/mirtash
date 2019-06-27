@@ -69,11 +69,27 @@ $this->setFrameMode(true);
 										<a href="<?=$photo_big['src']?>" class="cart-slider__item-imgwrap fancy-cart-slider" data-fancybox="cart-slider">
 											<img src="<?=$resize_img['src']?>" alt="<?=$arResult["NAME"]?>" class="cart-slider__item-img">
 										</a>
-										<div class="cart-slider__zoom fancy">
+										<div class="cart-slider__zoom">
 											<img src="<?=SITE_TEMPLATE_PATH?>/img/svg/resize.svg" alt="zoom" width="20" height="20">
 										</div>
 									</div>
 								<? endforeach; ?>
+								<? if ($arResult["PROPERTIES"]["VIDEO"]["VALUE"]) : ?>
+									<? foreach ($arResult["PROPERTIES"]["VIDEO"]["VALUE"] as $arVideo) : ?>
+										<? $video = $arVideo['SUB_VALUES']?>
+										<?
+										$resize_img = CFile::ResizeImageGet($video['VIDEO_COVER']['VALUE'], array("width" => 624, "height" => 468), BX_RESIZE_IMAGE_EXACT, true, array());
+										?>
+										<div class="cart-slider__item">
+											<a href="<?=$video['VIDEO_LINK']['VALUE']?>" class="cart-slider__item-video fancy-cart-slider" data-fancybox="cart-slider">
+												<img src="<?=$resize_img['src']?>" alt="<?=$arResult["NAME"]?>" class="cart-slider__item-img">
+											</a>
+											<div class="cart-slider__zoom">
+												<img src="<?=SITE_TEMPLATE_PATH?>/img/svg/resize.svg" alt="zoom" width="20" height="20">
+											</div>
+										</div>
+									<? endforeach; ?>
+								<? endif; ?>
 							</div>
 							<div class="cart-slider-thumbs">
 								<? foreach ($arResult["PROPERTIES"]["PHOTOS"]["VALUE"] as $key => $photo_id) : ?>
@@ -84,6 +100,17 @@ $this->setFrameMode(true);
 										<img src="<?=$resize_img['src']?>" alt="<?=$arResult["NAME"]?>">
 									</div>
 								<? endforeach; ?>
+								<? if ($arResult["PROPERTIES"]["VIDEO"]["VALUE"]) : ?>
+									<? foreach ($arResult["PROPERTIES"]["VIDEO"]["VALUE"] as $arVideo) : ?>
+										<? $video = $arVideo['SUB_VALUES']?>
+										<?
+										$resize_img = CFile::ResizeImageGet($video['VIDEO_COVER']['VALUE'], array("width" => 113, "height" => 85), BX_RESIZE_IMAGE_EXACT, true, array());
+										?>
+										<div class="cart-slider-thumbs__slide cart-slider-thumbs__slide--video">
+											<img src="<?=$resize_img['src']?>" alt="<?=$arResult["NAME"]?>">
+										</div>
+									<? endforeach; ?>
+								<? endif; ?>
 							</div>
 
 							<div class="cart__short-info--mob">

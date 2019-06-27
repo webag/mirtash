@@ -98,7 +98,7 @@ $this->setFrameMode(true);
 												</div>
 											<? endforeach; ?>
 										</div>
-										<div class="h4 ">Цена</div>
+										<div class="h4">Цена</div>
 										<div class="variants__items">
 											<? foreach ($arResult['PROPERTIES']['PRICE_VARIANT']['VALUE'] as $key=>$arOffer) : ?>
 												<? $offer = $arOffer['SUB_VALUES']?>
@@ -152,7 +152,7 @@ $this->setFrameMode(true);
 											<span>Стоимость:</span>
 											<span><?=$arResult["PROPERTIES"]["PRICE"]["VALUE"]?> <small style="font-size: 80%">&#8381;</small>
 												<? if (!empty($arResult["PROPERTIES"]["EDIN"]["VALUE"])) : ?>
-													/<?=$arResult["PROPERTIES"]["EDIN"]["VALUE"]?>
+													/<?=$arResult["PROPERTIES"]["EDIN"]["~VALUE"]?>
 												<? endif; ?>
 											</span>
 										</div>
@@ -264,7 +264,7 @@ $this->setFrameMode(true);
 											<span>Стоимость:</span>
 											<span><?=$arResult["PROPERTIES"]["PRICE"]["VALUE"]?> <small style="font-size: 80%">&#8381;</small>
 												<? if (!empty($arResult["PROPERTIES"]["EDIN"]["VALUE"])) : ?>
-													/<?=$arResult["PROPERTIES"]["EDIN"]["VALUE"]?>
+													/<?=$arResult["PROPERTIES"]["EDIN"]["~VALUE"]?>
 												<? endif; ?>
 											</span>
 										</div>

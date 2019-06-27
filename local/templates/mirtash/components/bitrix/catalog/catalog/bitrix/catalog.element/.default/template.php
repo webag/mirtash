@@ -298,16 +298,15 @@ $this->setFrameMode(true);
 						<div class="cart__form-wrap">
 							<div class="cart__form">
 								<form class="ajax-form">
-									<h5>Заполните форму и наш менеджер свяжется с вами для уточнения деталей заказа</h5>
-									<p>Как с вами связаться?</p>
+									<h5>Заполните форму и&nbsp;менеджер вам перезвонит</h5>
 									<input type="hidden" value="Заявка из карточки товара" name="form_subject">
 									<input type="hidden" value="<?=$arResult['NAME']?>" name="user_product" data-label="Продукт">
 									<input type="hidden" value="order_cart" name="target_id">
 									<input type="text" class="input-text input-text--bordered" name="user_name" placeholder="Ваше имя" data-label="Имя пользователя">
 									<input type="tel" class="input-text input-text--bordered" name="user_phone" placeholder="Номер телефона*" data-label="Телефон" data-req="true">
 									<input type="email" class="input-text input-text--bordered" name="user_email" placeholder="E-mail" data-label="E-mail">
-									<p>Выберите необходимые параметры</p>
 									<? if (!empty($arResult["PROPERTIES"]["TYPE"]["~VALUE"])) : ?>
+										<p>Выберите необходимые параметры</p>
 										<select class="custom-select" name="user_type" data-label="Тип">
 											<option selected="selected" disabled>Тип</option>
 											<? foreach ($arResult["PROPERTIES"]["TYPE"]["~VALUE"] as $key => $param_name) : ?>
@@ -338,7 +337,26 @@ $this->setFrameMode(true);
 									</div>
 								</form>
 							</div>
-							<span class="form__personal">Мы не передаем Вашу персональную информацию третьим лицам. Нажимая кнопку «Отправить» вы даете согласие на обработку персональных данных.</span>
+							<span class="form__personal">Нажимая кнопку, вы даете <a href="#">согласие</a> на&nbsp;обработку персональных данных.</span>
+						</div>
+
+						<a href="#" class="partner-block fancy-modal" data-src="#modal-partner">
+							<div class="partner-block__title h3">Стать партнером</div>
+							<div class="partner-block__subtitle">для дизайнеров и строителей</div>
+						</a>
+
+						<div class="cart-share">
+							<h4>Подпишитесь на&nbsp;наш Instagram</h4>
+							<a class="insta-header" href="https://www.instagram.com/mirtash_kzn/" target="_blank">
+								<img src="/local/templates/mirtash/img/instalogo.jpg" alt="instalogo">
+								<div class="insta-header__content">
+									<span>mirtash_kzn</span>
+								</div>
+							</a>
+							<h4>Рассказать друзьям:</h4>
+							<script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+							<script src="https://yastatic.net/share2/share.js"></script>
+							<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,viber,whatsapp,skype,telegram"></div>
 						</div>
 
 					</div>
@@ -356,6 +374,162 @@ while($ar_group = $db_groups->Fetch()):
 	$sections[] = $ar_group["ID"];
 endwhile;
 ?>
+
+
+<? if ($arResult['PROPERTIES']['BUY_WITH']['VALUE']) : ?>
+	<section class="s-cart-related">
+		<div class="wrapper">
+			<div class="catalog-inner">
+				<div class="catalog-inner__part">
+					<h2 class="catalog-inner__part-title"><?=$arResult['PROPERTIES']['BUY_WITH_TITLE']['VALUE']?></h2>
+					<?
+					global $arrFilterBuy;
+					$arrFilterBuy = Array(
+						"ID" => $arResult['PROPERTIES']['BUY_WITH']['VALUE'],
+					);
+					?>
+					<?$APPLICATION->IncludeComponent(
+						"bitrix:news.list",
+						"products_items",
+						Array(
+							"ACTIVE_DATE_FORMAT" => "d.m.Y",
+							"ADD_SECTIONS_CHAIN" => "N",
+							"AJAX_MODE" => "N",
+							"AJAX_OPTION_ADDITIONAL" => "",
+							"AJAX_OPTION_HISTORY" => "N",
+							"AJAX_OPTION_JUMP" => "N",
+							"AJAX_OPTION_STYLE" => "Y",
+							"CACHE_FILTER" => "N",
+							"CACHE_GROUPS" => "Y",
+							"CACHE_TIME" => "36000000",
+							"CACHE_TYPE" => "A",
+							"CHECK_DATES" => "Y",
+							"COMPOSITE_FRAME_MODE" => "A",
+							"COMPOSITE_FRAME_TYPE" => "AUTO",
+							"DETAIL_URL" => "/catalog/all/#ELEMENT_CODE#/",
+							"DISPLAY_BOTTOM_PAGER" => "N",
+							"DISPLAY_DATE" => "Y",
+							"DISPLAY_NAME" => "Y",
+							"DISPLAY_PICTURE" => "Y",
+							"DISPLAY_PREVIEW_TEXT" => "Y",
+							"DISPLAY_TOP_PAGER" => "N",
+							"FIELD_CODE" => array("", ""),
+							"FILTER_NAME" => "arrFilterBuy",
+							"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+							"IBLOCK_ID" => $arResult["IBLOCK_ID"],
+							"IBLOCK_TYPE" => "catalogs",
+							"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+							"INCLUDE_SUBSECTIONS" => "Y",
+							"MESSAGE_404" => "",
+							"NEWS_COUNT" => "4",
+							"PAGER_BASE_LINK_ENABLE" => "N",
+							"PAGER_DESC_NUMBERING" => "N",
+							"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+							"PAGER_SHOW_ALL" => "N",
+							"PAGER_SHOW_ALWAYS" => "N",
+							"PAGER_TEMPLATE" => ".default",
+							"PAGER_TITLE" => "Новости",
+							"PARENT_SECTION" => "",
+							"PARENT_SECTION_CODE" => "",
+							"PREVIEW_TRUNCATE_LEN" => "",
+							"PROPERTY_CODE" => array("PRICE"),
+							"SET_BROWSER_TITLE" => "N",
+							"SET_LAST_MODIFIED" => "N",
+							"SET_META_DESCRIPTION" => "N",
+							"SET_META_KEYWORDS" => "N",
+							"SET_STATUS_404" => "N",
+							"SET_TITLE" => "N",
+							"SHOW_404" => "N",
+							"SORT_BY1" => "SORT",
+							"SORT_BY2" => "ID",
+							"SORT_ORDER1" => "ASC",
+							"SORT_ORDER2" => "DESC",
+							"STRICT_SECTION_CHECK" => "N"
+						)
+					);?>
+				</div>
+			</div>
+		</div>
+	</section>
+<? endif; ?>
+
+
+<? if ($arResult['PROPERTIES']['INTEREST']['VALUE']) : ?>
+	<section class="s-cart-related">
+		<div class="wrapper">
+			<div class="catalog-inner">
+				<div class="catalog-inner__part">
+					<h2 class="catalog-inner__part-title"><?=$arResult['PROPERTIES']['INTEREST_TITLE']['VALUE']?></h2>
+					<?
+					global $arrFilterInterest;
+					$arrFilterInterest = Array(
+						"ID" => $arResult['PROPERTIES']['INTEREST']['VALUE'],
+					);
+					?>
+					<?$APPLICATION->IncludeComponent(
+						"bitrix:news.list",
+						"products_items",
+						Array(
+							"ACTIVE_DATE_FORMAT" => "d.m.Y",
+							"ADD_SECTIONS_CHAIN" => "N",
+							"AJAX_MODE" => "N",
+							"AJAX_OPTION_ADDITIONAL" => "",
+							"AJAX_OPTION_HISTORY" => "N",
+							"AJAX_OPTION_JUMP" => "N",
+							"AJAX_OPTION_STYLE" => "Y",
+							"CACHE_FILTER" => "N",
+							"CACHE_GROUPS" => "Y",
+							"CACHE_TIME" => "36000000",
+							"CACHE_TYPE" => "A",
+							"CHECK_DATES" => "Y",
+							"COMPOSITE_FRAME_MODE" => "A",
+							"COMPOSITE_FRAME_TYPE" => "AUTO",
+							"DETAIL_URL" => "/catalog/all/#ELEMENT_CODE#/",
+							"DISPLAY_BOTTOM_PAGER" => "N",
+							"DISPLAY_DATE" => "Y",
+							"DISPLAY_NAME" => "Y",
+							"DISPLAY_PICTURE" => "Y",
+							"DISPLAY_PREVIEW_TEXT" => "Y",
+							"DISPLAY_TOP_PAGER" => "N",
+							"FIELD_CODE" => array("", ""),
+							"FILTER_NAME" => "arrFilterInterest",
+							"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+							"IBLOCK_ID" => $arResult["IBLOCK_ID"],
+							"IBLOCK_TYPE" => "catalogs",
+							"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+							"INCLUDE_SUBSECTIONS" => "Y",
+							"MESSAGE_404" => "",
+							"NEWS_COUNT" => "4",
+							"PAGER_BASE_LINK_ENABLE" => "N",
+							"PAGER_DESC_NUMBERING" => "N",
+							"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+							"PAGER_SHOW_ALL" => "N",
+							"PAGER_SHOW_ALWAYS" => "N",
+							"PAGER_TEMPLATE" => ".default",
+							"PAGER_TITLE" => "Новости",
+							"PARENT_SECTION" => "",
+							"PARENT_SECTION_CODE" => "",
+							"PREVIEW_TRUNCATE_LEN" => "",
+							"PROPERTY_CODE" => array("PRICE"),
+							"SET_BROWSER_TITLE" => "N",
+							"SET_LAST_MODIFIED" => "N",
+							"SET_META_DESCRIPTION" => "N",
+							"SET_META_KEYWORDS" => "N",
+							"SET_STATUS_404" => "N",
+							"SET_TITLE" => "N",
+							"SHOW_404" => "N",
+							"SORT_BY1" => "SORT",
+							"SORT_BY2" => "ID",
+							"SORT_ORDER1" => "ASC",
+							"SORT_ORDER2" => "DESC",
+							"STRICT_SECTION_CHECK" => "N"
+						)
+					);?>
+				</div>
+			</div>
+		</div>
+	</section>
+<? endif; ?>
 
 
 <? if ($arResult['PROPERTIES']['SHOW_RELATED']['VALUE'] == "YES") : ?>
@@ -428,179 +602,10 @@ endwhile;
 <? endif; ?>
 
 
-<? if ($arResult['PROPERTIES']['BUY_WITH']['VALUE']) : ?>
-<section class="s-cart-related">
-	<div class="wrapper">
-		<div class="catalog-inner">
-			<div class="catalog-inner__part">
-				<h2 class="catalog-inner__part-title"><?=$arResult['PROPERTIES']['BUY_WITH_TITLE']['VALUE']?></h2>
-				<?
-				global $arrFilterBuy;
-				$arrFilterBuy = Array(
-					"ID" => $arResult['PROPERTIES']['BUY_WITH']['VALUE'],
-				);
-				?>
-				<?$APPLICATION->IncludeComponent(
-					"bitrix:news.list",
-					"products_items",
-					Array(
-						"ACTIVE_DATE_FORMAT" => "d.m.Y",
-						"ADD_SECTIONS_CHAIN" => "N",
-						"AJAX_MODE" => "N",
-						"AJAX_OPTION_ADDITIONAL" => "",
-						"AJAX_OPTION_HISTORY" => "N",
-						"AJAX_OPTION_JUMP" => "N",
-						"AJAX_OPTION_STYLE" => "Y",
-						"CACHE_FILTER" => "N",
-						"CACHE_GROUPS" => "Y",
-						"CACHE_TIME" => "36000000",
-						"CACHE_TYPE" => "A",
-						"CHECK_DATES" => "Y",
-						"COMPOSITE_FRAME_MODE" => "A",
-						"COMPOSITE_FRAME_TYPE" => "AUTO",
-						"DETAIL_URL" => "/catalog/all/#ELEMENT_CODE#/",
-						"DISPLAY_BOTTOM_PAGER" => "N",
-						"DISPLAY_DATE" => "Y",
-						"DISPLAY_NAME" => "Y",
-						"DISPLAY_PICTURE" => "Y",
-						"DISPLAY_PREVIEW_TEXT" => "Y",
-						"DISPLAY_TOP_PAGER" => "N",
-						"FIELD_CODE" => array("", ""),
-						"FILTER_NAME" => "arrFilterBuy",
-						"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-						"IBLOCK_ID" => $arResult["IBLOCK_ID"],
-						"IBLOCK_TYPE" => "catalogs",
-						"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-						"INCLUDE_SUBSECTIONS" => "Y",
-						"MESSAGE_404" => "",
-						"NEWS_COUNT" => "4",
-						"PAGER_BASE_LINK_ENABLE" => "N",
-						"PAGER_DESC_NUMBERING" => "N",
-						"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-						"PAGER_SHOW_ALL" => "N",
-						"PAGER_SHOW_ALWAYS" => "N",
-						"PAGER_TEMPLATE" => ".default",
-						"PAGER_TITLE" => "Новости",
-						"PARENT_SECTION" => "",
-						"PARENT_SECTION_CODE" => "",
-						"PREVIEW_TRUNCATE_LEN" => "",
-						"PROPERTY_CODE" => array("PRICE"),
-						"SET_BROWSER_TITLE" => "N",
-						"SET_LAST_MODIFIED" => "N",
-						"SET_META_DESCRIPTION" => "N",
-						"SET_META_KEYWORDS" => "N",
-						"SET_STATUS_404" => "N",
-						"SET_TITLE" => "N",
-						"SHOW_404" => "N",
-						"SORT_BY1" => "SORT",
-						"SORT_BY2" => "ID",
-						"SORT_ORDER1" => "ASC",
-						"SORT_ORDER2" => "DESC",
-						"STRICT_SECTION_CHECK" => "N"
-					)
-				);?>
-			</div>
-		</div>
-	</div>
-</section>
-<? endif; ?>
-
-
-<? if ($arResult['PROPERTIES']['INTEREST']['VALUE']) : ?>
-<section class="s-cart-related">
-	<div class="wrapper">
-		<div class="catalog-inner">
-			<div class="catalog-inner__part">
-				<h2 class="catalog-inner__part-title"><?=$arResult['PROPERTIES']['INTEREST_TITLE']['VALUE']?></h2>
-				<?
-				global $arrFilterInterest;
-				$arrFilterInterest = Array(
-					"ID" => $arResult['PROPERTIES']['INTEREST']['VALUE'],
-				);
-				?>
-				<?$APPLICATION->IncludeComponent(
-					"bitrix:news.list",
-					"products_items",
-					Array(
-						"ACTIVE_DATE_FORMAT" => "d.m.Y",
-						"ADD_SECTIONS_CHAIN" => "N",
-						"AJAX_MODE" => "N",
-						"AJAX_OPTION_ADDITIONAL" => "",
-						"AJAX_OPTION_HISTORY" => "N",
-						"AJAX_OPTION_JUMP" => "N",
-						"AJAX_OPTION_STYLE" => "Y",
-						"CACHE_FILTER" => "N",
-						"CACHE_GROUPS" => "Y",
-						"CACHE_TIME" => "36000000",
-						"CACHE_TYPE" => "A",
-						"CHECK_DATES" => "Y",
-						"COMPOSITE_FRAME_MODE" => "A",
-						"COMPOSITE_FRAME_TYPE" => "AUTO",
-						"DETAIL_URL" => "/catalog/all/#ELEMENT_CODE#/",
-						"DISPLAY_BOTTOM_PAGER" => "N",
-						"DISPLAY_DATE" => "Y",
-						"DISPLAY_NAME" => "Y",
-						"DISPLAY_PICTURE" => "Y",
-						"DISPLAY_PREVIEW_TEXT" => "Y",
-						"DISPLAY_TOP_PAGER" => "N",
-						"FIELD_CODE" => array("", ""),
-						"FILTER_NAME" => "arrFilterInterest",
-						"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-						"IBLOCK_ID" => $arResult["IBLOCK_ID"],
-						"IBLOCK_TYPE" => "catalogs",
-						"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
-						"INCLUDE_SUBSECTIONS" => "Y",
-						"MESSAGE_404" => "",
-						"NEWS_COUNT" => "4",
-						"PAGER_BASE_LINK_ENABLE" => "N",
-						"PAGER_DESC_NUMBERING" => "N",
-						"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
-						"PAGER_SHOW_ALL" => "N",
-						"PAGER_SHOW_ALWAYS" => "N",
-						"PAGER_TEMPLATE" => ".default",
-						"PAGER_TITLE" => "Новости",
-						"PARENT_SECTION" => "",
-						"PARENT_SECTION_CODE" => "",
-						"PREVIEW_TRUNCATE_LEN" => "",
-						"PROPERTY_CODE" => array("PRICE"),
-						"SET_BROWSER_TITLE" => "N",
-						"SET_LAST_MODIFIED" => "N",
-						"SET_META_DESCRIPTION" => "N",
-						"SET_META_KEYWORDS" => "N",
-						"SET_STATUS_404" => "N",
-						"SET_TITLE" => "N",
-						"SHOW_404" => "N",
-						"SORT_BY1" => "SORT",
-						"SORT_BY2" => "ID",
-						"SORT_ORDER1" => "ASC",
-						"SORT_ORDER2" => "DESC",
-						"STRICT_SECTION_CHECK" => "N"
-					)
-				);?>
-			</div>
-		</div>
-	</div>
-</section>
-<? endif; ?>
-
-
 <section class="s-cart-bottom">
 	<div class="wrapper">
-		<div class="row">
-			<div class="grid-6 grid-phone-12">
-				<a href="#" class="partner-block fancy-modal" data-src="#modal-partner">
-					<div class="partner-block__title h3">Стать партнером</div>
-					<div class="partner-block__subtitle">для дизайнеров и строителей</div>
-				</a>
-			</div>
-			<div class="grid-6 grid-phone-12">
-				<div class="cart-share">
-					<h4>Рассказать друзьям:</h4>
-					<script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
-					<script src="https://yastatic.net/share2/share.js"></script>
-					<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,viber,whatsapp,skype,telegram"></div>
-				</div>
-			</div>
+		<div class="cart-back-link h4">
+			Вернуться в <a href="/catalog/">каталог</a>
 		</div>
 	</div>
 </section>

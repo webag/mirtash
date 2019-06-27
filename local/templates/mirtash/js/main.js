@@ -574,3 +574,31 @@ $(function($){
 /***********************
  Cart slider END
  ***********************/
+
+
+/***********************
+Cart variants BEGIN
+***********************/
+$(function($){
+	var variantsBtns = $('.variants__selector-btn');
+	var variants = $('.variant');
+
+	variantsBtns.on('click',function (e) {
+		e.preventDefault();
+		var index = $(this).data('variant');
+
+		console.log($(this).data('slider-photo'));
+
+		if ($(this).data('slider-photo') > 0){
+			var photoIndex = $(this).data('slider-photo') - 1;
+			$('.cart-slider').flickity('select',photoIndex);
+		}
+		variantsBtns.removeClass('active');
+		variantsBtns.filter('[data-variant='+index+']').addClass('active');
+		variants.removeClass('active');
+		variants.filter('[data-variant='+index+']').addClass('active');
+	});
+});
+/***********************
+Cart variants END
+***********************/

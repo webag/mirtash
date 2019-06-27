@@ -38,6 +38,9 @@ switch ($arResult['PROPERTIES']['LABLE']['VALUE_XML_ID']){
 		<div class="catalog-inner__item-price">
 			<img src="<?=SITE_TEMPLATE_PATH ?>/img/svg/icons/price.svg" alt="">
 			<?= $arResult['PROPERTIES']['PRICE']['VALUE']; ?> &#8381;
+			<? if (!empty($arResult["PROPERTIES"]["EDIN"]["VALUE"])) : ?>
+				/<?=$arResult["PROPERTIES"]["EDIN"]["~VALUE"]?>
+			<? endif; ?>
 		</div>
 	<? endif; ?>
 </a>

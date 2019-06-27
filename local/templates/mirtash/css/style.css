@@ -6891,6 +6891,17 @@ textarea.error {
   padding-right: 6%;
 }
 
+.cart__short-info--mob {
+  display: none;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .cart__short-info--mob {
+    display: block;
+  }
+}
+
 .cart__short-price {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -7230,6 +7241,9 @@ textarea.error {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-bottom: 6px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .variants__selector-btn {
@@ -7250,6 +7264,7 @@ textarea.error {
 
 .variants__selector-btn.active {
   background: #02cfa6;
+  border: 2px solid #02cfa6;
   color: #FFF;
   pointer-events: none;
 }

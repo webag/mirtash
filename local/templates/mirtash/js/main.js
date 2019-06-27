@@ -40,6 +40,8 @@ $(function($){
 			form_data.append(input_label__name,input_label__value)
 		});
 
+		var targetId = form.find('[name=target_id]').val();
+
 		if (send === true) {
 			$.ajax({
 				type: "POST",
@@ -55,6 +57,7 @@ $(function($){
 					$.fancybox.open({src  : '#modal-thanks'});
 					setTimeout(function() {$.fancybox.close();},4500);
 					form[0].reset();
+					ym(48542102, 'reachGoal', targetId);
 				})
 			});
 		}

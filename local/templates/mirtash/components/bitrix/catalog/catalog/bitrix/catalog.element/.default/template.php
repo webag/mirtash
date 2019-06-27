@@ -213,6 +213,9 @@ $this->setFrameMode(true);
 								<form class="ajax-form">
 									<h5>Заполните форму и наш менеджер свяжется с вами для уточнения деталей заказа</h5>
 									<p>Как с вами связаться?</p>
+									<input type="hidden" value="Новая заявка" name="form_subject">
+									<input type="hidden" value="<?=$arResult['NAME']?>" name="user_product" data-label="Продукт">
+									<input type="hidden" value="order_cart" name="target_id">
 									<input type="text" class="input-text input-text--bordered" name="user_name" placeholder="Ваше имя" data-label="Имя пользователя">
 									<input type="tel" class="input-text input-text--bordered" name="user_phone" placeholder="Номер телефона*" data-label="Телефон" data-req="true">
 									<input type="email" class="input-text input-text--bordered" name="user_email" placeholder="E-mail" data-label="E-mail">
@@ -246,8 +249,6 @@ $this->setFrameMode(true);
 									<div class="center-btn">
 										<button class="btn btn--submit btn--full">заказать</button>
 									</div>
-									<input type="hidden" value="Новая заявка" name="form_subject">
-									<input type="hidden" value="<?=$arResult['NAME']?>" name="user_product" data-label="Продукт">
 								</form>
 							</div>
 							<span class="form__personal">Мы не передаем Вашу персональную информацию третьим лицам. Нажимая кнопку «Отправить» вы даете согласие на обработку персональных данных.</span>
@@ -419,7 +420,6 @@ endwhile;
 
 
 <? if ($arResult['PROPERTIES']['INTEREST']['VALUE']) : ?>
-
 <section class="s-cart-related">
 	<div class="wrapper">
 		<div class="catalog-inner">
@@ -540,6 +540,7 @@ endwhile;
 						<h3>Оставьте ваши контактные данные</h3>
 						<p>Специалист свяжется с вами в ближайшее время</p>
 						<form class="ajax-form">
+							<input type="hidden" value="callback" name="target_id">
 							<input type="text" class="input-text" name="user_name" placeholder="Ваше имя" data-label="Имя пользователя">
 							<input type="tel" class="input-text" name="user_phone" placeholder="Номер телефона*" data-label="Телефон" data-req="true">
 							<input type="email" class="input-text" name="user_email" placeholder="E-mail*" data-label="E-mail" data-req="true">

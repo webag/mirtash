@@ -627,6 +627,7 @@ $APPLICATION->SetTitle("Mirtash - студия натурального камн
 						<h3>Оставьте ваши контактные данные</h3>
 						<p>Специалист свяжется с вами в ближайшее время</p>
 						<form class="ajax-form">
+							<input type="hidden" value="callback" name="target_id">
 							<input type="text" class="input-text" name="user_name" placeholder="Ваше имя" data-label="Имя пользователя">
 							<input type="tel" class="input-text" name="user_phone" placeholder="Номер телефона*" data-label="Телефон" data-req="true">
 							<input type="email" class="input-text" name="user_email" placeholder="E-mail*" data-label="E-mail" data-req="true">

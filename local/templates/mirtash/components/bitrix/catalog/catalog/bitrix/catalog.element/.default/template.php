@@ -213,7 +213,7 @@ $this->setFrameMode(true);
 								<form class="ajax-form">
 									<h5>Заполните форму и наш менеджер свяжется с вами для уточнения деталей заказа</h5>
 									<p>Как с вами связаться?</p>
-									<input type="hidden" value="Новая заявка" name="form_subject">
+									<input type="hidden" value="Заявка из карточки товара" name="form_subject">
 									<input type="hidden" value="<?=$arResult['NAME']?>" name="user_product" data-label="Продукт">
 									<input type="hidden" value="order_cart" name="target_id">
 									<input type="text" class="input-text input-text--bordered" name="user_name" placeholder="Ваше имя" data-label="Имя пользователя">
@@ -524,7 +524,7 @@ endwhile;
 		<div class="row form-callback">
 			<div class="grid-7 grid-tabvert-6 grid-phone-12 form-callback__left">
 				<div class="form-callback__title">
-					<p class="h1">Получите бесплатную консультацию </p>
+					<p class="h1">Получите бесплатную консультацию</p>
 					<p>по подбору камня от профессионального <br>дизайнера прямо сейчас</p>
 				</div>
 				<img class="form-callback__stone form-callback__stone--cart" data-src="img/form-stone-main.png" data-src-phone="" src="<?=SITE_TEMPLATE_PATH?>/img/form-stone-main.png" alt="">
@@ -544,7 +544,7 @@ endwhile;
 							<input type="text" class="input-text" name="user_name" placeholder="Ваше имя" data-label="Имя пользователя">
 							<input type="tel" class="input-text" name="user_phone" placeholder="Номер телефона*" data-label="Телефон" data-req="true">
 							<input type="email" class="input-text" name="user_email" placeholder="E-mail*" data-label="E-mail" data-req="true">
-							<input type="hidden" value="Новая заявка" name="form_subject">
+							<input type="hidden" value="Получить консультацию" name="form_subject">
 							<div class="btnwrap-center">
 								<button class="btn btn--submit"><span>Отправить</span></button>
 							</div>

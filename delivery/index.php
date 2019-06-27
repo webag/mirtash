@@ -50,7 +50,7 @@ $APPLICATION->SetTitle("Доставка природного камня по К
 							<input type="text" class="input-text" name="user_name" placeholder="Ваше имя" data-label="Имя пользователя">
 							<input type="tel" class="input-text" name="user_phone" placeholder="Номер телефона*" data-label="Телефон" data-req="true">
 							<input type="email" class="input-text" name="user_email" placeholder="E-mail*" data-label="E-mail" data-req="true">
-							<input type="hidden" value="Новая заявка" name="form_subject">
+							<input type="hidden" value="Получить консультацию" name="form_subject">
 							<div class="btnwrap-center">
 								<button class="btn btn--submit"><span>Отправить</span></button>
 							</div>

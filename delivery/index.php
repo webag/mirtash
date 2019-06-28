@@ -54,7 +54,7 @@ $APPLICATION->SetTitle("Доставка природного камня по К
 							<div class="btnwrap-center">
 								<button class="btn btn--submit"><span>Отправить</span></button>
 							</div>
-							<span class="form__personal">Мы не передаем Вашу персональную информацию третьим лицам. Нажимая кнопку «Отправить» вы даете согласие на обработку персональных данных.</span>
+							<span class="form__personal">Мы не передаем Вашу персональную информацию третьим лицам. Нажимая кнопку «Отправить» вы даете <a href="/policy.docx" target="_blank" download="Политика конфиденциальности">согласие</a> на обработку персональных данных.</span>
 						</form>
 					</div>
 				</div>

@@ -46,7 +46,7 @@
 			<div class="btnwrap-center">
 				<button class="btn btn--submit"><span>Отправить</span></button>
 			</div>
-			<span class="form__personal">Мы не передаем Вашу персональную информацию третьим лицам. Нажимая кнопку «Отправить» вы даете согласие на обработку персональных данных.</span>
+			<span class="form__personal">Мы не передаем Вашу персональную информацию третьим лицам. Нажимая кнопку «Отправить» вы даете <a href="/policy.docx" target="_blank" download="Политика конфиденциальности">согласие</a> на обработку персональных данных.</span>
 		</form>
 	</div>
 </div>
@@ -64,7 +64,7 @@
 			<div class="btnwrap-center">
 				<button class="btn btn--submit"><span>Отправить</span></button>
 			</div>
-			<span class="form__personal">Мы не передаем Вашу персональную информацию третьим лицам. Нажимая кнопку «Отправить» вы даете согласие на обработку персональных данных.</span>
+			<span class="form__personal">Мы не передаем Вашу персональную информацию третьим лицам. Нажимая кнопку «Отправить» вы даете <a href="/policy.docx" target="_blank" download="Политика конфиденциальности">согласие</a> на обработку персональных данных.</span>
 		</form>
 	</div>
 </div>
@@ -88,6 +88,28 @@ _emv['campaign'] = '64ff30d936f1e12f838cade4';
 })();
 </script>
 <!-- End LeadBack code -->
+
+
+<!-- Facebook Pixel Code -->
+<script>
+	!function(f,b,e,v,n,t,s)
+	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+		if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+		n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];
+		s.parentNode.insertBefore(t,s)}(window,document,'script',
+		'https://connect.facebook.net/en_US/fbevents.js');
+
+	fbq('init', '448755462622616');
+	fbq('track', 'PageView');
+</script>
+<noscript>
+	<img height="1" width="1"
+		src="https://www.facebook.com/tr?id=448755462622616&ev=PageView
+&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
 
 </body>
 </html>

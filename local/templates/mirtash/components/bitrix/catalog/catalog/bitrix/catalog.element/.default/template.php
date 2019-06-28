@@ -60,20 +60,6 @@ $this->setFrameMode(true);
 							</div>
 
 							<div class="cart-slider">
-								<? foreach ($arResult["PROPERTIES"]["PHOTOS"]["VALUE"] as $key => $photo_id) : ?>
-									<?
-									$photo_big = CFile::ResizeImageGet($photo_id, array("width" => 1900, "height" => 1000), BX_RESIZE_IMAGE_PROPORTIONAL, true);
-									$resize_img = CFile::ResizeImageGet($photo_id, array("width" => 624, "height" => 468), BX_RESIZE_IMAGE_EXACT, true, array());
-									?>
-									<div class="cart-slider__item">
-										<a href="<?=$photo_big['src']?>" class="cart-slider__item-imgwrap fancy-cart-slider" data-fancybox="cart-slider">
-											<img src="<?=$resize_img['src']?>" alt="<?=$arResult["NAME"]?>" class="cart-slider__item-img">
-										</a>
-										<div class="cart-slider__zoom">
-											<img src="<?=SITE_TEMPLATE_PATH?>/img/svg/resize.svg" alt="zoom" width="20" height="20">
-										</div>
-									</div>
-								<? endforeach; ?>
 								<? if ($arResult["PROPERTIES"]["VIDEO"]["VALUE"]) : ?>
 									<? foreach ($arResult["PROPERTIES"]["VIDEO"]["VALUE"] as $arVideo) : ?>
 										<? $video = $arVideo['SUB_VALUES']?>
@@ -90,16 +76,22 @@ $this->setFrameMode(true);
 										</div>
 									<? endforeach; ?>
 								<? endif; ?>
-							</div>
-							<div class="cart-slider-thumbs">
 								<? foreach ($arResult["PROPERTIES"]["PHOTOS"]["VALUE"] as $key => $photo_id) : ?>
 									<?
-									$resize_img = CFile::ResizeImageGet($photo_id, array("width" => 113, "height" => 85), BX_RESIZE_IMAGE_EXACT, true, array());
+									$photo_big = CFile::ResizeImageGet($photo_id, array("width" => 1900, "height" => 1000), BX_RESIZE_IMAGE_PROPORTIONAL, true);
+									$resize_img = CFile::ResizeImageGet($photo_id, array("width" => 624, "height" => 468), BX_RESIZE_IMAGE_EXACT, true, array());
 									?>
-									<div class="cart-slider-thumbs__slide">
-										<img src="<?=$resize_img['src']?>" alt="<?=$arResult["NAME"]?>">
+									<div class="cart-slider__item">
+										<a href="<?=$photo_big['src']?>" class="cart-slider__item-imgwrap fancy-cart-slider" data-fancybox="cart-slider">
+											<img src="<?=$resize_img['src']?>" alt="<?=$arResult["NAME"]?>" class="cart-slider__item-img">
+										</a>
+										<div class="cart-slider__zoom">
+											<img src="<?=SITE_TEMPLATE_PATH?>/img/svg/resize.svg" alt="zoom" width="20" height="20">
+										</div>
 									</div>
 								<? endforeach; ?>
+							</div>
+							<div class="cart-slider-thumbs">
 								<? if ($arResult["PROPERTIES"]["VIDEO"]["VALUE"]) : ?>
 									<? foreach ($arResult["PROPERTIES"]["VIDEO"]["VALUE"] as $arVideo) : ?>
 										<? $video = $arVideo['SUB_VALUES']?>
@@ -111,6 +103,14 @@ $this->setFrameMode(true);
 										</div>
 									<? endforeach; ?>
 								<? endif; ?>
+								<? foreach ($arResult["PROPERTIES"]["PHOTOS"]["VALUE"] as $key => $photo_id) : ?>
+									<?
+									$resize_img = CFile::ResizeImageGet($photo_id, array("width" => 113, "height" => 85), BX_RESIZE_IMAGE_EXACT, true, array());
+									?>
+									<div class="cart-slider-thumbs__slide">
+										<img src="<?=$resize_img['src']?>" alt="<?=$arResult["NAME"]?>">
+									</div>
+								<? endforeach; ?>
 							</div>
 
 							<div class="cart__short-info--mob">
@@ -364,27 +364,25 @@ $this->setFrameMode(true);
 									</div>
 								</form>
 							</div>
-							<span class="form__personal">Нажимая кнопку, вы даете <a href="#">согласие</a> на&nbsp;обработку персональных данных.</span>
+							<span class="form__personal">Нажимая кнопку, вы даете <a href="/policy.docx" target="_blank" download="Политика конфиденциальности">согласие</a> на&nbsp;обработку персональных данных.</span>
 						</div>
 
-						<a href="#" class="partner-block fancy-modal" data-src="#modal-partner">
-							<div class="partner-block__title h3">Стать партнером</div>
-							<div class="partner-block__subtitle">для дизайнеров и строителей</div>
+						<a class="cart-instagram" href="https://www.instagram.com/mirtash_kzn/" target="_blank">
+							<img src="/local/templates/mirtash/img/ig-logo.png" alt="instalogo" class="cart-instagram__thumb">
+							<img src="/local/templates/mirtash/img/instagram.png" alt="1" class="cart-instagram__logo">
 						</a>
 
 						<div class="cart-share">
-							<h4>Подпишитесь на&nbsp;наш Instagram</h4>
-							<a class="insta-header" href="https://www.instagram.com/mirtash_kzn/" target="_blank">
-								<img src="/local/templates/mirtash/img/instalogo.jpg" alt="instalogo">
-								<div class="insta-header__content">
-									<span>mirtash_kzn</span>
-								</div>
-							</a>
 							<h4>Рассказать друзьям:</h4>
 							<script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
 							<script src="https://yastatic.net/share2/share.js"></script>
 							<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,viber,whatsapp,skype,telegram"></div>
 						</div>
+
+						<a href="#" class="partner-block fancy-modal" data-src="#modal-partner">
+							<div class="partner-block__title h3">Стать партнером</div>
+							<div class="partner-block__subtitle">для дизайнеров и&nbsp;строителей</div>
+						</a>
 
 					</div>
 				</div>
@@ -667,7 +665,7 @@ endwhile;
 							<div class="btnwrap-center">
 								<button class="btn btn--submit"><span>Отправить</span></button>
 							</div>
-							<span class="form__personal">Мы не передаем Вашу персональную информацию третьим лицам. Нажимая кнопку «Отправить» вы даете согласие на обработку персональных данных.</span>
+							<span class="form__personal">Мы не передаем Вашу персональную информацию третьим лицам. Нажимая кнопку «Отправить» вы даете <a href="/policy.docx" target="_blank" download="Политика конфиденциальности">согласие</a> на обработку персональных данных.</span>
 						</form>
 					</div>
 				</div>

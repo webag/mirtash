@@ -7459,3 +7459,9 @@ textarea.error {
   color: #7F7F7F;
   margin-bottom: 10px;
 }
+
+.sheme_img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

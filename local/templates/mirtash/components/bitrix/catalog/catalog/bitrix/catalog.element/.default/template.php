@@ -322,6 +322,12 @@ $this->setFrameMode(true);
 							));?>
 						</div>
 
+						<div class="cart__short">
+							<a href="<?=SITE_TEMPLATE_PATH?>/img/sheme.jpg" class="fancy">
+								<img src="<?=SITE_TEMPLATE_PATH?>/img/sheme.jpg" alt="" class="sheme_img">
+							</a>
+						</div>
+
 						<div class="cart__form-wrap">
 							<div class="cart__form">
 								<form class="ajax-form">

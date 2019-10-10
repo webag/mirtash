@@ -110,6 +110,12 @@ _emv['campaign'] = '64ff30d936f1e12f838cade4';
 &noscript=1"/>
 </noscript>
 <!-- End Facebook Pixel Code -->
+<script>
+(function(w,d,u){
+var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+})(window,document,'https://cdn.bitrix24.ru/b9850355/crm/tag/call.tracker.js');
+</script>
 
 </body>
 </html>

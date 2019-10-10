@@ -57,6 +57,26 @@
 	</script>
 	<noscript><div><img src="https://mc.yandex.ru/watch/48542102" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 	<!-- /Yandex.Metrika counter -->
+<!-- Global site tag (gtag.js) - Google Ads: 760127339 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-760127339"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-760127339');
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149440958-1"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-149440958-1');
+</script>
+
 <meta name="yandex-verification" content="4ef91cc0a5f61dcf" />
 
 </head>

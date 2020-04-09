@@ -114,6 +114,12 @@ $this->setFrameMode(true);
 							</div>
 
 							<div class="cart__short-info--mob">
+								<div class="center-btn">
+									<a href="tel:+78432661036" class="btn">Позвонить нам</a>
+								</div>
+							</div>
+
+							<div class="cart__short-info--mob">
 								<? if ($arResult['PROPERTIES']['PRICE_VARIANT']['VALUE']) : ?>
 									<div class="variants">
 										<div class="variants__param-name"><?=$arResult['PROPERTIES']['PARAM_NAME']['VALUE']?></div>

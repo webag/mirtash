@@ -66,6 +66,7 @@ $this->setFrameMode(true);
 										<?
 										$resize_img = CFile::ResizeImageGet($video['VIDEO_COVER']['VALUE'], array("width" => 624, "height" => 468), BX_RESIZE_IMAGE_EXACT, true, array());
 										?>
+										<!--
 										<div class="cart-slider__item">
 											<a href="<?=$video['VIDEO_LINK']['VALUE']?>" class="cart-slider__item-video fancy-cart-slider" data-fancybox="cart-slider">
 												<img src="<?=$resize_img['src']?>" alt="<?=$arResult["NAME"]?>" class="cart-slider__item-img">
@@ -74,6 +75,7 @@ $this->setFrameMode(true);
 												<img src="<?=SITE_TEMPLATE_PATH?>/img/svg/resize.svg" alt="zoom" width="20" height="20">
 											</div>
 										</div>
+										-->
 									<? endforeach; ?>
 								<? endif; ?>
 								<? foreach ($arResult["PROPERTIES"]["PHOTOS"]["VALUE"] as $key => $photo_id) : ?>
@@ -98,9 +100,11 @@ $this->setFrameMode(true);
 										<?
 										$resize_img = CFile::ResizeImageGet($video['VIDEO_COVER']['VALUE'], array("width" => 113, "height" => 85), BX_RESIZE_IMAGE_EXACT, true, array());
 										?>
+										<!--
 										<div class="cart-slider-thumbs__slide cart-slider-thumbs__slide--video">
 											<img src="<?=$resize_img['src']?>" alt="<?=$arResult["NAME"]?>">
 										</div>
+										-->
 									<? endforeach; ?>
 								<? endif; ?>
 								<? foreach ($arResult["PROPERTIES"]["PHOTOS"]["VALUE"] as $key => $photo_id) : ?>
@@ -327,6 +331,24 @@ $this->setFrameMode(true);
 								"PATH" => "/includes/phone_1.php"
 							));?>
 						</div>
+
+						<? if ($arResult["PROPERTIES"]["VIDEO"]["VALUE"]) { ?>
+							<? foreach ($arResult["PROPERTIES"]["VIDEO"]["VALUE"] as $arVideo) : ?>
+								<? $video = $arVideo['SUB_VALUES']?>
+								<?
+								$resize_img = CFile::ResizeImageGet($video['VIDEO_COVER']['VALUE'], array("width" => 624, "height" => 295), BX_RESIZE_IMAGE_EXACT, true, array());
+								?>
+								<?
+								$yt_link = $video['VIDEO_LINK']['VALUE'];
+								if (preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/\s]{11})%i', $yt_link, $match)) {
+									$yt_id = $match[1];
+								}
+								?>
+								<a href="<?=$video['VIDEO_LINK']['VALUE']?>" class="cart__video fancy-video">
+									<img src="https://img.youtube.com/vi/<?=$yt_id?>/maxresdefault.jpg" alt="<?=$arResult["NAME"]?>">
+								</a>
+							<? endforeach; ?>
+						<? } ?>
 
 						<div class="cart__short">
 							<a href="<?=SITE_TEMPLATE_PATH?>/img/sheme.jpg" class="fancy">

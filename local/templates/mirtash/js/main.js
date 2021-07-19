@@ -587,8 +587,6 @@ $(function($){
 		e.preventDefault();
 		var index = $(this).data('variant');
 
-		console.log($(this).data('slider-photo'));
-
 		if ($(this).data('slider-photo') > 0){
 			var photoIndex = $(this).data('slider-photo') - 1;
 			$('.cart-slider').flickity('select',photoIndex);

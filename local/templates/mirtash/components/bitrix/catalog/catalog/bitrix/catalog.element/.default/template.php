@@ -258,8 +258,17 @@ $this->setFrameMode(true);
 															<figure></figure>
 															<div class="variant__row-prices">
 																<div class="variant__row-price">
-																	<?=$offer['PRICE_ROZN']['VALUE']?>
-																	<small>&#8381;/<?=$arResult["PROPERTIES"]["EDIN"]["~VALUE"]?></small>
+																	<?
+																	$string = $offer['PRICE_ROZN']['VALUE'];
+																	$price = (int) filter_var($string,FILTER_SANITIZE_NUMBER_INT);
+																	$edIzm = preg_replace('/\d/','',$string);
+																	?>
+																	<?=$price?>
+																	<? if ($edIzm) { ?>
+																		<small>&#8381;/<?=$edIzm?></small>
+																	<? } else { ?>
+																		<small>&#8381;/<?=$arResult["PROPERTIES"]["EDIN"]["~VALUE"]?></small>
+																	<? } ?>
 																</div>
 															</div>
 														</div>
@@ -270,8 +279,17 @@ $this->setFrameMode(true);
 															<figure></figure>
 															<div class="variant__row-prices">
 																<div class="variant__row-price">
-																	<?=$offer['PRICE_OPT_SMALL']['VALUE']?>
-																	<small>&#8381;/<?=$arResult["PROPERTIES"]["EDIN"]["~VALUE"]?></small>
+																	<?
+																	$string = $offer['PRICE_OPT_SMALL']['VALUE'];
+																	$price = (int) filter_var($string,FILTER_SANITIZE_NUMBER_INT);
+																	$edIzm = preg_replace('/\d/','',$string);
+																	?>
+																	<?=$price?>
+																	<? if ($edIzm) { ?>
+																		<small>&#8381;/<?=$edIzm?></small>
+																	<? } else { ?>
+																		<small>&#8381;/<?=$arResult["PROPERTIES"]["EDIN"]["~VALUE"]?></small>
+																	<? } ?>
 																</div>
 															</div>
 														</div>
@@ -282,8 +300,17 @@ $this->setFrameMode(true);
 															<figure></figure>
 															<div class="variant__row-prices">
 																<div class="variant__row-price">
-																	<?=$offer['PRICE_OPT']['VALUE']?>
-																	<small>&#8381;/<?=$arResult["PROPERTIES"]["EDIN"]["~VALUE"]?></small>
+																	<?
+																	$string = $offer['PRICE_OPT']['VALUE'];
+																	$price = (int) filter_var($string,FILTER_SANITIZE_NUMBER_INT);
+																	$edIzm = preg_replace('/\d/','',$string);
+																	?>
+																	<?=$price?>
+																	<? if ($edIzm) { ?>
+																		<small>&#8381;/<?=$edIzm?></small>
+																	<? } else { ?>
+																		<small>&#8381;/<?=$arResult["PROPERTIES"]["EDIN"]["~VALUE"]?></small>
+																	<? } ?>
 																</div>
 															</div>
 														</div>

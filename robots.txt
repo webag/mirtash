@@ -34,6 +34,7 @@ Disallow: /*back_url_admin=
 Disallow: /*?utm_source=
 Disallow: /*?bxajaxid=
 Disallow: /*&bxajaxid=
+Disallow: /test/
 Crawl-delay: 2
 Host: http://mirtash.ru
 Sitemap: http://mirtash.ru/sitemap.xml

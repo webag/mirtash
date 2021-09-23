@@ -78,6 +78,7 @@
 </script>
 
 <meta name="yandex-verification" content="4ef91cc0a5f61dcf" />
+<meta name="p:domain_verify" content="d341715eee674687d322e1ef5c177c4a"/>
 
 </head>
 <body>

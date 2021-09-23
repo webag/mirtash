@@ -3,3 +3,6 @@
 /bitrix/*
 /upload/*
 .htaccess
+orders.csv
+.vscode
+sitemap*

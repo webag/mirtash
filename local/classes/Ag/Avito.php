@@ -44,7 +44,7 @@ class Avito
 			$export->writeFullTag('GoodsType', "Стройматериалы");
 			$export->writeFullTag('GoodsSubType', "Другое");
 			$export->writeFullTag('Condition', "Новое");
-			$export->writeFullTag('Address', "Россия, Республика Татарстан, Казань, д.Калинино, ул. Центральная, д. 101");
+			$export->writeFullTag('Address', "Россия, Республика Татарстан, Казань");
 			$export->writeFullTag('AdType', "Товар от производителя");
 			$export->writeFullTag('Price', $product['PROPERTY_PRICE_VALUE']);
 

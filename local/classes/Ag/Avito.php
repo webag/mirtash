@@ -7,26 +7,6 @@ Loader::includeModule('iblock');
 class Avito
 {
 	/**
-	 * @param int $iblockId
-	 * @param int $id
-	 * @return boolean
-	 */
-	public static function isActive($iblockId,$id)
-	{
-		$result = array();
-
-		$query = \CIBlockElement::GetList(array(),array('IBLOCK_ID' => $iblockId,'ACTIVE' => 'Y', 'ID' => $id),false,array(),array('ID'));
-		while ($elem = $query->GetNextElement()) {
-			$result[] = $elem->GetFields();
-		}
-		if ($result){
-			return true;
-		} else {
-			return false;
-		}
-	}
-
-	/**
 	 * @return boolean
 	 */
 	public static function generateXml()

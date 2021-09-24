@@ -35,7 +35,7 @@ class Avito
 			$res = \CIBlockSection::GetByID($product['IBLOCK_SECTION_ID']);
 			if ($category = $res->GetNext()) {
 				$catName = $category['NAME'];
-				$title .= " (" . $catName . ")";
+				$title = $catName . ' - ' . $product['NAME'];
 			}
 			$export->writeFullTag('Title', $title);
 			//Название товара

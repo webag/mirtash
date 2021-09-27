@@ -50,7 +50,9 @@ class Avito
 
 			//Description
 			if ($product['DETAIL_TEXT']) {
-				$descr = '![CDATA[' . $product['DETAIL_TEXT'] . ']]';
+				$formattedDescr = str_replace('<b>', '<strong>', $product['DETAIL_TEXT']);
+				$formattedDescr = str_replace('</b>', '</strong>', $formattedDescr);
+				$descr = '![CDATA[' . $formattedDescr . ']]';
 			} else {
 				$descr = '![CDATA[Описание временно отсутствует.]]';
 			}

@@ -16,7 +16,7 @@ if ( !defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true ) die();
 <?
 $dbResSect = CIBlockSection::GetList(
 	Array("SORT"=>"ASC"),
-	Array("IBLOCK_ID"=>$arParams['IBLOCK_ID'],"DEPTH_LEVEL" => 2,"SECTION_ID" => $arResult['ID'])
+	Array("ACTIVE" => 'Y',"IBLOCK_ID"=>$arParams['IBLOCK_ID'],"DEPTH_LEVEL" => 2,"SECTION_ID" => $arResult['ID'])
 );
 
 //Получаем разделы и собираем в массив

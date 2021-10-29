@@ -13,7 +13,7 @@ class Avito
 	{
 		$products = array();
 
-		$query = \CIBlockElement::GetList(array(), array('IBLOCK_ID' => 1, 'ACTIVE' => 'Y'), false, array(), array('ID', 'NAME', 'PROPERTY_PRICE', 'PROPERTY_PHOTOS', 'PROPERTY_VIDEO', 'IBLOCK_SECTION_ID', 'DETAIL_TEXT'));
+		$query = \CIBlockElement::GetList(array(), array('IBLOCK_ID' => 1, 'ACTIVE' => 'Y', "SECTION_ACTIVE" => 'Y'), false, array(), array('ID', 'NAME', 'PROPERTY_PRICE', 'PROPERTY_PHOTOS', 'PROPERTY_VIDEO', 'IBLOCK_SECTION_ID', 'DETAIL_TEXT'));
 		while ($elem = $query->GetNextElement()) {
 			$products[] = $elem->GetFields();
 		}

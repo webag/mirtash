@@ -369,9 +369,14 @@ $this->setFrameMode(true);
 								$yt_link = $video['VIDEO_LINK']['VALUE'];
 								if (preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/\s]{11})%i', $yt_link, $match)) {
 									$yt_id = $match[1];
+									$yt_link_need = $yt_link;
+								}
+								if(strpos($yt_link, "/shorts/") !== false){
+									$yt_id = substr($yt_link, strrpos($yt_link, '/' )+1);
+									$yt_link_need = "https://www.youtube.com/watch?v=".$yt_id;
 								}
 								?>
-								<a href="<?=$video['VIDEO_LINK']['VALUE']?>" class="cart__video fancy-video">
+								<a href="<?=$yt_link_need?>" class="cart__video fancy-video">
 									<img src="https://img.youtube.com/vi/<?=$yt_id?>/maxresdefault.jpg" alt="<?=$arResult["NAME"]?>">
 								</a>
 							<? endforeach; ?>

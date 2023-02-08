@@ -130,7 +130,7 @@ $this->setFrameMode(true);
 										<div class="variants__selector">
 											<? foreach ($arResult['PROPERTIES']['PRICE_VARIANT']['VALUE'] as $key=>$arOffer) : ?>
 												<? $offer = $arOffer['SUB_VALUES']?>
-												<div class="variants__selector-btn <? echo $key==0 ? 'active':''?>" data-variant="<?=$key?>" data-slider-photo="<?=$offer['PARAM_PHOTO']['VALUE']?>">
+												<div class="variants__selector-btn <? echo $key==0 ? 'active':''?>" data-variant="<?=$key?>" data-slider-photo="<?=$offer['PARAM_PHOTO']['VALUE']?>" data-video="<?=$offer['PARAM_VIDEO']['VALUE']?>">
 													<?=$offer['PARAM_VALUE']['VALUE']?>
 												</div>
 											<? endforeach; ?>

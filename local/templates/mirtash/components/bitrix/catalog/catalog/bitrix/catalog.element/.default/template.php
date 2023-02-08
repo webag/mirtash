@@ -373,7 +373,8 @@ $this->setFrameMode(true);
 										$yt_link_need = $yt_link;
 									}
 									if(strpos($yt_link, "/shorts/") !== false){
-										$yt_id = substr($yt_link, strrpos($yt_link, '/' )+1);
+										$yt_last = substr($yt_link, strrpos($yt_link, '/' )+1);
+										$yt_id = strtok($yt_last, '?');
 										$yt_link_need = "https://www.youtube.com/watch?v=".$yt_id;
 									}
 									?>

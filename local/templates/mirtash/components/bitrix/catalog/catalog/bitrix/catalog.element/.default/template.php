@@ -242,7 +242,7 @@ $this->setFrameMode(true);
 										<div class="variants__selector">
 											<? foreach ($arResult['PROPERTIES']['PRICE_VARIANT']['VALUE'] as $key=>$arOffer) : ?>
 												<? $offer = $arOffer['SUB_VALUES']?>
-												<div class="variants__selector-btn <? echo $key==0 ? 'active':''?>" data-variant="<?=$key?>" data-slider-photo="<?=$offer['PARAM_PHOTO']['VALUE']?>">
+												<div class="variants__selector-btn <? echo $key==0 ? 'active':''?>" data-variant="<?=$key?>" data-slider-photo="<?=$offer['PARAM_PHOTO']['VALUE']?>" data-video="<?=$offer['PARAM_VIDEO']['VALUE']?>">
 													<?=$offer['PARAM_VALUE']['VALUE']?>
 												</div>
 											<? endforeach; ?>
@@ -360,26 +360,28 @@ $this->setFrameMode(true);
 						</div>
 
 						<? if ($arResult["PROPERTIES"]["VIDEO"]["VALUE"]) { ?>
-							<? foreach ($arResult["PROPERTIES"]["VIDEO"]["VALUE"] as $arVideo) : ?>
-								<? $video = $arVideo['SUB_VALUES']?>
-								<?
-								$resize_img = CFile::ResizeImageGet($video['VIDEO_COVER']['VALUE'], array("width" => 624, "height" => 295), BX_RESIZE_IMAGE_EXACT, true, array());
-								?>
-								<?
-								$yt_link = $video['VIDEO_LINK']['VALUE'];
-								if (preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/\s]{11})%i', $yt_link, $match)) {
-									$yt_id = $match[1];
-									$yt_link_need = $yt_link;
-								}
-								if(strpos($yt_link, "/shorts/") !== false){
-									$yt_id = substr($yt_link, strrpos($yt_link, '/' )+1);
-									$yt_link_need = "https://www.youtube.com/watch?v=".$yt_id;
-								}
-								?>
-								<a href="<?=$yt_link_need?>" class="cart__video fancy-video">
-									<img src="https://img.youtube.com/vi/<?=$yt_id?>/maxresdefault.jpg" alt="<?=$arResult["NAME"]?>">
-								</a>
-							<? endforeach; ?>
+							<div class="cart__videos">
+								<? foreach ($arResult["PROPERTIES"]["VIDEO"]["VALUE"] as $vKey => $arVideo) : ?>
+									<? $video = $arVideo['SUB_VALUES']?>
+									<?
+									$resize_img = CFile::ResizeImageGet($video['VIDEO_COVER']['VALUE'], array("width" => 624, "height" => 295), BX_RESIZE_IMAGE_EXACT, true, array());
+									?>
+									<?
+									$yt_link = $video['VIDEO_LINK']['VALUE'];
+									if (preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/\s]{11})%i', $yt_link, $match)) {
+										$yt_id = $match[1];
+										$yt_link_need = $yt_link;
+									}
+									if(strpos($yt_link, "/shorts/") !== false){
+										$yt_id = substr($yt_link, strrpos($yt_link, '/' )+1);
+										$yt_link_need = "https://www.youtube.com/watch?v=".$yt_id;
+									}
+									?>
+									<a href="<?=$yt_link_need?>" class="cart__video fancy-video <?=$vKey==0?'active':''?>" data-video="<?=$vKey+1?>">
+										<img src="https://img.youtube.com/vi/<?=$yt_id?>/maxresdefault.jpg" alt="<?=$arResult["NAME"]?>">
+									</a>
+								<? endforeach; ?>
+							</div>
 						<? } ?>
 
 						<div class="cart__short">

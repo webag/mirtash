@@ -582,6 +582,7 @@ Cart variants BEGIN
 $(function($){
 	var variantsBtns = $('.variants__selector-btn');
 	var variants = $('.variant');
+	var videos = $('.cart__video');
 
 	variantsBtns.on('click',function (e) {
 		e.preventDefault();
@@ -590,6 +591,15 @@ $(function($){
 		if ($(this).data('slider-photo') > 0){
 			var photoIndex = $(this).data('slider-photo') - 1;
 			$('.cart-slider').flickity('select',photoIndex);
+		}
+		if ($(this).data('video') > 0){
+			var videoIndex = $(this).data('video');
+			var needVideo = videos.filter('[data-video='+videoIndex+']');
+			console.log(needVideo.length);
+			if (needVideo.length > 0) {
+				videos.removeClass('active');
+				needVideo.addClass('active');
+			}
 		}
 		variantsBtns.removeClass('active');
 		variantsBtns.filter('[data-variant='+index+']').addClass('active');

@@ -379,7 +379,7 @@ $this->setFrameMode(true);
 									}
 									?>
 									<a href="<?=$yt_link_need?>" class="cart__video fancy-video <?=$vKey==0?'active':''?>" data-video="<?=$vKey+1?>">
-										<img src="https://img.youtube.com/vi/<?=$yt_id?>/maxresdefault.jpg" alt="<?=$arResult["NAME"]?>">
+										<img src="https://img.youtube.com/vi/<?=$yt_id?>/sddefault.jpg" alt="<?=$arResult["NAME"]?>">
 									</a>
 								<? endforeach; ?>
 							</div>
